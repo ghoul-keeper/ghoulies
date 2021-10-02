@@ -1,0 +1,10 @@
+.DS_STORE
+image_generation/output
+5k_ghoulies_test_v2.zip
+image_generation/assets
+ignore
+.next
+node_modules/
+.vscode
+.metals
+.env

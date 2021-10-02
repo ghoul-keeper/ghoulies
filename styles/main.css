@@ -1,0 +1,498 @@
+@font-face {
+  font-family: "Spot";
+  src: url("/fonts/Spot/Spot-Normal.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+.supa-rounded {
+	border-radius: 40px;
+}
+
+.bg-shad {
+	opacity: 0.19;
+  border-radius: 40px;
+  background-color: #000;
+	/* width: 114px;
+  height: 115px; */
+	width: 141px;
+  height: 144px;
+	position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	z-index: 1;
+}
+
+.logo-bg {
+	background: url("/header-ghoulie-large.png") no-repeat center center;
+  background-size: cover;
+  height: 120%;
+  width: 20rem;
+  max-width: 100vw;
+  position: relative;
+  top: 20%;
+  transform: translateY(-33%);
+}
+
+.discord-bubble {
+	background-color: #5866f2;
+	border-radius: 38px;
+	width: 425px;
+  height: 76px;
+	display: flex;
+	color: white;
+	align-items: center;
+	font-size: 18px;
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: 1.2px;
+}
+
+.discord-bubble:hover {
+	background-color: #4050f0;
+}
+
+.reg-font {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	letter-spacing: 1.1px;
+}
+
+.faq-item {
+	background-color: #992930;
+	border-radius: 32px;
+	padding: 1rem 1.5rem;
+}
+
+.letter-spacing-1 {
+	letter-spacing: 1.2px;
+}
+
+.letter-spacing-1a {
+	letter-spacing: 1.66px;
+}
+
+.letter-spacing-2a {
+	letter-spacing: 2.03px;
+}
+
+.letter-spacing-2 {
+	letter-spacing: 2.75px;
+}
+
+.letter-spacing-3 {
+	letter-spacing: 3.76px;
+}
+
+body {
+	margin: 0;
+	font-family: "Spot", sans-serif;
+	background: #090212;
+}
+
+.center-img {
+	margin: 0 auto;
+}
+
+.gg-border {
+	border-top: 3px solid #3E849B;
+	width: 100%;
+	height: 1px;
+}
+
+.gg-b-t {
+	border-top: 2px solid #3E849B;
+}
+
+.gg-b-b {
+	border-bottom: 2px solid #3E849B;
+}
+
+.ghoulie-max {
+	max-width: 17rem;
+}
+
+.prov-base-text {
+	font-size: .85em;
+	font-weight: 300;
+	margin-bottom: calc(10px * 4);
+}
+
+.prov-hash-string {
+	font-family: Menlo;
+	font-size: .5em;
+	overflow-wrap: break-word;
+	overflow-y: scroll;
+	scrollbar-color: #fff #4b4a4a;
+	height: 10vw;
+}
+
+.nav-hov:hover {
+	background-color: #3e849b;
+}
+
+.na-hov:hover {
+	color: #3e849b;
+}
+
+.prov-hov:hover {
+	color: #fff !important;
+}
+
+.banner {
+	margin: 2rem auto;
+}
+
+.inside {
+	max-width: 960px;
+	display: block;
+	margin: 0 auto;
+}
+
+.special-bg-h {
+	height: 100vh;
+}
+
+.blur-bg {
+	background-color: #090212;
+}
+
+.gh-shadow {
+	text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
+}
+
+.gg-ml-auto {
+	margin-left: auto;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero {
+	background: url("/star-background.jpg");
+	background-size: cover;
+}
+
+.dark-bg {
+	background: url("/dark-night-bg.png");
+	background-size: cover;
+}
+
+.welcome {
+	background-color: #2f1021;
+	border-radius: 40px;
+}
+
+.welcome-section, .dna-section, .kensa-korbi, .roadmap, .community-tools, .fair-spawn, .book-ghoulie {
+	background-color: #202020;
+}
+
+.cap-log {
+	background-color: #8c8f68;
+}
+
+blockquote {
+  border-left: 10px solid #2e687b;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+	letter-spacing: 1.66px;
+	font-weight: normal;
+}
+blockquote:before {
+  color: #2e687b;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+
+.rectangle-frame {
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.19);
+	width: 265px;
+  height: 265px;
+	position: relative;
+	z-index: 1;
+}
+
+.spec {
+	background-color: #fff;
+}
+
+.ship-class {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -133.5px;
+	z-index: 2;
+	max-width: 120%;
+	width: 115%;
+	height: auto;
+}
+
+.ghoulie-button {
+	background-color: #fff;
+	border-radius: 25.5px;
+	padding: .5rem 1rem;
+	font-family: Helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #4f1436;
+	text-transform: uppercase;
+}
+
+.ghoulie-button:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.the-crew {
+	background-color:#3ba571;
+}
+
+.tst-but {
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	margin-left: -172.5px;
+	z-index: 2;
+	width: 130%;
+	max-width: 130%;
+}
+
+.text-shadow {
+	text-shadow: 2px 2px 4px black;
+}
+.text-shadow-md {
+	text-shadow: 4px 4px 8px black;
+}
+.text-shadow-lg {
+	text-shadow: 15px 15px 30px black;
+}
+.text-shadow-none {
+	text-shadow: none;
+}
+
+.cap-icon {
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	margin-left: -172.5px;
+	z-index: 2;
+	max-width: 140%;
+	width: 135%;
+	height: auto;
+}
+
+.foot {
+	background-color: #202020;
+}
+
+.all-a-bored {
+  background-color: #3a8097;
+}
+
+.svg-twit {
+enable-background:new 0 0 248 204;
+}
+
+.Logo_1_ {
+	fill: #fff;
+}
+
+.gg-wallet {
+  background: #4285f4;
+  color: #fff;
+  text-transform: uppercase;
+	box-shadow: 0px 17px 10px -10px rgb(0 181 172 / 39%);
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.gg-but {
+	line-height: 1.25rem !important;
+	padding: 1.75rem .75rem !important;
+}
+
+.gg-wallet:hover {
+	box-shadow: 0px 37px 20px -20px rgb(0 181 172 / 39%);
+	transform: translate(0px, -10px) scale(1.05);
+}
+
+.dont-touch {
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+}
+
+.dont-touch:hover {
+	transform: translate(0px, -10px) scale(1.05);
+}
+
+.block-links li {
+	position: relative;
+	height: 50px;
+	margin: 0 auto;
+  width: 62%;
+	margin-left: 33px;
+}
+
+.block-links li a svg {
+	width: 65%;
+	fill: #fff;
+	margin-top: 7px;
+}
+
+.block-links li a {
+	z-index: 10;
+	position: absolute;
+	display: block;
+	background: rgb(55, 178, 171);
+	top: 0;
+	left: 0;
+	width: 48px;
+	height: 45px;
+	border-radius: 100%;
+	padding: 6px 0 0 13px;
+	text-decoration: none;
+	color: #BBDEFB;
+	font-size: 18px;
+	text-align: center;
+	border: 1px solid #c2c9cc;
+	-webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.4);
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,0.4);
+
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.block-links li a:hover {
+	cursor: pointer;
+	color: #fff;
+	margin-left: 4px;
+}
+
+.block-links li:before {
+	z-index: 5;
+	position: relative;
+	content: " ";
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: #5b6266;
+	border-radius: 100%;
+	border: 1px solid #1976D2;
+	top: -1px;
+	left: -1px;
+}
+
+.bg-shad-mobile {
+	display: none;
+}
+
+.hide-on-large {
+	display: none;
+}
+
+@media (max-width: 480px) {
+	.adjust-font {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	.adjust-font-small {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}
+
+@media (max-width: 770px) {
+
+.hide-on-large {
+	display: block;
+}
+	.discord-bubble {
+		width: 100%;
+	}
+
+	.logo-bg {
+		top: 0;
+		height: 15rem;
+		width: auto;
+		background-size: contain;
+	}
+
+	.logo-bg-cont {
+		width: auto !important;
+	}
+
+	.gg-ml-auto {
+		margin: 0 auto;
+	}
+
+	.bg-shad-mobile {
+		display: block;
+		border-radius: 40px;
+		background-color: rgba(0, 0, 0, 0.19);
+		width: 100%;
+		height: 100%;
+		padding: 1rem 0;
+	}
+
+	.bg-shad {
+		display: none;
+	}
+
+	.hid-small {
+		display: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.block-links li:before {
+		position: absolute;
+	}
+}
+
+@media (max-width: 1024px) {
+	.bg-small {
+		background: url("/space_square.png");
+		background-repeat: repeat; 
+		width: 100%;
+	}
+}
+
+@media (max-width: 650px) {
+	.special-pad {
+		margin-right: .5rem !important;
+		margin-left: 2.5rem !important;
+	}
+
+	.gg-wallet {
+		font-size: 11px !important;
+		padding: 0;
+		line-height: 20px !important;
+	}
+
+	.no-p-left {
+		margin-left: 0 !important;
+	}
+}
+
+@media (max-width: 1135px) {
+	.special-bg-h {
+		height: auto;
+	}
+}
