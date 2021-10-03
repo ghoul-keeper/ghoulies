@@ -274,7 +274,7 @@ export default function Home() {
                   className="font-bold"
                   style={{ color: "#3a8097" }}
                 >
-                  <p className="reg-font">GITHUB REPO</p>
+                  <p className="reg-font hover:opacity-60">GITHUB REPO</p>
                 </a>
                 <a
                   target="_blank"
