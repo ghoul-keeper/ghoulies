@@ -44,11 +44,6 @@ const faqs = [
     answer:
       'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can happier and more fulfilling lives globally not just locally.\n\nCheck out our docs for more information.',
   },
-  {
-    question: "WILL THERE BE SECONDARY SALE ROYALTIES?",
-    answer:
-      "Royalties will be 6.9%. 1.15% to the Crew and 1.15% to buy back the Ghoulie floor.",
-  },
 ];
 
 function classNames(...classes) {
@@ -261,7 +256,7 @@ export default function Home() {
                 </p>
                 <br />
                 <a
-                  href="https://ghoulies-sol.gitbook.io/ghoulies-guide-to-the-galaxy/"
+                  href=""
                   target="_blank"
                   className="font-bold"
                   style={{ color: "#3a8097" }}
@@ -849,7 +844,7 @@ export default function Home() {
                             <span>
                               <br />
                               <a
-                                href="https://ghoulies-sol.gitbook.io/ghoulies-guide-to-the-galaxy/"
+                                href=""
                                 target="_blank"
                                 style={{ color: "#202020" }}
                                 className="hover:opacity-60 letter-spacing-2"

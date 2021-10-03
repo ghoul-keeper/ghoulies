@@ -19,7 +19,7 @@ const menuItems = [
   },
   {
     name: "Docs",
-    href: "https://ghoulies-sol.gitbook.io/ghoulies-guide-to-the-galaxy/",
+    href: "",
   },
   {
     name: "Kensa Korbi",
@@ -59,11 +59,7 @@ const NavOnHomePage = (props) => {
       >
         Roadmap
       </a>
-      <a
-        href="https://ghoulies-sol.gitbook.io/ghoulies-guide-to-the-galaxy/"
-        target="_blank"
-        className="text-sm na-hov"
-      >
+      <a href="" target="_blank" className="text-sm na-hov">
         Docs
       </a>
       <a
@@ -107,11 +103,7 @@ const NavOnProvenancePage = (props) => {
       <a href="/home#roadmap" className="text-sm na-hov">
         Roadmap
       </a>
-      <a
-        href="https://ghoulies-sol.gitbook.io/ghoulies-guide-to-the-galaxy/"
-        target="_blank"
-        className="text-sm na-hov"
-      >
+      <a href="" target="_blank" className="text-sm na-hov">
         Docs
       </a>
       <a href="/home#kensa-korbi" className="text-sm na-hov">
