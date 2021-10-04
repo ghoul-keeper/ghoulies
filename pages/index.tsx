@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "WHAT DO I GET WITH MY GHOULIE?",
     answer:
-      "Each Ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
+      "Each Space Ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
   },
   {
     question: "WHAT IS AN NFT?",
@@ -136,10 +136,10 @@ export default function Home() {
                   SPAWN ABOARD THE ISS GHOUL
                 </h1>
                 <p className="reg-font max-w-lg py-3">
-                  Space Ghoulies are a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each Ghoulie doubles as
-                  your intergalactic passport on the ISS GHOUL, the mothership
-                  for all Ghoulies.
+                  Space Ghoulies is a collection of 10,000 algorithmically
+                  unique NFTs on the Solana blockchain. Each Space Ghoulie
+                  doubles as your intergalactic passport on the ISS GHOUL, the
+                  mothership for all Ghoulies.
                 </p>
                 <h3 className="uppercase text-2xl letter-spacing-2a">
                   ticket price: 1.5 sol
@@ -215,10 +215,10 @@ export default function Home() {
                   WHAT ARE SPACE GHOULIES?
                 </h2>
                 <p className="pt-4 reg-font">
-                  Space Ghoulies are a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each ghoulie doubles as
-                  your intergalactic passport aboard the ISS GHOUL, the
-                  mothership for all ghoulies.
+                  Space Ghoulies is a collection of 10,000 algorithmically
+                  unique NFTs on the Solana blockchain. Each Space Ghoulie
+                  doubles as your intergalactic passport aboard the ISS GHOUL,
+                  the mothership for all ghoulies.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -243,10 +243,10 @@ export default function Home() {
               <div className="w-full md:w-2/3 md:pr-14 leading-5 text-base">
                 <h2 className="uppercase text-4xl letter-spacing-2">dna</h2>
                 <p className="pt-4 reg-font">
-                  Each ghoulie is unique and programmatically generated from
-                  over 152 hand-drawn traits including mouth, headwear, eyes,
-                  bodies, accessories, and more. All ghoulies are rare but some
-                  spawns are more uncommon than others.
+                  Each Space Ghoulie is unique and programmatically generated
+                  from over 152 hand-drawn traits including mouth, headwear,
+                  eyes, bodies, accessories, and more. All ghoulies are rare but
+                  some spawns are more uncommon than others.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -288,22 +288,24 @@ export default function Home() {
                   or Sollet Wallet.
                 </p>
                 <br />
-                <a
-                  href="https://phantom.app/"
-                  target="_blank"
-                  className="font-bold"
-                  style={{ color: "#3a8097" }}
-                >
-                  <p className="reg-font hover:opacity-60">PHANTOM WALLET</p>
-                </a>
-                <a
-                  href="https://www.sollet.io/"
-                  target="_blank"
-                  className="font-bold"
-                  style={{ color: "#3a8097" }}
-                >
-                  <p className="reg-font hover:opacity-60">SOLLET WALLET</p>
-                </a>
+                <div className="flex flex-row space-x-5">
+                  <a
+                    href="https://phantom.app/"
+                    target="_blank"
+                    className="font-bold"
+                    style={{ color: "#3a8097" }}
+                  >
+                    <p className="reg-font hover:opacity-60">PHANTOM WALLET</p>
+                  </a>
+                  <a
+                    href="https://www.sollet.io/"
+                    target="_blank"
+                    className="font-bold"
+                    style={{ color: "#3a8097" }}
+                  >
+                    <p className="reg-font hover:opacity-60">SOLLET WALLET</p>
+                  </a>
+                </div>
               </div>
               <img
                 className="w-full md:w-1/3 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
@@ -331,16 +333,16 @@ export default function Home() {
                   THE BOOK OF GHOULIE
                 </h2>
                 <p className="pt-4 reg-font">
-                  Following the Fiat Hard Fork, ghoulies were ridiculed and
-                  disregarded by their peers, the Fiatbrains, for their belief
-                  in DeFi. The ghoulies initially sought asylum on{" "}
+                  Following the Fiat Hard Fork, ghoulies were considered misfits
+                  by their peers the Fiatbrains because of their belief in DeFi.
+                  The ghoulies initially sought asylum on{" "}
                   <a
                     className="font-bold hover:opacity-60"
                     style={{ color: "#3a8097" }}
                     href="https://opensea.io/collection/stinkybinky-collection"
                     target="_blank"
                   >
-                    [Earthereum]
+                    Earthereum
                   </a>
                   . However, due to high gas fees, the ghoulies were forced to
                   venture into unknown parts of the universe.
@@ -389,9 +391,9 @@ export default function Home() {
             </blockquote>
             <br />
             <p className="reg-font">
-              Each ghoulie you hold acts as one vote in the ISS GHOUL DAO and a
-              1/10,000 chance to go to space. We're quite literally the cheapest
-              ticket to space.
+              Each Space Ghoulie you hold acts as one vote in the ISS GHOUL DAO
+              and a 1/10,000 chance to go to space. We're quite literally the
+              cheapest ticket to space.
             </p>
             <div className="flex flex-col md:flex-row mt-8 font-medium text-sm text-center space-x-0 md:space-x-5 reg-font">
               <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
@@ -518,13 +520,14 @@ export default function Home() {
                   We're crypto-natives that combined our love for design,
                   software tools, and art to tell the Space Ghoulie story. We
                   want to build the world we want to live in. Rarity charts,
-                  dashboards, AMM, and LPs are not out of the question for us.
+                  dashboards, governance and other software tools are not out of
+                  the question for us.
                 </p>
                 <br />
                 <p className="reg-font">
                   From time to time we will put community rewards into the Kensa
                   Korbi ranging from commemorative NFTs to Asteroid Mining
-                  Pools(AMPs).
+                  Pools.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -685,7 +688,7 @@ export default function Home() {
                       </span>
                       <div>
                         <span className="letter-spacing-2">
-                          Space Perspective Flight - Converting the Un-Ghoul.
+                          Space Perspective Flight - Converting the Un-Ghoul
                         </span>
                         <br />
                         <span className="reg-font">
@@ -717,7 +720,7 @@ export default function Home() {
                 </h2>
                 <p className="pt-2 reg-font">
                   We may have hidden a few easter eggs but there are no bonding
-                  curves or price tiers. Each ghoulie costs 1.5 SOL.
+                  curves or price tiers. Each Space Ghoulie costs 1.5 SOL.
                 </p>
                 <br />
                 <p className="reg-font pb-6">
