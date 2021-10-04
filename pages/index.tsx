@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "WHY SPACE GHOULIES?",
     answer:
-      "NFTs are the equivalent of the Renaissance in our humble opinion.\n\nGhoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU.\n\nThose original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.",
+      "NFTs are the equivalent of the Renaissance in our humble opinion.\n\nGhoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU. Those original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in terrestrial society. Our mission is to create a culture of ultra ambitious ghoulie holders who will usher in a paradigm shift of commerce and value aboard the ISS GHOUL.",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
@@ -594,9 +594,9 @@ export default function Home() {
                 <p className="pt-4 reg-font pb-6 pr-16">
                   The recipe of humans, machines, and blockchains has aligned
                   incentives like never before possible in terrestrial society.
-                  Our mission is to create a culture of ultra ambitious ghoulies
-                  who will usher in a paradigm shift of commerce and value
-                  aboard the ISS GHOUL.
+                  Our mission is to create a culture of ultra ambitious guild of
+                  ghoulie holders who will usher in a paradigm shift of commerce
+                  and value aboard the ISS GHOUL.
                 </p>
                 <div className="flex flex-col md:flex-row letter-spacing-1">
                   <div className="w-full p-0 md:pr-8">
