@@ -26,9 +26,9 @@ const faqs = [
     answer: "TBD",
   },
   {
-    question: "WHY GHOULIES?",
+    question: "WHY SPACE GHOULIES?",
     answer:
-      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU.\n\nThose original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.\n\nNFTs are the equivalent of the Renaissance in our humble opinion.",
+      "NFTs are the equivalent of the Renaissance in our humble opinion.\n\nGhoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU.\n\nThose original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "WHAT DO I GET WITH MY GHOULIE?",
     answer:
-      "Each Space Ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
+      "Each ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
   },
   {
     question: "WHAT IS AN NFT?",
@@ -137,9 +137,9 @@ export default function Home() {
                 </h1>
                 <p className="reg-font max-w-lg py-3">
                   Space Ghoulies is a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each Space Ghoulie
-                  doubles as your intergalactic passport on the ISS GHOUL, the
-                  mothership for all Ghoulies.
+                  unique NFTs on the Solana blockchain. Each ghoulie doubles as
+                  your intergalactic passport on the ISS GHOUL, the mothership
+                  for all Ghoulies.
                 </p>
                 <h3 className="uppercase text-2xl letter-spacing-2a">
                   ticket price: 1.5 sol
@@ -216,9 +216,9 @@ export default function Home() {
                 </h2>
                 <p className="pt-4 reg-font">
                   Space Ghoulies is a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each Space Ghoulie
-                  doubles as your intergalactic passport aboard the ISS GHOUL,
-                  the mothership for all ghoulies.
+                  unique NFTs on the Solana blockchain. Each ghoulie doubles as
+                  your intergalactic passport aboard the ISS GHOUL, the
+                  mothership for all ghoulies.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -243,10 +243,10 @@ export default function Home() {
               <div className="w-full md:w-2/3 md:pr-14 leading-5 text-base">
                 <h2 className="uppercase text-4xl letter-spacing-2">dna</h2>
                 <p className="pt-4 reg-font">
-                  Each Space Ghoulie is unique and programmatically generated
-                  from over 152 hand-drawn traits including mouth, headwear,
-                  eyes, bodies, accessories, and more. All ghoulies are rare but
-                  some spawns are more uncommon than others.
+                  Each ghoulie is unique and programmatically generated from
+                  over 152 hand-drawn traits including mouth, headwear, eyes,
+                  bodies, accessories, and more. All ghoulies are rare but some
+                  spawns are more uncommon than others.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -391,9 +391,9 @@ export default function Home() {
             </blockquote>
             <br />
             <p className="reg-font">
-              Each Space Ghoulie you hold acts as one vote in the ISS GHOUL DAO
-              and a 1/10,000 chance to go to space. We're quite literally the
-              cheapest ticket to space.
+              Each ghoulie you hold acts as one vote in the ISS GHOUL DAO and a
+              1/10,000 chance to go to space. We're quite literally the cheapest
+              ticket to space.
             </p>
             <div className="flex flex-col md:flex-row mt-8 font-medium text-sm text-center space-x-0 md:space-x-5 reg-font">
               <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
