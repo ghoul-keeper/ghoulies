@@ -25,13 +25,13 @@
 
 .logo-bg {
 	background: url("/header-ghoulie-large.png") no-repeat center center;
-  background-size: cover;
-  height: 120%;
-  width: 20rem;
-  max-width: 100vw;
-  position: relative;
-  top: 20%;
-  transform: translateY(-33%);
+	background-size: cover;
+	height: 130%;
+	width: 17rem;
+	max-width: 100vw;
+	position: relative;
+	top: 20%;
+	transform: translateY(-38%);
 }
 
 .discord-bubble {
@@ -286,12 +286,12 @@ blockquote p {
 
 .cap-icon {
 	position: absolute;
-	bottom: -50px;
-	left: 50%;
-	margin-left: -172.5px;
+	bottom: -40px;
+	left: 55%;
+	margin-left: -165.5px;
 	z-index: 2;
 	max-width: 140%;
-	width: 135%;
+	width: 125%;
 	height: auto;
 }
 
@@ -428,7 +428,7 @@ enable-background:new 0 0 248 204;
 	}
 
 	.logo-bg {
-		top: 0;
+		top: 15px;
 		height: 15rem;
 		width: auto;
 		background-size: contain;

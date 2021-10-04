@@ -120,7 +120,7 @@ export default function Home() {
         <div className="hero">
           <div className="inside px-8 md:px-0 pb-24">
             <img
-              className="m-auto w-96 pt-24 pb-20"
+              className="m-auto w-96 pt-24 pb-24 md:pb-20"
               src="/space-ghoulies-logo.png"
             />
             <div className="welcome w-full flex flex-col md:flex-row text-white overflow-visible">
@@ -228,7 +228,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/b.png"
           />
         </div>
@@ -291,7 +291,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/a.png"
           />
         </div>
@@ -303,7 +303,7 @@ export default function Home() {
           <div className="inside px-8 md:px-0">
             <div className="flex flex-col md:flex-row items-center">
               <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="cap-icon" src="/icons/4.png" />
+                <img className="cap-icon" src="/icons/item_book.png" />
               </span>
               <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
                 <h2 className="uppercase text-4xl letter-spacing-2">
@@ -344,7 +344,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/c.png"
           />
         </div>
@@ -379,12 +379,12 @@ export default function Home() {
                   <span className="bg-shad"></span>
                   <img
                     className="hid-small center-img w-16 h-auto md:h-60 md:w-auto pb-4 relative z-10"
-                    src="/icons/5.png"
+                    src="/icons/item_cup.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-16 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/5.png"
+                      src="/icons/item_cup.png"
                     />
                   </span>
                 </div>
@@ -397,12 +397,12 @@ export default function Home() {
                   <span className="bg-shad"></span>
                   <img
                     className="hid-small center-img w-16 h-auto md:h-60 md:w-auto pb-4 z-10 relative"
-                    src="/icons/6.png"
+                    src="/icons/item_ipa.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-16 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/6.png"
+                      src="/icons/item_ipa.png"
                     />
                   </span>
                 </div>
@@ -415,12 +415,12 @@ export default function Home() {
                   <span className="bg-shad"></span>
                   <img
                     className="hid-small center-img w-24 h-auto md:h-52 md:w-auto pb-4 z-10 relative"
-                    src="/icons/4.png"
+                    src="/icons/item_book.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/4.png"
+                      src="/icons/item_book.png"
                     />
                   </span>
                 </div>
@@ -433,12 +433,12 @@ export default function Home() {
                   <span className="bg-shad" style={{ top: "30px" }}></span>
                   <img
                     className="hid-small center-img w-24 h-auto md:h-44 md:w-auto pb-4 relative z-10"
-                    src="/icons/2.png"
+                    src="/icons/item_pyramid.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/2.png"
+                      src="/icons/item_pyramid.png"
                     />
                   </span>
                 </div>
@@ -451,12 +451,12 @@ export default function Home() {
                   <span className="bg-shad"></span>
                   <img
                     className="hid-small center-img w-24 h-auto md:h-32 md:w-auto pb-4 z-10 relative"
-                    src="/icons/1.png"
+                    src="/icons/item_hat.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/1.png"
+                      src="/icons/item_hat.png"
                     />
                   </span>
                 </div>
@@ -468,7 +468,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/a.png"
           />
         </div>
@@ -480,7 +480,7 @@ export default function Home() {
           <div className="inside px-8 md:px-0">
             <div className="flex flex-col md:flex-row items-center">
               <span className="rectangle-frame">
-                <img className="tst-but" src="/icons/2.png" />
+                <img className="tst-but" src="/icons/item_pyramid.png" />
               </span>
               <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
                 <h2 className="uppercase text-4xl letter-spacing-2">
@@ -509,7 +509,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/c.png"
           />
         </div>
@@ -535,12 +535,12 @@ export default function Home() {
               </div>
 
               <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="cap-icon" src="/icons/4.png" />
+                <img className="cap-icon" src="/icons/item_book.png" />
               </span>
             </div>
           </div>
           <img
-            className="absolute right-0 h-full w-auto top-0"
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
             src="/effects/a.png"
           />
         </div>
