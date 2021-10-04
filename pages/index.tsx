@@ -61,6 +61,9 @@ export default function Home() {
   let kensaKorbi = useRef(null);
   let kensaKorbiId = "kensa-korbi";
 
+  let capLog = useRef(null);
+  let capLogId = "captain-log";
+
   let flightPlan = useRef(null);
   let flightPlanId = "flight-plan";
 
@@ -69,12 +72,13 @@ export default function Home() {
       typeof window !== "undefined"
         ? window.location.href.slice(window.location.href.indexOf("#") + 1)
         : "";
-    console.log(anchorId);
 
     if (anchorId === bookOfGhoulieId) {
       bookOfGhoulie.current.scrollIntoView({ behavior: "smooth" });
     } else if (anchorId === kensaKorbiId) {
       kensaKorbi.current.scrollIntoView({ behavior: "smooth" });
+    } else if (anchorId === capLogId) {
+      capLog.current.scrollIntoView({ behavior: "smooth" });
     } else if (anchorId === flightPlanId) {
       flightPlan.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -536,7 +540,10 @@ export default function Home() {
           />
         </div>
 
-        <div className="cap-log py-10 text-white mt-16 md:mt-24 relative">
+        <div
+          className="cap-log py-10 text-white mt-16 md:mt-24 relative"
+          ref={capLog}
+        >
           <div className="inside px-8 md:px-0">
             <div className="flex flex-col md:flex-row items-center">
               <div className="w-full md:w-2/3 md:pr-20 leading-5 text-base">

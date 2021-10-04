@@ -50,6 +50,14 @@ const Navigation = (props) => {
           </a>
           <a
             onClick={() => props.setIsOpen(false)}
+            id="cap-log"
+            className="pt-4 menu-item"
+            href="#captain-log"
+          >
+            Captain Ralju's Log
+          </a>
+          <a
+            onClick={() => props.setIsOpen(false)}
             id="flight-plan"
             className="pt-4 menu-item"
             href="#flight-plan"
