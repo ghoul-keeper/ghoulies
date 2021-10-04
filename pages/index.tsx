@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "WHY GHOULIES?",
     answer:
-      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU.\n\nThose original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Ghoulies.Space because we believe that decentralization will usher in the future of work.\n\nNFTs are the equivalent of the Renaissance in our humble opinion.",
+      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU.\n\nThose original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.\n\nNFTs are the equivalent of the Renaissance in our humble opinion.",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
@@ -38,12 +38,12 @@ const faqs = [
   {
     question: "WHAT DO I GET WITH MY GHOULIE?",
     answer:
-      "Each Ghoulie acts as your passport 'pikta' and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
+      "Each Ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
   },
   {
     question: "WHAT IS AN NFT?",
     answer:
-      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can happier and more fulfilling lives globally not just locally.\n\nCheck out our docs for more information.',
+      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.\n\nCheck out our docs for more information.',
   },
 ];
 
@@ -132,10 +132,10 @@ export default function Home() {
                   SPAWN ABOARD THE ISS GHOUL
                 </h1>
                 <p className="reg-font max-w-lg py-3">
-                  Ghoulies.Space is a collection of 10,000 algorithmically
+                  Space Ghoulies are a collection of 10,000 algorithmically
                   unique NFTs on the Solana blockchain. Each Ghoulie doubles as
                   your intergalactic passport on the ISS GHOUL, the mothership
-                  for all hitchhiking Ghoulies.
+                  for all Ghoulies.
                 </p>
                 <h3 className="uppercase text-2xl letter-spacing-2a">
                   ticket price: 1.5 sol
@@ -208,21 +208,21 @@ export default function Home() {
               </span>
               <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-10 md:pt-0">
                 <h2 className="uppercase text-4xl letter-spacing-2">
-                  WHAT IS GHOULIES.SPACE?
+                  WHAT ARE SPACE GHOULIES?
                 </h2>
                 <p className="pt-4 reg-font">
-                  Ghoulies.Space is a collection of 10,000 algorithmically
+                  Space Ghoulies are a collection of 10,000 algorithmically
                   unique NFTs on the Solana blockchain. Each ghoulie doubles as
-                  your intergalactic passport ("pikta") aboard the ISS GHOUL,
-                  the mothership for all hitchhiking ghoulies.
+                  your intergalactic passport aboard the ISS GHOUL, the
+                  mothership for all ghoulies.
                 </p>
                 <br />
                 <p className="reg-font">
                   Your ghoulie grants you passenger-only benefits, the first is
-                  access to Captain Ralju's Log an ever-evolving lore (built
-                  with AI) of the ghoulies and their cosmic DeFi adventures.
-                  Future areas and passenger perks can be unlocked by the
-                  community via flight plan activations.
+                  access to Captain Ralju's Log an ever-evolving lore written by
+                  AI regarding the ghoulie's intergalactic DeFi adventures. When
+                  all ghoulies have spawned aboard the ISS GHOUL, one holder
+                  will be chosen to travel to space.
                 </p>
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function Home() {
                   Each ghoulie is unique and programmatically generated from
                   over 152 hand-drawn traits including mouth, headwear, eyes,
                   bodies, accessories, and more. All ghoulies are rare but some
-                  spawns are more uncommon ("steci") than others.
+                  spawns are more uncommon than others.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -280,9 +280,26 @@ export default function Home() {
                 <br />
                 <p className="reg-font">
                   To access passenger-only areas such as the Kensa Korbi,
-                  Ghoulie holders will need to signed in with their Phantom or
-                  Sollet Wallet.
+                  Ghoulie holders will need to be signed in with their Phantom
+                  or Sollet Wallet.
                 </p>
+                <br />
+                <a
+                  href="https://phantom.app/"
+                  target="_blank"
+                  className="font-bold"
+                  style={{ color: "#3a8097" }}
+                >
+                  <p className="reg-font hover:opacity-60">PHANTOM WALLET</p>
+                </a>
+                <a
+                  href="https://www.sollet.io/"
+                  target="_blank"
+                  className="font-bold"
+                  style={{ color: "#3a8097" }}
+                >
+                  <p className="reg-font hover:opacity-60">SOLLET WALLET</p>
+                </a>
               </div>
               <img
                 className="w-full md:w-1/3 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
@@ -319,11 +336,10 @@ export default function Home() {
                     href="https://opensea.io/collection/stinkybinky-collection"
                     target="_blank"
                   >
-                    {" "}
-                    Earthereum.{" "}
+                    [Earthereum]
                   </a>
-                  However, due to high gas fees, the ghoulies were forced to the
-                  outskirts of the universe.
+                  . However, due to high gas fees, the ghoulies were forced to
+                  venture into unknown parts of the universe.
                 </p>
                 <br />
                 <p className="reg-font">
@@ -356,10 +372,10 @@ export default function Home() {
             </h2>
             <br />
             <p className="reg-font">
-              When you spawn a ghoulie, you're receiving much more than a
-              decentralized avatar or provably-rare piece of art. Your ghoulie
-              acts as a non-dilutable share in the ISS GHOUL DAO. A governance
-              mechanism for the ship.
+              Captain Ralju loves making asymmetric bets so when you spawn a
+              ghoulie, you're receiving much more than a decentralized avatar or
+              provably-rare piece of art. Your ghoulie acts as a non-dilutable
+              share in the ISS GHOUL DAO. A governance mechanism for the ship.
             </p>
             <br />
             <blockquote>
@@ -369,9 +385,9 @@ export default function Home() {
             </blockquote>
             <br />
             <p className="reg-font">
-              Each ghoulie serves as your intergalactic passport ("pikta") to
-              participate in the ISS GHOUL DAO and a 1/10,000 chance to go to
-              space. We're quite literally the cheapest ticket to space.
+              Each ghoulie you hold acts as one vote in the ISS GHOUL DAO and a
+              1/10,000 chance to go to space. We're quite literally the cheapest
+              ticket to space.
             </p>
             <div className="flex flex-col md:flex-row mt-8 font-medium text-sm text-center space-x-0 md:space-x-5 reg-font">
               <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
@@ -389,7 +405,7 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-2">
-                  10,000 Provably-rare Ghoulies.
+                  10,000 provably-rare Space Ghoulies.
                 </p>
               </div>
               <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
@@ -407,7 +423,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-2">
-                  Fair Launch, fair distribution: All ghoulies cost 1.5 SOL.
+                  Fair launch, fair distribution: All Space Ghoulies cost 1.5
+                  SOL.
                 </p>
               </div>
               <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
@@ -443,7 +460,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-10">
-                  Kensa Korbi: A exclusive galaxy viewing bridge.
+                  Kensa Korbi & Captain Ralju's Log: Tools and lore exclusively
+                  for ghoulie holders.
                 </p>
               </div>
               <div className="flex items-center md:block w-full md:w-1/5 mt-0 md:mt-14 justify-center md:justify-start">
@@ -461,8 +479,8 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-16">
-                  Captain Ralju's Log: Decode the messages and memes. Unlock
-                  rewards.
+                  Space Perspective Flight: one small step for ghoulies, one
+                  giant leap for DeFi.
                 </p>
               </div>
             </div>
@@ -487,22 +505,26 @@ export default function Home() {
                   kensa korbi
                 </h2>
                 <p className="pt-4 reg-font">
-                  The Kensa Korbi will enable passengers to view all the
-                  planets, stars and strange creatures found while zipping
-                  through the Solana Galaxy. We're crypto-natives that combined
-                  our love for design and software tools to tell a story. We
-                  want to build the world we live in. Rarity charts, dashboards,
-                  AMMs, and LPs are not out of the question for us.
+                  The Kensa Korbi enables passengers to view all the planets,
+                  stars and strange creatures found while zipping through the
+                  Solana Galaxy.
+                </p>
+                <br />
+                <p className="reg-font">
+                  We're crypto-natives that combined our love for design,
+                  software tools, and art to tell the Space Ghoulie story. We
+                  want to build the world we want to live in. Rarity charts,
+                  dashboards, AMM, and LPs are not out of the question for us.
                 </p>
                 <br />
                 <p className="reg-font">
                   From time to time we will put community rewards into the Kensa
-                  Korbi ranging from commemorative NFTs to secret super shadowy
-                  space liquidity pots.
+                  Korbi ranging from commemorative NFTs to Asteroid Mining
+                  Pools(AMPs).
                 </p>
                 <br />
                 <p className="reg-font">
-                  Always be cautious of lurking fiatbrains as we build this new
+                  Always be cautious of lurking Fiatbrains as we build this new
                   world.
                 </p>
               </div>
@@ -560,11 +582,11 @@ export default function Home() {
                   Flight Plan
                 </h2>
                 <p className="pt-4 reg-font pb-6 pr-16">
-                  Our mission is to create a culture of ultra motivated
-                  enterprising ghoulies who understand the recipe of humans,
-                  machines, and blockchains will usher in a new paradigm of
-                  commerce and value aboard the ISS GHOUL. If we collaborate and
-                  do our best work we can rival any NFT community in the galaxy.
+                  The recipe of humans, machines, and blockchains has aligned
+                  incentives like never before possible in terrestrial society.
+                  Our mission is to create a culture of ultra ambitious ghoulies
+                  who will usher in a paradigm shift of commerce and value
+                  aboard the ISS GHOUL.
                 </p>
                 <div className="flex flex-col md:flex-row letter-spacing-1">
                   <div className="w-full p-0 md:pr-8">
@@ -602,10 +624,10 @@ export default function Home() {
                         </span>
                         <br />
                         <span className="reg-font">
-                          Ghoulies gets a YouTube Channel, PrinceAlGhoul
+                          Ghoulies gets a YouTube Channel, Prince Al Ghoul
                           releases a mixtape. 20% of revenue of both will go to
-                          the TET (Terrestrial Economy Treasury)[link coming
-                          soon]. The DAO will create and vote on proposals to
+                          the TET (Terrestrial Economy Treasury)[insert contract
+                          address]. The DAO will create and vote on proposals to
                           determine allocation of the funds.
                         </span>
                       </div>
@@ -621,9 +643,9 @@ export default function Home() {
                         <span className="letter-spacing-2">Kensa Korbi</span>
                         <br />
                         <span className="reg-font">
-                          The Kensa Korbi is unlocked and now you will be able
-                          to catch a view of the ever changing space-scapes of
-                          the Solana Galaxy - look out for commemorative NFT
+                          The <b>Kensa Korbi</b> is unlocked and now you will be
+                          able to catch a view of the ever changing space-scapes
+                          of the Solana Galaxy - look out for commemorative NFT
                           drops and rewards but beware of fiatbrains.
                         </span>
                       </div>
@@ -643,7 +665,7 @@ export default function Home() {
                         <span className="reg-font">
                           Ghoulies can now can read Captain Ralju's Log. Read
                           their documentation for a chance to win one of the
-                          five hitchhiking ghoulies.
+                          five lost ghoulies.
                         </span>
                       </div>
                     </div>
@@ -662,7 +684,7 @@ export default function Home() {
                         <span className="reg-font">
                           The Pamoi Pendo is chosen and sent to outer space in
                           the terrestrial world in order to find and convert the
-                          fiatbrains to the truth of DeFi. The Pamoi Pendo will
+                          Fiatbrains to the truth of DeFi. The Pamoi Pendo will
                           receive a 1-of-1 mint hand-drawn ghoulie which acts as
                           your ticket to space.
                         </span>
@@ -715,7 +737,7 @@ export default function Home() {
                 THE CAPTAIN'S CREW
               </h2>
               <p className="pt-2 reg-font">
-                Space.Ghoulies was created by five internet friends who became
+                Space Ghoulies was created by five internet friends who became
                 wanderers in the strange universe of DeFi. We'd like to help
                 build the world we want to live in.
               </p>
