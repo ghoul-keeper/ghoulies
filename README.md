@@ -1,6 +1,6 @@
 ### SPACE GHOULIES
 
-Ghoulies.Space is a collection of 10,000 algorithmically unique NFTs on the Solana blockchain. Each Ghoulie doubles as an intergalactic passport on the ISS GHOUL, the mothership for all hitchhiking Ghoulies.
+Space Ghoulies is a collection of 10,000 algorithmically unique NFTs on the Solana blockchain. Each ghoulie doubles as your intergalactic passport on the ISS GHOUL, the mothership for all Ghoulies.
 
 Visit us at [Ghoulies.Space](https://ghoulies.space)
 
