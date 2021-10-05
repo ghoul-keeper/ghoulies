@@ -25,7 +25,7 @@ export default function Footer() {
         <p className="reg-font mb-10">All rights reserved 2021</p>
         <div className="flex justify-between px-8 w-9/12 md:w-3/12 items-center mb-16">
           <a
-            href="https://medium.com/"
+            href="https://medium.com/@Ghoulies"
             target="_blank"
             className="hover:opacity-60"
           >

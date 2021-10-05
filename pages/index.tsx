@@ -45,6 +45,10 @@ const faqs = [
     answer:
       'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.\n\nCheck out our docs for more information.',
   },
+  {
+    question: "ARE YOU SENDING A GHOULIE HOLDER TO SPACE?",
+    answer: "Yes.",
+  },
 ];
 
 function classNames(...classes) {
@@ -171,7 +175,7 @@ export default function Home() {
                   </clipPath>
                 </defs>
               </svg>
-              Join the community on Discord
+              <b>Join the community on Discord</b>
             </a>
           </div>
         </div>
@@ -284,28 +288,27 @@ export default function Home() {
                 <br />
                 <p className="reg-font">
                   To access passenger-only areas such as the Kensa Korbi,
-                  Ghoulie holders will need to be signed in with their Phantom
-                  or Sollet Wallet.
-                </p>
-                <br />
-                <div className="flex flex-row space-x-5">
+                  Ghoulie holders will need to be signed in with their{" "}
                   <a
                     href="https://phantom.app/"
                     target="_blank"
-                    className="font-bold"
+                    className="font-bold hover:opacity-60"
                     style={{ color: "#3a8097" }}
                   >
-                    <p className="reg-font hover:opacity-60">PHANTOM WALLET</p>
+                    Phantom{" "}
                   </a>
+                  or
                   <a
                     href="https://www.sollet.io/"
                     target="_blank"
-                    className="font-bold"
+                    className="font-bold hover:opacity-60"
                     style={{ color: "#3a8097" }}
                   >
-                    <p className="reg-font hover:opacity-60">SOLLET WALLET</p>
+                    {" "}
+                    Sollet{" "}
                   </a>
-                </div>
+                  Wallet.
+                </p>
               </div>
               <img
                 className="w-full md:w-1/3 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
@@ -470,21 +473,21 @@ export default function Home() {
                   for ghoulie holders.
                 </p>
               </div>
-              <div className="flex items-center md:block w-full md:w-1/5 mt-0 md:mt-14 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative">
-                  <span className="bg-shad"></span>
+              <div className="flex items-center md:block w-full md:w-1/5 justify-center md:justify-start">
+                <div className="w-1/3 md:w-auto relative pt-0 md:pt-8">
+                  <span className="bg-shad" style={{ top: "30px" }}></span>
                   <img
-                    className="hid-small center-img w-24 h-auto md:h-32 md:w-auto pb-4 z-10 relative"
-                    src="/icons/item_hat.png"
+                    className="hid-small center-img w-24 h-auto md:h-44 md:w-auto z-10 relative"
+                    src="/icons/item_shuttle.png"
                   />
                   <span className="bg-shad-mobile">
                     <img
                       className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_hat.png"
+                      src="/icons/item_shuttle.png"
                     />
                   </span>
                 </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-16">
+                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-10">
                   Space Perspective Flight: one small step for ghoulies, one
                   giant leap for DeFi.
                 </p>
@@ -567,7 +570,7 @@ export default function Home() {
               </div>
 
               <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="cap-icon" src="/icons/item_book.png" />
+                <img className="cap-icon" src="/icons/item_hat.png" />
               </span>
             </div>
           </div>
@@ -594,9 +597,9 @@ export default function Home() {
                 <p className="pt-4 reg-font pb-6 pr-16">
                   The recipe of humans, machines, and blockchains has aligned
                   incentives like never before possible in terrestrial society.
-                  Our mission is to create a culture of ultra ambitious guild of
-                  ghoulie holders who will usher in a paradigm shift of commerce
-                  and value aboard the ISS GHOUL.
+                  Our mission is to create an ultra ambitious guild of ghoulie
+                  holders who will usher in a paradigm shift of commerce and
+                  value aboard the ISS GHOUL.
                 </p>
                 <div className="flex flex-col md:flex-row letter-spacing-1">
                   <div className="w-full p-0 md:pr-8">
@@ -636,9 +639,9 @@ export default function Home() {
                         <span className="reg-font">
                           Ghoulies gets a YouTube Channel, Prince Al Ghoul
                           releases a mixtape. 20% of revenue of both will go to
-                          the TET (Terrestrial Economy Treasury)[insert contract
-                          address]. The DAO will create and vote on proposals to
-                          determine allocation of the funds.
+                          the TET (Terrestrial Economy Treasury)[coming soon].
+                          The DAO will create and vote on proposals to determine
+                          allocation of the funds.
                         </span>
                       </div>
                     </div>

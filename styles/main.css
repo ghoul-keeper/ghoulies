@@ -42,7 +42,7 @@
 	display: flex;
 	color: white;
 	align-items: center;
-	font-size: 18px;
+	font-size: 17px;
 	font-family: Helvetica, Arial, sans-serif;
 	letter-spacing: 1.2px;
 }
@@ -286,7 +286,7 @@ blockquote p {
 
 .cap-icon {
 	position: absolute;
-	bottom: -40px;
+	bottom: 30px;
 	left: 55%;
 	margin-left: -165.5px;
 	z-index: 2;
