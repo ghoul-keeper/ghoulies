@@ -329,7 +329,7 @@ export default function Home() {
           <div className="inside px-8 md:px-0">
             <div className="flex flex-col md:flex-row items-center">
               <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="cap-icon" src="/icons/item_book.png" />
+                <img className="book-icon" src="/icons/item_book.png" />
               </span>
               <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
                 <h2 className="uppercase text-4xl letter-spacing-2">
