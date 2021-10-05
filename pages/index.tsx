@@ -676,9 +676,9 @@ export default function Home() {
                         </span>
                         <br />
                         <span className="reg-font">
-                          Ghoulies can now can read Captain Ralju's Log. Read
-                          their documentation for a chance to win one of the
-                          five lost ghoulies.
+                          Ghoulies can now read Captain Ralju's Log. Read their
+                          documentation for a chance to win one of the five lost
+                          ghoulies.
                         </span>
                       </div>
                     </div>
