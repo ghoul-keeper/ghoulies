@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "WHEN IS THE LAUNCH?",
-    answer: "TBD",
+    answer: "October 25th",
   },
   {
     question: "WHY SPACE GHOULIES?",
