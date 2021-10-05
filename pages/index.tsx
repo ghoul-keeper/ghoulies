@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "HOW MANY NFTS WILL BE SPAWNING?",
     answer:
-      "There will be exactly 10,000 Ghoulies being released on Oct. ??. They will be 1.5 SOL each (make sure to have ~0.05 SOL for fees)",
+      "There will be exactly 10,000 Ghoulies being released on Oct. 25th. They will be 1.5 SOL each (make sure to have ~0.05 SOL for fees)",
   },
   {
     question: "WHEN IS THE LAUNCH?",
@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ghoulies | Solana | NFT</title>
+        <title>Space Ghoulies | Solana | NFT</title>
         <meta charSet="utf-8" />
         <link
           href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
@@ -263,7 +263,7 @@ export default function Home() {
                 </p>
                 <br />
                 <a
-                  href=""
+                  href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
                   target="_blank"
                   className="font-bold"
                   style={{ color: "#3a8097" }}
@@ -639,9 +639,9 @@ export default function Home() {
                         <span className="reg-font">
                           Ghoulies gets a YouTube Channel, Prince Al Ghoul
                           releases a mixtape. 20% of revenue of both will go to
-                          the TET (Terrestrial Economy Treasury)[coming soon].
-                          The DAO will create and vote on proposals to determine
-                          allocation of the funds.
+                          the Terrestrial Economy Treasury. The DAO will create
+                          and vote on proposals to determine allocation of the
+                          funds.
                         </span>
                       </div>
                     </div>
@@ -887,7 +887,7 @@ export default function Home() {
                             <span>
                               <br />
                               <a
-                                href=""
+                                href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
                                 target="_blank"
                                 style={{ color: "#202020" }}
                                 className="hover:opacity-60 letter-spacing-2"

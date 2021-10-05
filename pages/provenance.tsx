@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ghoulies | Solana | NFT</title>
+        <title>Space Ghoulies | Solana | NFT</title>
         <meta charSet="utf-8" />
         <link
           href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"

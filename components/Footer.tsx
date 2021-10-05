@@ -112,7 +112,11 @@ export default function Footer() {
               />
             </svg>
           </a>
-          <a href="" target="_blank" className="hover:opacity-60">
+          <a
+            href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
+            target="_blank"
+            className="hover:opacity-60"
+          >
             <svg
               width="35px"
               height="26px"
