@@ -197,7 +197,8 @@ export default function Home() {
             <img className="h-auto w-52" src="/ghoulies/8.png" />
             <img className="h-auto w-52" src="/ghoulies/1.png" />
             <img className="h-auto w-52" src="/ghoulies/7.png" />
-            <img className="h-auto w-52" src="/ghoulies/9.png" />
+            <img className="desktop-only h-auto w-52" src="/ghoulies/9.png" />
+            <img className="mobile-only h-auto w-52" src="/ghoulies/19.png" />
             <img className="h-auto w-52" src="/ghoulies/11.png" />
             <img className="h-auto w-52" src="/ghoulies/443.png" />
             <img className="h-auto w-52" src="/ghoulies/19.png" />
