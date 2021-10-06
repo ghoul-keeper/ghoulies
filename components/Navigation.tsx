@@ -36,10 +36,10 @@ const Navigation = (props) => {
             onClick={() => props.setIsOpen(false)}
             id="docs"
             className="pt-4 menu-item"
-            href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
+            href=""
             target="_blank"
           >
-            Docs
+            Docs(coming soon)
           </a>
           <a
             onClick={() => props.setIsOpen(false)}
