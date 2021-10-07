@@ -264,14 +264,12 @@ export default function Home() {
                 </p>
                 <br />
                 <a
-                  href=""
+                  href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
                   target="_blank"
                   className="font-bold"
                   style={{ color: "#3a8097" }}
                 >
-                  <p className="reg-font hover:opacity-60">
-                    DOCS COMING SOON...
-                  </p>
+                  <p className="reg-font hover:opacity-60">DOCS</p>
                 </a>
                 <a
                   href="https://github.com/ghoul-keeper/ghoulies"
@@ -890,12 +888,12 @@ export default function Home() {
                             <span>
                               <br />
                               <a
-                                href=""
+                                href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
                                 target="_blank"
                                 style={{ color: "#202020" }}
                                 className="hover:opacity-60 letter-spacing-2"
                               >
-                                Link to docs(coming soon)
+                                Link to docs
                               </a>
                             </span>
                           ) : null}
