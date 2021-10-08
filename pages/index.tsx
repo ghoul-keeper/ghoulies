@@ -264,14 +264,6 @@ export default function Home() {
                 </p>
                 <br />
                 <a
-                  href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
-                  target="_blank"
-                  className="font-bold"
-                  style={{ color: "#3a8097" }}
-                >
-                  <p className="reg-font hover:opacity-60">DOCS</p>
-                </a>
-                <a
                   href="https://github.com/ghoul-keeper/ghoulies"
                   target="_blank"
                   className="font-bold"
@@ -882,21 +874,6 @@ export default function Home() {
                           <p className="whitespace-pre-wrap reg-font text-white">
                             {faq.answer}
                           </p>
-                          {faq.question ==
-                            "HOW DO I SPAWN A GHOULIE ON SOLANA?" ||
-                          faq.question == "WHAT IS AN NFT?" ? (
-                            <span>
-                              <br />
-                              <a
-                                href="https://app.gitbook.com/@ghoulies-sol/s/ghoulies-guide-to-the-galaxy/"
-                                target="_blank"
-                                style={{ color: "#202020" }}
-                                className="hover:opacity-60 letter-spacing-2"
-                              >
-                                Link to docs
-                              </a>
-                            </span>
-                          ) : null}
                         </Disclosure.Panel>
                       </>
                     )}
