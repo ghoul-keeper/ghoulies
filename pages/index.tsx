@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
     answer:
-      "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to Phantom Wallet.\n\nCheckout our docs on step-by-step guides.",
+      "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to Phantom Wallet.",
   },
   {
     question: "WHAT DO I GET WITH MY GHOULIE?",
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "WHAT IS AN NFT?",
     answer:
-      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.\n\nCheck out our docs for more information.',
+      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.',
   },
   {
     question: "ARE YOU SENDING A GHOULIE HOLDER TO SPACE?",
