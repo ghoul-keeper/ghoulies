@@ -26,27 +26,27 @@ const Navigation = (props) => {
             onClick={() => {
               props.setIsOpen(false);
             }}
-            id="book-of-ghoulie"
+            id="solaunted-forest"
             className="pt-4 menu-item"
-            href="#book-of-ghoulie"
+            href="#solaunted-forest"
           >
-            Book of Ghoulie
+            Solaunted Forest
           </a>
           <a
             onClick={() => props.setIsOpen(false)}
-            id="kensa-korbi"
+            id="reason-for-season"
             className="pt-4 menu-item"
-            href="#kensa-korbi"
+            href="#reason-for-season"
           >
-            Kensa Korbi
+            Reason For Season
           </a>
           <a
             onClick={() => props.setIsOpen(false)}
-            id="cap-log"
+            id="whole-lotta-gang"
             className="pt-4 menu-item"
-            href="#captain-log"
+            href="#whole-lotta-gang"
           >
-            Captain Ralju's Log
+            Gang Sh*t
           </a>
           <a
             onClick={() => props.setIsOpen(false)}
@@ -54,7 +54,7 @@ const Navigation = (props) => {
             className="pt-4 menu-item"
             href="#flight-plan"
           >
-            Flight Plan
+            Roadmap
           </a>
           {/* <a
             onClick={() => props.setIsOpen(false)}

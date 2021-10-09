@@ -58,7 +58,7 @@
 }
 
 .faq-item {
-	background-color: #992930;
+	background-color: #eb6123;
 	border-radius: 32px;
 	padding: 1rem 1.5rem;
 }
@@ -173,6 +173,7 @@ body {
 .hero {
 	background: url("/halloween-bg.png");
 	background-size: cover;
+	background-position: bottom;
 }
 
 .dark-bg {

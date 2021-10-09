@@ -59,14 +59,14 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [initialLoad, setIsInitialLoad] = useState(true);
 
-  let bookOfGhoulie = useRef(null);
-  let bookOfGhoulieId = "book-of-ghoulie";
+  let solauntedForest = useRef(null);
+  let solauntedForestId = "solaunted-forest";
 
-  let kensaKorbi = useRef(null);
-  let kensaKorbiId = "kensa-korbi";
+  let reasonForSeason = useRef(null);
+  let reasonForSeasonId = "reason-for-season";
 
-  let capLog = useRef(null);
-  let capLogId = "captain-log";
+  let wholeLottaGang = useRef(null);
+  let wholeLottaGangId = "whole-lotta-gang";
 
   let flightPlan = useRef(null);
   let flightPlanId = "flight-plan";
@@ -77,12 +77,12 @@ export default function Home() {
         ? window.location.href.slice(window.location.href.indexOf("#") + 1)
         : "";
 
-    if (anchorId === bookOfGhoulieId) {
-      bookOfGhoulie.current.scrollIntoView({ behavior: "smooth" });
-    } else if (anchorId === kensaKorbiId) {
-      kensaKorbi.current.scrollIntoView({ behavior: "smooth" });
-    } else if (anchorId === capLogId) {
-      capLog.current.scrollIntoView({ behavior: "smooth" });
+    if (anchorId === solauntedForestId) {
+      solauntedForest.current.scrollIntoView({ behavior: "smooth" });
+    } else if (anchorId === reasonForSeasonId) {
+      reasonForSeason.current.scrollIntoView({ behavior: "smooth" });
+    } else if (anchorId === wholeLottaGangId) {
+      wholeLottaGang.current.scrollIntoView({ behavior: "smooth" });
     } else if (anchorId === flightPlanId) {
       flightPlan.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -137,13 +137,13 @@ export default function Home() {
               </div>
               <div className="py-0 md:py-8 -mt-14 md:mt-0 text-center md:text-left pb-6 px-4 md:px-0">
                 <h1 className="uppercase text-4xl letter-spacing-3">
-                  SPAWN ABOARD THE ISS GHOUL
+                  GANG GANG GANG
                 </h1>
                 <p className="reg-font max-w-lg py-3">
-                  Space Ghoulies is a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each ghoulie doubles as
-                  your intergalactic passport on the ISS GHOUL, the mothership
-                  for all Ghoulies.
+                  Ghoulie Gang is a multi-season generative collection of 10,000
+                  unique NFTs on the Solana blockchain. Creepy, weird, and
+                  unique just like each one of us. Spawn a ghoulie to be be part
+                  of the gang.
                 </p>
                 <h3 className="uppercase text-2xl letter-spacing-2a">
                   ticket price: 1.5 sol
@@ -209,29 +209,24 @@ export default function Home() {
 
         <div className="dark-bg pb-4 md:pb-12 pt-8 mt-4"></div>
 
-        <div className="welcome-section py-10 text-white relative">
+        <div
+          className="welcome-section py-10 text-white relative"
+          ref={solauntedForest}
+        >
           <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col md:flex-row">
               <span className="rectangle-frame spec">
                 <img className="ship-class" src="/ship.png" />
               </span>
               <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-10 md:pt-0">
                 <h2 className="uppercase text-4xl letter-spacing-2">
-                  WHAT ARE SPACE GHOULIES?
+                  THE SOLAUNTED FOREST
                 </h2>
                 <p className="pt-4 reg-font">
-                  Space Ghoulies is a collection of 10,000 algorithmically
-                  unique NFTs on the Solana blockchain. Each ghoulie doubles as
-                  your intergalactic passport aboard the ISS GHOUL, the
-                  mothership for all ghoulies.
-                </p>
-                <br />
-                <p className="reg-font">
-                  Your ghoulie grants you passenger-only benefits, the first is
-                  access to Captain Ralju's Log an ever-evolving lore written by
-                  AI regarding the ghoulie's intergalactic DeFi adventures. When
-                  all ghoulies have spawned aboard the ISS GHOUL, one holder
-                  will be chosen to travel to space.
+                  Ghoulie Gang is spawning 10,000 unique Halloween edition NFTs
+                  for all the ghosts, ghouls and lost souls on Solana. Holders
+                  of the "Solaunted Forest" collection will be airdropped the
+                  "Turkey Day" collection on November 25, 2021.
                 </p>
               </div>
             </div>
@@ -242,25 +237,56 @@ export default function Home() {
           />
         </div>
 
-        <div className="dna-section py-10 text-white mt-16 md:mt-24 relative">
+        <div
+          className="dna-section py-10 text-white mt-16 md:mt-24 relative"
+          ref={reasonForSeason}
+        >
           <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col md:flex-row">
               <div className="w-full md:w-2/3 md:pr-14 leading-5 text-base">
-                <h2 className="uppercase text-4xl letter-spacing-2">dna</h2>
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  REASON FOR THE SEASONS
+                </h2>
                 <p className="pt-4 reg-font">
-                  Each ghoulie is unique and programmatically generated from
-                  over 152 hand-drawn traits including mouth, headwear, eyes,
-                  bodies, accessories, and more. All ghoulies are rare but some
-                  spawns are more uncommon than others.
+                  Let's call NFT's exactly what they are, casino slot machines.
+                  Mint a rare NFT and boom your in the money. EZ CLAP. We want
+                  to absolutely incentivize this type of Degen behavior because
+                  all the fiat being printed will be absorbed by crypto like a
+                  sponge. Spawning a ghoulie, could be the best asymmetric bet
+                  of your life.
                 </p>
-                <br />
-                <p className="reg-font">
-                  Ghoulies are stored as SPL tokens on the Solana blockchain and
-                  on Arweave. We use QuickNode as our dedicated RPC provider to
-                  scale and handle high amounts of traffic without rate limits.
-                  We use Candy Machine for our smart contract. Candy Machine
-                  helps us and you to have fair mints. This protects us from
-                  over collection and pre-launch spawning malfunctions.
+              </div>
+              <img
+                className="w-full md:w-1/3 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
+                src="/ghoulies/202.png"
+              />
+            </div>
+          </div>
+          <img
+            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
+            src="/effects/a.png"
+          />
+        </div>
+
+        <div
+          className="book-ghoulie text-white mt-16 md:mt-24 py-10 relative"
+          ref={wholeLottaGang}
+        >
+          <div className="inside px-8 md:px-0">
+            <div className="flex flex-col md:flex-row">
+              <span className="rectangle-frame mt-16 md:mt-0">
+                <img className="book-icon" src="/icons/item_book.png" />
+              </span>
+              <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  WHOLE LOTTA GANG SH*T
+                </h2>
+                <p className="pt-4 reg-font">
+                  Each Ghoulie is unique and programmatically generated from
+                  over 152 hand-drawn traits by GHOULAREYOU including mouth,
+                  headwear, eyes, bodies, accessories, and seasonal traits. All
+                  ghoulies are rare but some spawns are more uncommon than
+                  others. We open-sourced it all for the Gang.
                 </p>
                 <br />
                 <a
@@ -280,14 +306,15 @@ export default function Home() {
                 </a>
                 <br />
                 <p className="reg-font">
-                  To access passenger-only areas such as the Kensa Korbi,
-                  Ghoulie holders will need to be signed in with their{" "}
+                  To access areas such as the Clout Canvas you will need to be
+                  signed in with
                   <a
                     href="https://phantom.app/"
                     target="_blank"
                     className="font-bold hover:opacity-60"
                     style={{ color: "#3a8097" }}
                   >
+                    {" "}
                     Phantom{" "}
                   </a>
                   or
@@ -303,62 +330,6 @@ export default function Home() {
                   Wallet.
                 </p>
               </div>
-              <img
-                className="w-full md:w-1/3 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
-                src="/ghoulies/202.png"
-              />
-            </div>
-          </div>
-          <img
-            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
-            src="/effects/a.png"
-          />
-        </div>
-
-        <div
-          className="book-ghoulie text-white mt-16 md:mt-24 py-10 relative"
-          ref={bookOfGhoulie}
-        >
-          <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
-              <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="book-icon" src="/icons/item_book.png" />
-              </span>
-              <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
-                <h2 className="uppercase text-4xl letter-spacing-2">
-                  THE BOOK OF GHOULIE
-                </h2>
-                <p className="pt-4 reg-font">
-                  Following the Fiat Hard Fork, ghoulies were considered misfits
-                  by their peers the Fiatbrains because of their belief in DeFi.
-                  The ghoulies initially sought asylum on{" "}
-                  <a
-                    className="font-bold hover:opacity-60"
-                    style={{ color: "#3a8097" }}
-                    href="https://opensea.io/collection/stinkybinky-collection"
-                    target="_blank"
-                  >
-                    Earthereum
-                  </a>
-                  . However, due to high gas fees, the ghoulies were forced to
-                  venture into unknown parts of the universe.
-                </p>
-                <br />
-                <p className="reg-font">
-                  When Captain Ralju discovered these DeFi nomads, the ghoulies
-                  were almost out of hope having wandered in space for years
-                  without a home galaxy. Captain Ralju, a shadowy super coder
-                  and pilot of the ISS GHOUL stumbled upon the Solana Galaxy
-                  while in search of low gas fees and spawn latency.
-                </p>
-                <br />
-                <p className="reg-font">
-                  Once all 10,000 Ghoulies spawn aboard the ISS GHOUL, a member
-                  of the ghoulie family will be designated as the First Friend
-                  or "Pamoi Pendo." The Pamoi Pendo will be eligible to travel
-                  to intergalactic space in the terrestrial world in 2025.
-                </p>
-              </div>
             </div>
           </div>
           <img
@@ -367,371 +338,41 @@ export default function Home() {
           />
         </div>
 
-        <div className="all-a-bored text-white mt-16 md:mt-24 py-10 relative">
-          <div className="inside px-8 md:px-0">
-            <h2 className="uppercase text-3xl md:text-4xl letter-spacing-2">
-              ALL A-BORED THE ISS GHOUL
-            </h2>
-            <br />
-            <p className="reg-font">
-              Captain Ralju loves making asymmetric bets so when you spawn a
-              ghoulie, you're receiving much more than a decentralized avatar or
-              provably-rare piece of art. Your ghoulie acts as a non-dilutable
-              share in the ISS GHOUL DAO. A governance mechanism for the ship.
-            </p>
-            <br />
-            <blockquote>
-              When ghoulies of true value come together for a common purpose and
-              speak the truth, great things can result. This is the nature of
-              things. - Captain Ralju
-            </blockquote>
-            <br />
-            <p className="reg-font">
-              Each ghoulie you hold acts as one vote in the ISS GHOUL DAO and a
-              1/10,000 chance to go to space. We're quite literally the cheapest
-              ticket to space.
-            </p>
-            <div className="flex flex-col md:flex-row mt-8 font-medium text-sm text-center space-x-0 md:space-x-5 reg-font">
-              <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative">
-                  <span className="bg-shad"></span>
-                  <img
-                    className="hid-small center-img w-16 h-auto md:h-60 md:w-auto pb-4 relative z-10"
-                    src="/icons/item_cup.png"
-                  />
-                  <span className="bg-shad-mobile">
-                    <img
-                      className="center-img w-16 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_cup.png"
-                    />
-                  </span>
-                </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-2">
-                  10,000 provably-rare Space Ghoulies.
-                </p>
-              </div>
-              <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative">
-                  <span className="bg-shad"></span>
-                  <img
-                    className="hid-small center-img w-16 h-auto md:h-60 md:w-auto pb-4 z-10 relative"
-                    src="/icons/item_ipa.png"
-                  />
-                  <span className="bg-shad-mobile">
-                    <img
-                      className="center-img w-16 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_ipa.png"
-                    />
-                  </span>
-                </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-2">
-                  Fair launch, fair distribution: All Space Ghoulies cost 1.5
-                  SOL.
-                </p>
-              </div>
-              <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative pt-0 md:pt-8">
-                  <span className="bg-shad"></span>
-                  <img
-                    className="hid-small center-img w-24 h-auto md:h-52 md:w-auto pb-4 z-10 relative"
-                    src="/icons/item_book.png"
-                  />
-                  <span className="bg-shad-mobile">
-                    <img
-                      className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_book.png"
-                    />
-                  </span>
-                </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 md:pt-2 pt-0">
-                  Ownership and commercial usage rights.
-                </p>
-              </div>
-              <div className="flex items-center md:block mb-10 md:mb-4 w-full md:w-1/5 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative pt-0 md:pt-8">
-                  <span className="bg-shad" style={{ top: "30px" }}></span>
-                  <img
-                    className="hid-small center-img w-24 h-auto md:h-44 md:w-auto pb-4 relative z-10"
-                    src="/icons/item_pyramid.png"
-                  />
-                  <span className="bg-shad-mobile">
-                    <img
-                      className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_pyramid.png"
-                    />
-                  </span>
-                </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-10">
-                  Kensa Korbi & Captain Ralju's Log: Tools and lore exclusively
-                  for ghoulie holders.
-                </p>
-              </div>
-              <div className="flex items-center md:block w-full md:w-1/5 justify-center md:justify-start">
-                <div className="w-1/3 md:w-auto relative pt-0 md:pt-8">
-                  <span className="bg-shad" style={{ top: "30px" }}></span>
-                  <img
-                    className="hid-small center-img w-24 h-auto md:h-44 md:w-auto z-10 relative"
-                    src="/icons/item_shuttle.png"
-                  />
-                  <span className="bg-shad-mobile">
-                    <img
-                      className="center-img w-24 h-auto md:h-32 md:w-auto z-10 relative"
-                      src="/icons/item_shuttle.png"
-                    />
-                  </span>
-                </div>
-                <p className="w-2/4 ml-6 text-left md:text-center md:w-full md:ml-0 pt-0 md:pt-10">
-                  Space Perspective Flight: one small step for ghoulies, one
-                  giant leap for DeFi.
-                </p>
-              </div>
-            </div>
-          </div>
-          <img
-            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
-            src="/effects/a.png"
-          />
-        </div>
-
-        <div
-          className="kensa-korbi text-white mt-16 md:mt-24 py-10 relative"
-          ref={kensaKorbi}
-        >
-          <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
-              <span className="rectangle-frame">
-                <img className="tst-but" src="/icons/item_pyramid.png" />
-              </span>
-              <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
-                <h2 className="uppercase text-4xl letter-spacing-2">
-                  kensa korbi
-                </h2>
+        <div className="flight-plan text-white mt-16" ref={flightPlan}>
+          <div className="inside">
+            <div className="flex flex-col md:flex-row">
+              <div className="w-full md:w-2/3 md:pl-12 leading-5 text-base px-8 md:px-0">
+                <h2 className="uppercase text-4xl letter-spacing-2">Roadmap</h2>
                 <p className="pt-4 reg-font">
-                  The Kensa Korbi enables passengers to view all the planets,
-                  stars and strange creatures found while zipping through the
-                  Solana Galaxy.
+                  The recipe of humans, machines, and blockchains has aligned
+                  incentives like never before possible in society. Our mission
+                  is simply to create the Ghouliest of Gangs.
                 </p>
                 <br />
                 <p className="reg-font">
-                  We're crypto-natives that combined our love for design,
-                  software tools, and art to tell the Space Ghoulie story. We
-                  want to build the world we want to live in. Rarity charts,
-                  dashboards, governance and other software tools are not out of
-                  the question for us.
+                  Spawn Date: <b>October 25, 2021</b>
                 </p>
-                <br />
-                <p className="reg-font">
-                  From time to time we will put community rewards into the Kensa
-                  Korbi ranging from commemorative NFTs to Asteroid Mining
-                  Pools.
-                </p>
-                <br />
-                <p className="reg-font">
-                  Always be cautious of lurking Fiatbrains as we build this new
-                  world.
-                </p>
+                <ul className="reg-font">
+                  <li className="pt-6">
+                    - **Get listed on major exchanges (Solanart, Magic Eden,
+                    DigitalEyes, Solsea)**
+                  </li>
+                  <li className="pt-6">
+                    - **5000 Twitter followers, 2500 Discord**
+                  </li>
+                  <li className="pt-6">
+                    - **Ghoulie Gang Clout Canvas -- Sometimes status matters.
+                    Exploit as needed. #GG
+                  </li>
+                  <li className="pt-6">
+                    - **Turkey Day Drop (Solaunted Forest Holders get Airdrop)**
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <img
-            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
-            src="/effects/c.png"
-          />
-        </div>
-
-        <div
-          className="cap-log py-10 text-white mt-16 md:mt-24 relative"
-          ref={capLog}
-        >
-          <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="w-full md:w-2/3 md:pr-20 leading-5 text-base">
-                <h2 className="uppercase text-4xl letter-spacing-2">
-                  Captain Ralju's Log
-                </h2>
-                <p className="pt-4 reg-font">
-                  Some say Captain Ralju is a droid who became sentient, but the
-                  truth is we don't know anything about their origins. Our only
-                  insight into their adventures are via their flight journals.
-                </p>
-                <br />
-                <p className="reg-font">
-                  The ever-evolving lore exists exclusively for ghoulie holders.
-                  Read the flight journal to unlock the secrets of Captain Ralju
-                  as they teach us where we came from and where we're going.
-                </p>
-              </div>
-
-              <span className="rectangle-frame mt-16 md:mt-0">
-                <img className="cap-icon" src="/icons/item_hat.png" />
-              </span>
-            </div>
-          </div>
-          <img
-            className="absolute right-0 h-full w-auto top-0 pointer-events-none"
-            src="/effects/a.png"
-          />
-        </div>
-
-        <div
-          className="flight-plan text-white mt-16 md:mt-24 py-4 pb-14 md:pb-4"
-          ref={flightPlan}
-        >
-          <div className="px-0 md:px-36 py-6">
-            <div className="flex flex-col md:flex-row items-center">
               <img
-                className="w-2/3 md:w-2/5 my-8 md:mt-0 supa-rounded h-full"
+                className="w-2/3 md:w-2/5 supa-rounded h-full ml-8"
                 src="/roadmap.png"
               />
-              <div className="w-full md:w-2/3 md:pl-12 leading-5 text-base px-8 md:px-0">
-                <h2 className="uppercase text-4xl letter-spacing-2">
-                  Flight Plan
-                </h2>
-                <p className="pt-4 reg-font pb-6 pr-16">
-                  The recipe of humans, machines, and blockchains has aligned
-                  incentives like never before possible in terrestrial society.
-                  Our mission is to create an ultra ambitious guild of ghoulie
-                  holders who will usher in a paradigm shift of commerce and
-                  value aboard the ISS GHOUL.
-                </p>
-                <div className="flex flex-col md:flex-row letter-spacing-1">
-                  <div className="w-full p-0 md:pr-8">
-                    <div className="py-4 flex">
-                      <span
-                        className="pr-12 text-3xl text-shadow"
-                        style={{ color: "#A131C7" }}
-                      >
-                        20%
-                      </span>
-                      <div>
-                        <span className="letter-spacing-2">
-                          High-Res Image Files
-                        </span>
-                        <br />
-                        <span className="reg-font">
-                          Captain Ralju and the Crew would like to remain
-                          anonymous but we'd like you to have full commercial
-                          ownership rights to your ghoulies. Sometimes status
-                          matters and when you own a ghoulie you own something
-                          special. Exploit as needed. Wgmi.
-                        </span>
-                      </div>
-                    </div>
-                    <div className="py-4 flex">
-                      <span
-                        className="pr-12 text-3xl text-shadow"
-                        style={{ color: "#A131C7" }}
-                      >
-                        40%
-                      </span>
-                      <div>
-                        <span className="letter-spacing-2">
-                          Terrestrial Economy Unlocked
-                        </span>
-                        <br />
-                        <span className="reg-font">
-                          Ghoulies gets a YouTube Channel, Prince Al Ghoul
-                          releases a mixtape. 20% of revenue of both will go to
-                          the Terrestrial Economy Treasury. The DAO will create
-                          and vote on proposals to determine allocation of the
-                          funds.
-                        </span>
-                      </div>
-                    </div>
-                    <div className="py-4 flex">
-                      <span
-                        className="pr-12 text-3xl text-shadow"
-                        style={{ color: "#A131C7" }}
-                      >
-                        69%
-                      </span>
-                      <div>
-                        <span className="letter-spacing-2">Kensa Korbi</span>
-                        <br />
-                        <span className="reg-font">
-                          The <b>Kensa Korbi</b> is unlocked and now you will be
-                          able to catch a view of the ever changing space-scapes
-                          of the Solana Galaxy - look out for commemorative NFT
-                          drops and rewards but beware of fiatbrains.
-                        </span>
-                      </div>
-                    </div>
-                    <div className="py-4 flex">
-                      <span
-                        className="pr-12 text-3xl text-shadow"
-                        style={{ color: "#A131C7" }}
-                      >
-                        80%
-                      </span>
-                      <div>
-                        <span className="letter-spacing-2">
-                          Captain Ralju's Log
-                        </span>
-                        <br />
-                        <span className="reg-font">
-                          Ghoulies can now read Captain Ralju's Log. Read their
-                          documentation for a chance to win one of the five lost
-                          ghoulies.
-                        </span>
-                      </div>
-                    </div>
-                    <div className="py-4 flex">
-                      <span
-                        className="pr-8 text-3xl text-shadow"
-                        style={{ color: "#A131C7" }}
-                      >
-                        100%
-                      </span>
-                      <div>
-                        <span className="letter-spacing-2">
-                          Space Perspective Flight - Converting the Un-Ghoul
-                        </span>
-                        <br />
-                        <span className="reg-font">
-                          The Pamoi Pendo is chosen and sent to outer space in
-                          the terrestrial world in order to find and convert the
-                          Fiatbrains to the truth of DeFi. The Pamoi Pendo will
-                          receive a 1-of-1 mint hand-drawn ghoulie which acts as
-                          your ticket to space.
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="fair-spawn text-white mt-16 md:mt-24 py-8 pb-12 md:pb-8">
-          <div className="inside px-8 md:px-0">
-            <div className="flex flex-col md:flex-row items-center">
-              <img
-                className="w-2/3 md:w-1/5 supa-rounded h-full mb-10 md:mb-0"
-                src="/ghoulies/11.png"
-              />
-              <div className="w-full md:w-2/3 md:pl-12 leading-5 text-base">
-                <h2 className="uppercase text-4xl letter-spacing-2">
-                  Fair Spawn
-                </h2>
-                <p className="pt-2 reg-font">
-                  We may have hidden a few easter eggs but there are no bonding
-                  curves or price tiers. Each Space Ghoulie costs 1.5 SOL.
-                </p>
-                <br />
-                <p className="reg-font pb-6">
-                  1% of spawned ghoulies are withheld from the drop to be used
-                  for giveaways, puzzles and for the Crew's passports to spawn
-                  aboard the ISS GHOUL.
-                </p>
-                {/* <a
-                  href="https://solanart.io/"
-                  target="_blank"
-                  className="ghoulie-button"
-                >
-                  Buy on Solanart
-                </a> */}
-              </div>
             </div>
           </div>
         </div>
@@ -743,7 +384,7 @@ export default function Home() {
                 THE CAPTAIN'S CREW
               </h2>
               <p className="pt-2 reg-font">
-                Space Ghoulies was created by five internet friends who became
+                Ghoulie Gang was created by five internet friends who became
                 wanderers in the strange universe of DeFi. We'd like to help
                 build the world we want to live in.
               </p>
