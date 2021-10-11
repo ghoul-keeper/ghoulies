@@ -67,7 +67,7 @@ const Navigation = (props) => {
         <a href="/" className="hover:opacity-60">
           <img
             className="absolute bottom-10 custom-left"
-            src="/space-ghoulies-badge.svg"
+            src="/ghoulie-gang-logo.png"
           />
         </a>
       </Menu>

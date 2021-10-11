@@ -4,7 +4,7 @@ Space Ghoulies is a collection of 10,000 algorithmically unique NFTs on the Sola
 
 Visit us at [Ghoulies.Space](https://ghoulies.space)
 
-![Ghoulies logo](./public/space-ghoulies-logo.png)
+![Ghoulies logo](./public/ghoulie-gang-logo.png)
 
 ---
 
