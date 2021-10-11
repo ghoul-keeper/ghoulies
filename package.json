@@ -22,6 +22,7 @@
     "@solana/web3.js": "^1.26.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
+    "html-react-parser": "^1.4.0",
     "next": "^11.0.0",
     "next-transpile-modules": "^8.0.0",
     "react": "17.0.2",

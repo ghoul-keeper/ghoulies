@@ -38,8 +38,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item {
+  display: flex;
 	color: rgb(229, 231, 235);
 	letter-spacing: 2px;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 0 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.sol-log {
+  position: absolute;
+  width: 150px;
+  height: 18.8px;
+  right: 100px;
+  top: 41px;
 }
 
 .menu-item:hover {
@@ -48,14 +61,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #031423;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #031423;
 }
 
 /* Wrapper for item list */
@@ -92,5 +105,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .custom-left {
-	left: 60px;
+	left: 0px;
 }
