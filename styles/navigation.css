@@ -38,8 +38,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-item {
+  display: flex;
 	color: rgb(229, 231, 235);
 	letter-spacing: 2px;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 0 1.5rem;
 }
 
 .menu-item:hover {

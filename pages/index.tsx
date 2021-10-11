@@ -38,56 +38,8 @@ const faqs = [
   },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
-  const [initialLoad, setIsInitialLoad] = useState(true);
-
-  let solauntedForest = useRef(null);
-  let solauntedForestId = "solaunted-forest";
-
-  let reasonForSeason = useRef(null);
-  let reasonForSeasonId = "reason-for-season";
-
-  let wholeLottaGang = useRef(null);
-  let wholeLottaGangId = "whole-lotta-gang";
-
-  let flightPlan = useRef(null);
-  let flightPlanId = "flight-plan";
-
-  let scrollToPos = () => {
-    let anchorId =
-      typeof window !== "undefined"
-        ? window.location.href.slice(window.location.href.indexOf("#") + 1)
-        : "";
-
-    if (anchorId === solauntedForestId) {
-      solauntedForest.current.scrollIntoView({ behavior: "smooth" });
-    } else if (anchorId === reasonForSeasonId) {
-      reasonForSeason.current.scrollIntoView({ behavior: "smooth" });
-    } else if (anchorId === wholeLottaGangId) {
-      wholeLottaGang.current.scrollIntoView({ behavior: "smooth" });
-    } else if (anchorId === flightPlanId) {
-      flightPlan.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  useEffect(() => {
-    if (initialLoad) {
-      setTimeout(() => {
-        scrollToPos();
-      }, 1000);
-    } else {
-      scrollToPos();
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    setIsInitialLoad(false);
-  }, []);
 
   return (
     <div>
