@@ -17,18 +17,14 @@ const WalletProvider = dynamic(
 
 const faqs = [
   {
-    question: "HOW MANY NFTS WILL BE SPAWNING?",
+    question: "HOW MANY GHOULIES WILL BE SPAWNING?",
     answer:
       "There will be exactly 10,000 Ghoulies being released on Oct. 25th. They will be 1.5 SOL each (make sure to have ~0.05 SOL for fees)",
   },
   {
-    question: "WHEN IS THE LAUNCH?",
-    answer: "October 25th",
-  },
-  {
-    question: "WHY SPACE GHOULIES?",
+    question: "WHY GHOULIE GANG?",
     answer:
-      "NFTs are the equivalent of the Renaissance in our humble opinion.\n\nGhoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU. Those original 1-of-1's spawned the project you see before you today. On a technical level we wanted to build a project with intention and the longterm in mind. We built Space Ghoulies because we believe that decentralization will usher in the future of work.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in terrestrial society. Our mission is to create a culture of ultra ambitious ghoulie holders who will usher in a paradigm shift of commerce and value aboard the ISS GHOUL.",
+      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU(link this out to the OG collection). Those original 1-of-1's inspired the Ghoulie Gang.  Each Ghoulie is unique and generated from over 152 hand-drawn traits. All Ghoulies are rare but some spawns are more uncommon than others and we’ve open-sourced it all for the Gang.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in society. Printed fiat is being absorbed by crypto like a sponge so we wanted to incentivize Degen behavior. Our mission is simply to create the Ghouliest of Gangs.",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
@@ -36,18 +32,9 @@ const faqs = [
       "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to Phantom Wallet.",
   },
   {
-    question: "WHAT DO I GET WITH MY GHOULIE?",
-    answer:
-      "Each ghoulie acts as your passport and as a non-dilutable share to vote on ISS GHOUL DAO proposals. We've also released all creative and commercial usage to you for any Ghoulies you hold in your wallet. ",
-  },
-  {
     question: "WHAT IS AN NFT?",
     answer:
       'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.',
-  },
-  {
-    question: "ARE YOU SENDING A GHOULIE HOLDER TO SPACE?",
-    answer: "Yes.",
   },
 ];
 
@@ -367,6 +354,28 @@ export default function Home() {
                           <p className="whitespace-pre-wrap reg-font text-white">
                             {faq.answer}
                           </p>
+                          {faq.question == "WHY GHOULIE GANG?" ? (
+                            <span>
+                              <br />
+                              <a
+                                href="https://github.com/ghoul-keeper/ghoulies"
+                                target="_blank"
+                                style={{ color: "#202020" }}
+                                className="hover:opacity-60 letter-spacing-2"
+                              >
+                                GIT REPO
+                              </a>
+                              <br />
+                              <a
+                                href="/"
+                                target="_blank"
+                                style={{ color: "#202020" }}
+                                className="hover:opacity-60 letter-spacing-2"
+                              >
+                                CANDY MACHINE ID COMING SOON...
+                              </a>
+                            </span>
+                          ) : null}
                         </Disclosure.Panel>
                       </>
                     )}
