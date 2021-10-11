@@ -47,6 +47,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-items: center;
 }
 
+.sol-log {
+  position: fixed;
+  width: 150px;
+  height: 18.8px;
+  right: 100px;
+  top: 41px;
+}
+
 .menu-item:hover {
 	color: #3a8097;
 }

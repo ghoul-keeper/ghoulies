@@ -31,6 +31,16 @@
 	transform: translateY(5px);
 }
 
+.anchor-here {
+	color: rgb(32, 32, 32);
+	letter-spacing: 2.75px;
+	font-family: "Spot", sans-serif;
+}
+
+.anchor-here:hover {
+	opacity: .6;
+}
+
 .pos-gho-tra-s {
 	transform: translateY(2px);
 }

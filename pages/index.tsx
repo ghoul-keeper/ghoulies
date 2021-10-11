@@ -5,6 +5,7 @@ import { PlusIcon, MinusIcon } from "@heroicons/react/outline";
 import dynamic from "next/dynamic";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import parse from "html-react-parser";
 
 // Work around to use the Solana Wallet Adapter with Next.js
 // https://github.com/solana-labs/wallet-adapter/issues/30
@@ -24,17 +25,17 @@ const faqs = [
   {
     question: "WHY GHOULIE GANG?",
     answer:
-      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by GHOULAREYOU(link this out to the OG collection). Those original 1-of-1's inspired the Ghoulie Gang.  Each Ghoulie is unique and generated from over 152 hand-drawn traits. All Ghoulies are rare but some spawns are more uncommon than others and we’ve open-sourced it all for the Gang.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in society. Printed fiat is being absorbed by crypto like a sponge so we wanted to incentivize Degen behavior. Our mission is simply to create the Ghouliest of Gangs.",
+      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by [GHOULAREYOU](https://opensea.io/collection/stinkybinky-collection). Those original 1-of-1's inspired the Ghoulie Gang.  Each Ghoulie is unique and generated from over 152 hand-drawn traits. All Ghoulies are rare but some spawns are more uncommon than others and we’ve open-sourced it all for the Gang.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in society. Printed fiat is being absorbed by crypto like a sponge so we wanted to incentivize Degen behavior. Our mission is simply to create the Ghouliest of Gangs.",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
     answer:
-      "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to Phantom Wallet.",
+      "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to [Phantom Wallet](https://phantom.app/).",
   },
   {
     question: "WHAT IS AN NFT?",
     answer:
-      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives globally not just locally.',
+      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives. Spawning a Ghoulie, could be the best asymmetric bet of your life.',
   },
 ];
 
@@ -44,7 +45,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Space Ghoulies | Solana | NFT</title>
+        <title>Ghoulie Gang | Solana | NFT</title>
         <meta charSet="utf-8" />
         <link
           href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
@@ -59,10 +60,22 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Ghoulie Gang is a multi-season generative collection of 10,000 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us. Spawn a Ghoulie to be be part of the Gang."
+        />
+        <meta name="keywords" content="Solana, Blockchain, NFT" />
       </Head>
 
       <main className="relative overflow-hidden">
         {/* <WalletProvider objectOfScrolls={objOfScrolls} /> */}
+        <a
+          href="https://solana.com/"
+          target="_blank"
+          className="hover:opacity-60"
+        >
+          <img src="/solana.png" className="sol-log" />
+        </a>
         <Navigation setIsOpen={setIsOpen} isOpen={isOpen} />
         <div className="hero">
           <div className="inside px-8 md:px-0 pb-8">
@@ -304,7 +317,13 @@ export default function Home() {
                         </dt>
                         <Disclosure.Panel as="dd" className="mt-2 pr-12">
                           <p className="whitespace-pre-wrap reg-font text-white">
-                            {faq.answer}
+                            {parse(
+                              faq.answer.replace(/\[.*?\]\(.*?\)/g, (text) => {
+                                let [_fullmatch, name, link] =
+                                  /\[(.*?)\]\((.*?)\)/g.exec(text);
+                                return `<a class="anchor-here" target="_blank" href="${link}">${name}</a>`;
+                              })
+                            )}
                           </p>
                           {faq.question == "WHY GHOULIE GANG?" ? (
                             <span>
