@@ -181,7 +181,7 @@ export default function Home() {
         <a
           href="https://discord.gg/SY4tmHx5NC"
           target="_blank"
-          className="discord-bubble m-auto my-8 p-6 px-10"
+          className="discord-bubble m-auto my-8 px-10"
         >
           <svg
             className="h-auto w-10 md:w-8 mr-5"
@@ -206,7 +206,7 @@ export default function Home() {
           <b>Join the community on Discord</b>
         </a>
 
-        <div className="ghoulies-demo mt-4 overflow-hidden">
+        <div className="ghoulies-demo py-4 overflow-hidden">
           <div className="demo-1 flex w-full items-center justify-center space-x-1 pb-1">
             <img className="h-auto w-52" src="/ghoulies/7.png" />
             <img className="h-auto w-52" src="/ghoulies/4.png" />

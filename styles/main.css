@@ -99,6 +99,10 @@
 body {
 	margin: 0;
 	font-family: "Spot", sans-serif;
+  background: #031423;
+}
+
+.ghoulies-demo {
 	background: #000;
 }
 
