@@ -99,7 +99,7 @@ export default function Home() {
                 </p>
                 <br />
                 <p className="reg-font max-w-lg pb-3">
-                  Holders of Season 1 may recieve special Thanksgiving airdrops
+                  Holders of Season 1 may receive special Thanksgiving airdrops
                   and exclusive access to Season 2: Christmas
                 </p>
                 <ul className="flex justify-center items-center space-x-1 md:space-x-3 px-2 md:px-0">
