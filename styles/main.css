@@ -23,15 +23,28 @@
 	z-index: 1;
 }
 
+.pos-gho {
+	margin-bottom: -16px;
+}
+
+.pos-gho-tra {
+	transform: translateY(6px);
+}
+
+.pos-gho-tra-s {
+	transform: translateY(2px);
+}
+
 .logo-bg {
-	background: url("/header-ghoulie-large.png") no-repeat center center;
+	background: url(/Ghoulie-lg-01.png) no-repeat center center;
 	background-size: cover;
-	height: 130%;
-	width: 17rem;
+	height: 113%;
+	width: 22rem;
 	max-width: 100vw;
 	position: relative;
-	top: 20%;
-	transform: translateY(-38%);
+	top: 24.5%;
+	transform: translateY(-33%);
+	left: -6%;
 }
 
 .discord-bubble {
@@ -58,7 +71,7 @@
 }
 
 .faq-item {
-	background-color: #eb6123;
+	background-color: #13548a;;
 	border-radius: 32px;
 	padding: 1rem 1.5rem;
 }
@@ -86,7 +99,7 @@
 body {
 	margin: 0;
 	font-family: "Spot", sans-serif;
-	background: #090212;
+	background: #000;
 }
 
 .center-img {
@@ -153,7 +166,7 @@ body {
 }
 
 .blur-bg {
-	background-color: #090212;
+	background-color: #031423;
 }
 
 .gh-shadow {
@@ -171,7 +184,7 @@ body {
 }
 
 .hero {
-	background: url("/halloween-bg.png");
+	background: url("/ghoulies-mast-background-halloween.jpg");
 	background-size: cover;
 	background-position: bottom;
 }
@@ -182,7 +195,7 @@ body {
 }
 
 .welcome {
-	background-color: #2f1021;
+	background-color: #051624;
 	border-radius: 40px;
 }
 
@@ -259,7 +272,7 @@ blockquote p {
 }
 
 .the-crew {
-	background-color:#3ba571;
+	background-color:#632469;
 }
 
 .tst-but {
@@ -316,7 +329,7 @@ blockquote p {
 }
 
 .foot {
-	background-color: #202020;
+	background-color: #000;
 }
 
 .all-a-bored {
@@ -451,14 +464,29 @@ enable-background:new 0 0 248 204;
 	display: block;
 }
 	.discord-bubble {
-		width: 100%;
+		width: 80%;
+		font-size: 14px;
 	}
 
 	.logo-bg {
 		top: 15px;
 		height: 15rem;
+		left: 0;
 		width: auto;
 		background-size: contain;
+		margin-bottom: 10px;
+	}
+
+	.pos-gho {
+		margin-bottom: -9px;
+	}
+
+	.pos-gho-tra {
+		transform: translateY(3px);
+	}
+
+	.pos-gho-tra-s {
+		transform: translateY(1px);
 	}
 
 	.logo-bg-cont {
