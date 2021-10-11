@@ -48,7 +48,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .sol-log {
-  position: fixed;
+  position: absolute;
   width: 150px;
   height: 18.8px;
   right: 100px;
