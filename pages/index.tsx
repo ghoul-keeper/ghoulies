@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "HOW MANY GHOULIES WILL BE SPAWNING?",
     answer:
-      "There will be exactly 10,000 Ghoulies being released on Oct. 25th. They will be 1.5 SOL each (make sure to have ~0.05 SOL for fees)",
+      "There will be exactly 10,000 Ghoulies released on Oct. 25th. They will be 1.5 SOL each (make sure to have ~0.05 SOL for fees)",
   },
   {
     question: "WHY GHOULIE GANG?",
@@ -185,7 +185,7 @@ export default function Home() {
           <div className="inside px-8 md:px-0">
             <div className="w-full leading-5 text-base">
               <h2 className="uppercase text-3xl md:text-4xl letter-spacing-2">
-                THE CAPTAIN'S CREW
+                OGG
               </h2>
               <p className="pt-2 reg-font">
                 Ghoulie Gang was created by five internet friends who became
