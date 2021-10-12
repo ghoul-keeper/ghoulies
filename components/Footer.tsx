@@ -40,7 +40,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://discord.gg/SY4tmHx5NC"
+            href="https://discord.gg/UQQ2ySbt"
             target="_blank"
             className="hover:opacity-60"
           >

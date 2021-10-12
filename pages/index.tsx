@@ -131,7 +131,7 @@ export default function Home() {
         </div>
 
         <a
-          href="https://discord.gg/SY4tmHx5NC"
+          href="https://discord.gg/UQQ2ySbt"
           target="_blank"
           className="discord-bubble m-auto my-8 px-10"
         >
