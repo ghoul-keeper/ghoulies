@@ -251,10 +251,10 @@ export default function Home() {
                 />
                 <a
                   className="uppercase text-sm letter-spacing-1 text-center pt-2 hover:opacity-75"
-                  href="https://twitter.com/wb_ghoulie"
+                  href="https://twitter.com/fiatbrain"
                   target="_blank"
                 >
-                  <h3>@Wooly Bully Ghoulie</h3>
+                  <h3>@Fiatbrain</h3>
                 </a>
                 <p className="reg-font text-center pt-2 w-10/12">
                   DeFi Immigrant. Don’t Panic!
@@ -270,7 +270,7 @@ export default function Home() {
                   href="https://twitter.com/hicryptopete"
                   target="_blank"
                 >
-                  <h3>@pistolpete</h3>
+                  <h3>@hicryptopete</h3>
                 </a>
                 <p className="reg-font text-center pt-2">
                   Apps To Dapps. Good Vibes Only.
