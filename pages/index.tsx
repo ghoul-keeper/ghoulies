@@ -118,7 +118,8 @@ export default function Home() {
                   Halloween
                 </h1>
                 <p className="reg-font max-w-lg pt-3">
-                  The first Ghoulie Gang drop is happening October 25 on Solana
+                  The first Ghoulie Gang drop is happening October 25th on
+                  Solana
                 </p>
                 <br />
                 <p className="reg-font max-w-lg pb-3">
