@@ -67,6 +67,11 @@ export default function Home() {
         <meta name="keywords" content="Solana, Blockchain, NFT" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GhouliesNFT" />
+        <meta name="twitter:title" content="Ghoulie Gang | Solana | NFT" />
+        <meta
+          name="twitter:description"
+          content="Ghoulie Gang is a multi-season generative collection of 10,000 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us. Spawn a Ghoulie to be be part of the Gang."
+        />
         <meta name="twitter:creator" content="@GhouliesNFT" />
         <meta
           name="twitter:image"
