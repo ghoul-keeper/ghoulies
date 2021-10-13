@@ -118,13 +118,31 @@ export default function Home() {
                   Halloween
                 </h1>
                 <p className="reg-font max-w-lg pt-3">
-                  The first Ghoulie Gang drop is happening October 25th on
-                  Solana
+                  Catch a spooky Halloween Ghoulie in the first Ghoulie Gang
+                  drop!
+                </p>
+                <p className="reg-font max-w-lg">
+                  October 25 at 5PM UTC/10AM EST on Solana.
                 </p>
                 <br />
                 <p className="reg-font max-w-lg pb-3">
-                  Holders of Season 1 may receive special Thanksgiving airdrops
-                  and exclusive access to Season 2: Christmas
+                  Follow along on{" "}
+                  <a
+                    className="underline hover:opacity-60"
+                    target="_blank"
+                    href="https://twitter.com/GhouliesNFT"
+                  >
+                    Twitter
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    className="underline hover:opacity-60"
+                    target="_blank"
+                    href="https://discord.gg/UQQ2ySbt"
+                  >
+                    Discord
+                  </a>
+                  .
                 </p>
                 <ul className="flex justify-center items-center space-x-1 md:space-x-3 px-2 md:px-0">
                   <li className="pos-gho">
