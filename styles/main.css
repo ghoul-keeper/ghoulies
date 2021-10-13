@@ -203,11 +203,6 @@ body {
 	background-position: bottom;
 }
 
-.dark-bg {
-	background: url("/dark-night-bg.png");
-	background-size: cover;
-}
-
 .welcome {
 	background-color: #051624;
 	border-radius: 40px;
@@ -532,14 +527,6 @@ enable-background:new 0 0 248 204;
 @media (min-width: 1024px) {
 	.block-links li:before {
 		position: absolute;
-	}
-}
-
-@media (max-width: 1024px) {
-	.bg-small {
-		background: url("/space_square.png");
-		background-repeat: repeat; 
-		width: 100%;
 	}
 }
 
