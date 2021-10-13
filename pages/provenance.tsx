@@ -55,6 +55,20 @@ export default function Home() {
           content="Ghoulie Gang is a multi-season generative collection of 10,000 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us. Spawn a Ghoulie to be be part of the Gang."
         />
         <meta name="keywords" content="Solana, Blockchain, NFT" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@GhouliesNFT" />
+        <meta name="twitter:creator" content="@GhouliesNFT" />
+        <meta property="og:title" content="Ghoulie Gang" />
+        <meta property="og:url" content="https://www.ghouliegang.io/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.ghouliegang.io/share-img.png"
+        />
+        <meta
+          property="og:description"
+          content="Ghoulie Gang is a multi-season generative collection of 10,000 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us. Spawn a Ghoulie to be be part of the Gang."
+        />
       </Head>
 
       <main className="relative overflow-hidden inside px-8 md:px-0">
