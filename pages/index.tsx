@@ -68,7 +68,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GhouliesNFT" />
         <meta name="twitter:creator" content="@GhouliesNFT" />
-        <meta property="og:title" content="Ghoulie Gang" />
+        <meta
+          name="twitter:image"
+          content="https://www.ghouliegang.io/share-img.png"
+        />
+        <meta property="og:title" content="Ghoulie Gang | Solana | NFT" />
         <meta property="og:url" content="https://www.ghouliegang.io/" />
         <meta property="og:type" content="website" />
         <meta
