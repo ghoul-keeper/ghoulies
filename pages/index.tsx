@@ -122,7 +122,7 @@ export default function Home() {
                   drop!
                 </p>
                 <p className="reg-font max-w-lg">
-                  October 25th at 5PM UTC/10AM EST on Solana.
+                  October 25th at 8PM UTC/4PM EST on Solana.
                 </p>
                 <br />
                 <p className="reg-font max-w-lg pb-3">
