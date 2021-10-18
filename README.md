@@ -1,6 +1,6 @@
 ### GHOULIE GANG
 
-Ghoulie Gang is a multi-season generative collection of 10,000 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us.
+Ghoulie Gang is a multi-season generative collection of 7,500 unique NFTs on the Solana blockchain. Creepy, weird, and unique just like each one of us.
 
 Visit us at [ghouliegang.io](https://ghouliegang.io)
 
@@ -10,8 +10,8 @@ Visit us at [ghouliegang.io](https://ghouliegang.io)
 
 ### The Team
 
-- [@GHOULAREYOU](https://twitter.com/ghoulareyou)
-- [@2GHOUL4SCHOOL](https://twitter.com/GrouchyGhoulie)
-- [@GHOUL_KEEPER](https://twitter.com/ghoul_keeper)
-- [@Fiatbrain](https://twitter.com/fiatbrain)
+- [@ghoulareyou](https://twitter.com/ghoulareyou)
+- [@2ghoul4school](https://twitter.com/GrouchyGhoulie)
+- [@ghoul_keeper](https://twitter.com/ghoul_keeper)
+- [@fiatbrain](https://twitter.com/fiatbrain)
 - [@hicryptopete](https://twitter.com/hicryptopete)

@@ -226,7 +226,7 @@ const Hero = (props: HomeProps) => {
                 </span>
               </h1>
               <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                10,000 <b>unique</b> algorithmically generated Ghoulies on the
+                7,500 <b>unique</b> algorithmically generated Ghoulies on the
                 Solana blockchain. Using Candy Machine for our smart contract to
                 guarantee we don't over-collect.
               </p>

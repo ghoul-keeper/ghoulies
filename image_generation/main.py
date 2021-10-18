@@ -775,7 +775,7 @@ def createGhoulieMetadata(ghoulie):
     m = {}
     m["name"] = 'Ghoulie #' + str(ghoulie_id).zfill(4)
     m["symbol"] = 'GHOULIE'
-    m["description"] = 'Ghoulies.Space is a collection of 10,000 algorithmically unique NFTs on the Solana blockchain.'
+    m["description"] = 'Ghoulies.Space is a collection of 7,500 algorithmically unique NFTs on the Solana blockchain.'
     m["seller_fee_basis_points"] = 690
     m["image"] = str(ghoulie_id) + '.png'
     m["external_url"] = 'https://www.ghoulies.space'
