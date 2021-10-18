@@ -223,6 +223,134 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="ghoulies-section py-10 text-white mt-16 md:mt-24 relative">
+          <div className="inside px-8 md:px-0">
+            <div className="flex flex-col md:flex-row">
+              <div className="w-full md:w-2/3 md:pr-20 leading-5 text-base">
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  ghoulies
+                </h2>
+                <p className="pt-4 reg-font">
+                  Ghoulies debut as{" "}
+                  <a
+                    className="simple-link"
+                    href="https://opensea.io/collection/stinkybinky-collection"
+                    target="_blank"
+                  >
+                    25 1-of-1 hand-drawings
+                  </a>{" "}
+                  created by{" "}
+                  <a
+                    className="simple-link"
+                    href="https://twitter.com/ghoulareyou"
+                    target="_blank"
+                  >
+                    @ghoulareyou
+                  </a>{" "}
+                  on the Ethereum chain.
+                </p>
+                <br />
+                <p className="reg-font">
+                  Those original's inspired the Ghoulie Gang, generativly unique
+                  Halloween series from over 152 hand-drawn traits. All Ghoulies
+                  are rare but some spawns are more uncommon than others but
+                  each have thier own peronality.
+                </p>
+              </div>
+              <img
+                className="w-full md:w-3/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black mr-10"
+                src="/ghoulies/279.png"
+              />
+              <img
+                className="w-full md:w-3/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
+                src="/ghoulies/228.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="open-source text-white mt-16 py-10 relative">
+          <div className="inside px-8 md:px-0">
+            <div className="flex flex-col md:flex-row">
+              <img
+                className="w-full md:w-4/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
+                src="/ghoulies/316.png"
+              />
+              <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  Open source
+                </h2>
+                <p className="pt-4 reg-font">
+                  Ghoulies are stored as SPL tokens on the{" "}
+                  <a
+                    className="simple-link"
+                    href="https://solana.com/"
+                    target="_blank"
+                  >
+                    Solana blockchain
+                  </a>{" "}
+                  and on{" "}
+                  <a
+                    className="simple-link"
+                    href="https://www.arweave.org/"
+                    target="_blank"
+                  >
+                    Arweave
+                  </a>
+                  . We use{" "}
+                  <a
+                    className="simple-link"
+                    href="https://www.quicknode.com/"
+                    target="_blank"
+                  >
+                    QuickNode
+                  </a>{" "}
+                  as our dedicated RPC provider to scale and handle high amounts
+                  of traffic without rate limits. We use{" "}
+                  <a
+                    className="simple-link"
+                    href="https://github.com/metaplex-foundation/metaplex/blob/master/rust/nft-candy-machine/src/lib.rs"
+                    target="_blank"
+                  >
+                    Candy Machine
+                  </a>{" "}
+                  for our smart contract. Candy Machine helps us and you to have
+                  fair mints. This protects us from over collection and
+                  pre-launch minting malfunctions.
+                  <br />
+                  <br />
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://github.com/ghoul-keeper/ghoulies"
+                    target="_blank"
+                  >
+                    GIT REPO
+                  </a>
+                  <br />
+                  <a>CANDY MACHINE ID COMING SOON...</a>
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://link.medium.com/pz674xxPrkb"
+                    target="_blank"
+                  >
+                    The New Solana NFT Standard
+                  </a>
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://link.medium.com/QhfrNHojkkb"
+                    target="_blank"
+                  >
+                    Why Provenance Isn’t Talked About on the Solana Blockchain
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="the-crew text-white mt-16 py-8">
           <div className="inside px-8 md:px-0">
             <div className="w-full leading-5 text-base">
