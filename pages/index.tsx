@@ -226,7 +226,7 @@ export default function Home() {
                   ghoulies
                 </h2>
                 <p className="pt-4 reg-font">
-                  Ghoulies debut as{" "}
+                  Ghoulies debuted as{" "}
                   <a
                     className="simple-link"
                     href="https://opensea.io/collection/stinkybinky-collection"
@@ -242,14 +242,14 @@ export default function Home() {
                   >
                     @ghoulareyou
                   </a>{" "}
-                  on the Ethereum chain.
+                  on the Ethereum blockchain.
                 </p>
                 <br />
                 <p className="reg-font">
-                  Those original's inspired the Ghoulie Gang, generativly unique
-                  Halloween series from over 200+ hand-drawn traits. All
-                  Ghoulies are rare but some spawns are more uncommon than
-                  others but each have thier own peronality.
+                  Those originals inspired the Ghoulie Gang's generatively
+                  unique Halloween season from over 200+ hand-drawn traits. All
+                  Ghoulies are rare and some spawns are more uncommon than
+                  others but each ghoulie has its own personality.
                 </p>
               </div>
               <img
