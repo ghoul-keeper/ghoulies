@@ -175,6 +175,19 @@ body {
 	margin: 0 auto;
 }
 
+.simple-link {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.simple-link:hover {
+	opacity: 60%;
+}
+
+.open-source {
+	background-color: #237879;
+}
+
 .special-bg-h {
 	height: 100vh;
 }
@@ -210,6 +223,10 @@ body {
 
 .welcome-section, .dna-section, .kensa-korbi, .roadmap, .community-tools, .fair-spawn, .book-ghoulie {
 	background-color: #202020;
+}
+
+.ghoulies-section {
+	background-color: #194052;
 }
 
 .cap-log {

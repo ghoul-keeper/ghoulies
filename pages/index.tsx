@@ -18,24 +18,19 @@ const WalletProvider = dynamic(
 
 const faqs = [
   {
-    question: "HOW MANY GHOULIES WILL BE SPAWNING?",
+    question: "WHEN IS THE LAUNCH AND HOW MUCH?",
     answer:
       "There will be exactly 10,000 Ghoulies released on Oct. 25th. They will be 0.75 SOL each (make sure to have ~0.05 SOL for fees)",
   },
   {
-    question: "WHY GHOULIE GANG?",
-    answer:
-      "Ghoulies was the original name given to the 1-of-1 hand-drawings created by [GHOULAREYOU](https://opensea.io/collection/stinkybinky-collection). Those original 1-of-1's inspired the Ghoulie Gang.  Each Ghoulie is unique and generated from over 152 hand-drawn traits. All Ghoulies are rare but some spawns are more uncommon than others and we’ve open-sourced it all for the Gang.\n\nThe recipe of humans, machines, and blockchains has aligned incentives like never before possible in society. Printed fiat is being absorbed by crypto like a sponge so we wanted to incentivize Degen behavior. Our mission is simply to create the Ghouliest of Gangs.\n\nGhoulies are stored as SPL tokens on the Solana blockchain and on [Arweave](https://www.arweave.org/). We use [QuickNode](https://www.quicknode.com/) as our dedicated RPC provider to scale and handle high amounts of traffic without rate limits. We use [Candy Machine](https://github.com/metaplex-foundation/metaplex/blob/master/rust/nft-candy-machine/src/lib.rs) for our smart contract. Candy Machine helps us and you to have fair mints. This protects us from over collection and pre-launch minting malfunctions.",
-  },
-  {
-    question: "HOW DO I SPAWN A GHOULIE ON SOLANA?",
+    question: "HOW DO I SPAWN A GHOULIE?",
     answer:
       "In order to purchase a Ghoulie, you’ll need to use Solana (SOL), which you can get at most of the exchanges (Coinbase, Binance, FTX, Gemini). Always remember to have extra Solana to cover the network transaction fee.\n\nOnce you've loaded up on the eco-friendly SOL, you’ll need a wallet to store it in. If you’re familiar with ether and their wallets (such as Metamask), let us introduce you to [Phantom Wallet](https://phantom.app/).",
   },
   {
-    question: "WHAT IS AN NFT?",
+    question: "WHAT'S THE ROADMAP?",
     answer:
-      'NFT is an acronym for the technical term "non-fungible token." Each token is essentially a digital asset living permanently on the blockchain.\n\nThey may seem quite esoteric now but the smartest people in the world are building on the blockchain so humans can live happier and more fulfilling lives. Spawning a Ghoulie, could be the best asymmetric bet of your life.',
+      "This is the inaugural season for Ghoulie Gang, and the best time to join!\n\nWe're planning to explore future drops and releases for other holiday events, and we're already creating partnerships with other projects. All future Ghoulie Gang projects will provide incentives to Ghoulie Gang members (holders of Season 1: Halloween).\n\nJoin the gang on [Discord](https://discord.gg/UQQ2ySbt) for more information.",
   },
 ];
 
@@ -223,6 +218,134 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="ghoulies-section py-10 text-white mt-16 md:mt-24 relative">
+          <div className="inside px-8 md:px-0">
+            <div className="flex flex-col md:flex-row">
+              <div className="w-full md:w-2/3 md:pr-20 leading-5 text-base">
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  ghoulies
+                </h2>
+                <p className="pt-4 reg-font">
+                  Ghoulies debuted as{" "}
+                  <a
+                    className="simple-link"
+                    href="https://opensea.io/collection/stinkybinky-collection"
+                    target="_blank"
+                  >
+                    22 1-of-1 hand-drawings
+                  </a>{" "}
+                  created by{" "}
+                  <a
+                    className="simple-link"
+                    href="https://twitter.com/ghoulareyou"
+                    target="_blank"
+                  >
+                    @ghoulareyou
+                  </a>{" "}
+                  on the Ethereum blockchain.
+                </p>
+                <br />
+                <p className="reg-font">
+                  Those originals inspired the Ghoulie Gang's generatively
+                  unique Halloween season from over 200+ hand-drawn traits. All
+                  Ghoulies are rare and some spawns are more uncommon than
+                  others but each ghoulie has its own personality.
+                </p>
+              </div>
+              <img
+                className="w-full md:w-3/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black mr-10"
+                src="/ghoulies/279.png"
+              />
+              <img
+                className="w-full md:w-3/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
+                src="/ghoulies/228.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="open-source text-white mt-16 py-10 relative">
+          <div className="inside px-8 md:px-0">
+            <div className="flex flex-col md:flex-row">
+              <img
+                className="w-full md:w-4/12 mt-8 md:mt-0 supa-rounded h-full border-4 border-black"
+                src="/ghoulies/316.png"
+              />
+              <div className="w-full md:w-2/3 md:pl-24 leading-5 text-base pt-12 md:pt-0">
+                <h2 className="uppercase text-4xl letter-spacing-2">
+                  Open source
+                </h2>
+                <p className="pt-4 reg-font">
+                  Ghoulies are stored as SPL tokens on the{" "}
+                  <a
+                    className="simple-link"
+                    href="https://solana.com/"
+                    target="_blank"
+                  >
+                    Solana blockchain
+                  </a>{" "}
+                  and on{" "}
+                  <a
+                    className="simple-link"
+                    href="https://www.arweave.org/"
+                    target="_blank"
+                  >
+                    Arweave
+                  </a>
+                  . We use{" "}
+                  <a
+                    className="simple-link"
+                    href="https://www.quicknode.com/"
+                    target="_blank"
+                  >
+                    QuickNode
+                  </a>{" "}
+                  as our dedicated RPC provider to scale and handle high amounts
+                  of traffic without rate limits. We use{" "}
+                  <a
+                    className="simple-link"
+                    href="https://github.com/metaplex-foundation/metaplex/blob/master/rust/nft-candy-machine/src/lib.rs"
+                    target="_blank"
+                  >
+                    Candy Machine
+                  </a>{" "}
+                  for our smart contract. Candy Machine helps us and you to have
+                  fair mints. This protects us from over collection and
+                  pre-launch minting malfunctions.
+                  <br />
+                  <br />
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://github.com/ghoul-keeper/ghoulies"
+                    target="_blank"
+                  >
+                    GIT REPO
+                  </a>
+                  <br />
+                  <a>CANDY MACHINE ID COMING SOON...</a>
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://link.medium.com/pz674xxPrkb"
+                    target="_blank"
+                  >
+                    The New Solana NFT Standard
+                  </a>
+                  <br />
+                  <a
+                    className="simple-link"
+                    href="https://link.medium.com/QhfrNHojkkb"
+                    target="_blank"
+                  >
+                    Why Provenance Isn’t Talked About on the Solana Blockchain
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="the-crew text-white mt-16 py-8">
           <div className="inside px-8 md:px-0">
             <div className="w-full leading-5 text-base">
@@ -367,28 +490,6 @@ export default function Home() {
                               })
                             )}
                           </p>
-                          {faq.question == "WHY GHOULIE GANG?" ? (
-                            <span>
-                              <br />
-                              <a
-                                href="https://github.com/ghoul-keeper/ghoulies"
-                                target="_blank"
-                                style={{ color: "#202020" }}
-                                className="hover:opacity-60 letter-spacing-2"
-                              >
-                                GIT REPO
-                              </a>
-                              <br />
-                              <a
-                                href="/"
-                                target="_blank"
-                                style={{ color: "#202020" }}
-                                className="hover:opacity-60 letter-spacing-2"
-                              >
-                                CANDY MACHINE ID COMING SOON...
-                              </a>
-                            </span>
-                          ) : null}
                         </Disclosure.Panel>
                       </>
                     )}
