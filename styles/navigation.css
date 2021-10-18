@@ -1,3 +1,67 @@
+.wal {
+	border-radius: 25.5px !important;
+	background-color: #fff !important;
+  font-size: 15px !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+	letter-spacing: 1px !important;
+	color: #051a29 !important;
+
+	position: fixed !important;
+	width: auto !important;
+  min-width: 198px !important;
+	height: 36px !important;
+	right: 100px !important;
+	top: 32px !important;
+  line-height: 38px !important;
+  justify-content: center !important;
+}
+
+.mint-button {
+	border-radius: 25.5px !important;
+	background-color: #fff !important;
+	font-size: 15px !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+	letter-spacing: 1px !important;
+	color: #051a29 !important;
+  padding: .25rem 2.5rem;
+}
+
+.mint-button:hover {
+  opacity: 60%;
+}
+
+.MuiCircularProgress-root {
+  width: 20px !important;
+  height: 20px !important;
+  margin-top: 7px !important;
+}
+
+.wallet-adapter-dropdown-list {
+  position: fixed !important;
+  right: 96px !important;
+  top: 63px !important;
+  background: #031423 !important;
+}
+
+.wallet-adapter-dropdown {
+  display: block !important
+}
+
+.wal:hover {
+  opacity: 80%;
+}
+
+
+.sol-log {
+  position: fixed;
+  width: 75px;
+  height: 9.4px;
+  right: 160px;
+  top: 83px;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -45,14 +109,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 1rem 1.5rem 0 1.5rem;
   align-items: center;
   justify-items: center;
-}
-
-.sol-log {
-  position: absolute;
-  width: 150px;
-  height: 18.8px;
-  right: 100px;
-  top: 41px;
 }
 
 .menu-item:hover {
