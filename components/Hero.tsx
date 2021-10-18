@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from "react";
 import { useEffect, useState, useMemo } from "react";
 import Countdown from "react-countdown";
@@ -10,6 +11,8 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import Navigation from "../components/Navigation";
+import useSWR, { mutate } from "swr";
+import redis from "../lib/redis";
 
 import {
   CandyMachine,
@@ -26,7 +29,10 @@ export interface HomeProps {
   startDate: number;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
+  features: Array<string>;
 }
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const GhoulieCountdown = (props) => {
   let startDate = props.startDate;
@@ -104,8 +110,37 @@ const Hero = (props: HomeProps) => {
     new Date(props.startDate * 1000000)
   );
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
-  console.log(props);
-  console.log(startDate);
+
+  const features = props.features;
+
+  const { data, error } = useSWR("/api/get-addys", fetcher, {
+    initialData: { features },
+  });
+
+  const addFeature = async (pubkey) => {
+    const res = await fetch("/api/cache-presale-addy", {
+      body: JSON.stringify({
+        id: pubkey,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    mutate("/api/get-addys");
+  };
+
+  if (error) {
+    console.error(error);
+  }
 
   let startDateInThePast = startDate <= new Date();
 
@@ -143,69 +178,72 @@ const Hero = (props: HomeProps) => {
   };
 
   const onMint = async () => {
-    try {
-      setIsMinting(true);
-      if (wallet && candyMachine?.program) {
-        const mintTxId = await mintOneToken(
-          candyMachine,
-          props.config,
-          wallet.publicKey,
-          props.treasury
-        );
+    if (!data.features.includes(wallet?.publicKey?.toBase58())) {
+      try {
+        setIsMinting(true);
+        if (wallet && candyMachine?.program) {
+          const mintTxId = await mintOneToken(
+            candyMachine,
+            props.config,
+            wallet.publicKey,
+            props.treasury
+          );
 
-        const status = await awaitTransactionSignatureConfirmation(
-          mintTxId,
-          props.txTimeout,
-          props.connection,
-          "singleGossip",
-          false
-        );
+          const status = await awaitTransactionSignatureConfirmation(
+            mintTxId,
+            props.txTimeout,
+            props.connection,
+            "singleGossip",
+            false
+          );
 
-        if (!status?.err) {
-          setAlertState({
-            open: true,
-            message: "Congratulations! Mint succeeded!",
-            severity: "success",
-          });
+          if (!status?.err) {
+            setAlertState({
+              open: true,
+              message: "Congratulations! Mint succeeded!",
+              severity: "success",
+            });
+            addFeature(wallet?.publicKey?.toBase58());
+          } else {
+            setAlertState({
+              open: true,
+              message: "Mint failed! Please try again!",
+              severity: "error",
+            });
+          }
+        }
+      } catch (error: any) {
+        // TODO: blech:
+        let message = error.msg || "Minting failed! Please try again!";
+        if (!error.msg) {
+          if (error.message.indexOf("0x138")) {
+          } else if (error.message.indexOf("0x137")) {
+            message = `SOLD OUT!`;
+          } else if (error.message.indexOf("0x135")) {
+            message = `Insufficient funds to mint. Please fund your wallet.`;
+          }
         } else {
-          setAlertState({
-            open: true,
-            message: "Mint failed! Please try again!",
-            severity: "error",
-          });
+          if (error.code === 311) {
+            message = `SOLD OUT!`;
+            setIsSoldOut(true);
+          } else if (error.code === 312) {
+            message = `Minting period hasn't started yet.`;
+          }
         }
-      }
-    } catch (error: any) {
-      // TODO: blech:
-      let message = error.msg || "Minting failed! Please try again!";
-      if (!error.msg) {
-        if (error.message.indexOf("0x138")) {
-        } else if (error.message.indexOf("0x137")) {
-          message = `SOLD OUT!`;
-        } else if (error.message.indexOf("0x135")) {
-          message = `Insufficient funds to mint. Please fund your wallet.`;
-        }
-      } else {
-        if (error.code === 311) {
-          message = `SOLD OUT!`;
-          setIsSoldOut(true);
-        } else if (error.code === 312) {
-          message = `Minting period hasn't started yet.`;
-        }
-      }
 
-      setAlertState({
-        open: true,
-        message,
-        severity: "error",
-      });
-    } finally {
-      if (wallet) {
-        const balance = await props.connection.getBalance(wallet.publicKey);
-        setBalance(balance / LAMPORTS_PER_SOL);
+        setAlertState({
+          open: true,
+          message,
+          severity: "error",
+        });
+      } finally {
+        if (wallet) {
+          const balance = await props.connection.getBalance(wallet.publicKey);
+          setBalance(balance / LAMPORTS_PER_SOL);
+        }
+        setIsMinting(false);
+        refreshCandyMachineState();
       }
-      setIsMinting(false);
-      refreshCandyMachineState();
     }
   };
 
@@ -223,8 +261,6 @@ const Hero = (props: HomeProps) => {
     props.candyMachineId,
     props.connection,
   ]);
-
-  console.log(wallet);
 
   return (
     <div>
@@ -298,8 +334,19 @@ const Hero = (props: HomeProps) => {
                     <div className="mt-8 sm:mt-10 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
                       <p>Pre-sale now open!</p>
                       <button
-                        className="mint-button my-6"
-                        disabled={isSoldOut || isMinting || !isActive}
+                        className={
+                          data.features.includes(
+                            wallet?.publicKey?.toBase58()
+                          ) || isSoldOut
+                            ? "mint-button my-6 disable-but"
+                            : "mint-button my-6"
+                        }
+                        disabled={
+                          isSoldOut ||
+                          isMinting ||
+                          !isActive ||
+                          data.features.includes(wallet?.publicKey?.toBase58())
+                        }
                         onClick={onMint}
                         // variant="contained"
                       >

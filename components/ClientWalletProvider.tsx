@@ -74,6 +74,7 @@ export default function ClientWalletProvider(props): JSX.Element {
             startDate={startDateSeed}
             treasury={treasury}
             txTimeout={txTimeout}
+            features={[]}
           />
         </WalletModalProvider>
         <Toaster position="bottom-left" reverseOrder={false} />

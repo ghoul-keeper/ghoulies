@@ -19,7 +19,7 @@
 
 .mint-button {
 	border-radius: 25.5px !important;
-	background-color: #fff !important;
+	background-color: #fff;
 	font-size: 15px !important;
 	font-family: Helvetica, Arial, sans-serif !important;
 	font-weight: bold !important;

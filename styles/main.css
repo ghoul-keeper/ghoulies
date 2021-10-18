@@ -222,6 +222,14 @@ body {
 	margin-right: auto;
 }
 
+.disable-but {
+	background-color: rgba(156, 163, 175) !important;
+}
+
+.disable-but:hover {
+	cursor: not-allowed;
+}
+
 .hero {
 	background: url("/ghoulies-mast-background-halloween.jpg");
 	background-size: cover;
