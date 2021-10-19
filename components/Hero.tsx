@@ -323,7 +323,7 @@ const Hero = (props: HomeProps) => {
                 <a
                   className="underline hover:opacity-60"
                   target="_blank"
-                  href="https://discord.gg/UQQ2ySbt"
+                  href="https://discord.gg/vhhs3t3xqK"
                 >
                   Discord
                 </a>

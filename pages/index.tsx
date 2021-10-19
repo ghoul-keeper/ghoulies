@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "WHAT'S THE ROADMAP?",
     answer:
-      "This is the inaugural season for Ghoulie Gang, and the best time to join!\n\nWe're planning to explore future drops and releases for other holiday events, and we're already creating partnerships with other projects. All future Ghoulie Gang projects will provide incentives to Ghoulie Gang members (holders of Season 1: Halloween).\n\nJoin the gang on [Discord](https://discord.gg/UQQ2ySbt) for more information.",
+      "This is the inaugural season for Ghoulie Gang, and the best time to join!\n\nWe're planning to explore future drops and releases for other holiday events, and we're already creating partnerships with other projects. All future Ghoulie Gang projects will provide incentives to Ghoulie Gang members (holders of Season 1: Halloween).\n\nJoin the gang on [Discord](https://discord.gg/vhhs3t3xqK) for more information.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function Home() {
                     <a
                       className="underline hover:opacity-60"
                       target="_blank"
-                      href="https://discord.gg/UQQ2ySbt"
+                      href="https://discord.gg/vhhs3t3xqK"
                     >
                       Discord
                     </a>
@@ -167,7 +167,7 @@ export default function Home() {
         )}
 
         <a
-          href="https://discord.gg/UQQ2ySbt"
+          href="https://discord.gg/vhhs3t3xqK"
           target="_blank"
           className="discord-bubble m-auto my-8 px-10"
         >
