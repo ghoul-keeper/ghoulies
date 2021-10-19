@@ -39,8 +39,8 @@ const GhoulieCountdown = (props) => {
   let setIsActive = props.setIsActive;
 
   return (
-    <div className="mt-8 sm:mt-10 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-      <p>Pre-sale now open!</p>
+    <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
+      <p>Soft launch now open!</p>
       <Countdown
         date={startDate.getTime()}
         onMount={({ completed }) => completed && setIsActive(true)}
@@ -55,10 +55,10 @@ const rendererForCountdown = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
     return (
       <span
-        className="flex my-6 text-center items-center w-full justify-center"
+        className="flex my-2 text-center items-center w-full justify-center"
         style={{ color: "#46ddeb" }}
       >
-        Please connect your wallet.
+        Connect your wallet
       </span>
     );
   } else {
@@ -283,7 +283,7 @@ const Hero = (props: HomeProps) => {
       <div className="hero">
         <div className="inside px-8 md:px-0 pb-8">
           <img
-            className="m-auto w-96 pt-24 pb-24 md:pb-20"
+            className="m-auto w-96 pt-24 pb-24 md:pb-16 md:pt-16"
             src="/ghoulie-gang-logo.png"
           />
           <div className="welcome w-full flex flex-col md:flex-row text-white overflow-visible">
@@ -294,17 +294,18 @@ const Hero = (props: HomeProps) => {
                 <div className="logo-bg"></div>
               )}
             </div>
-            <div className="py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-4 md:px-0">
+            <div className="ml-4 py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-4 md:px-0">
               <h2 className="uppercase text-xl letter-spacing-2">Season 1:</h2>
               <h1 className="uppercase text-4xl letter-spacing-3">Halloween</h1>
               <p className="reg-font max-w-lg pt-3">
-                Catch a spooky Halloween Ghoulie in the first Ghoulie Gang drop!
+                <b>Soft launch</b>: Oct 19th for the first 750 Ghoulies, 0.1 SOL
+                each (limit 1 per wallet)
               </p>
-              <p className="reg-font max-w-lg">
-                October 25th at 8PM UTC/4PM EST on Solana.
+              <p className="reg-font max-w-lg mt-3">
+                <b>Full release</b>: Oct 25th for 7,500 total Ghoulies, .75 SOL
+                each (no-limit)
               </p>
-              <br />
-              <p className="reg-font max-w-lg pb-3">
+              <p className="reg-font max-w-lg pb-3 mt-3">
                 Follow along on{" "}
                 <a
                   className="underline hover:opacity-60"
@@ -331,8 +332,8 @@ const Hero = (props: HomeProps) => {
                       setIsActive={setIsActive}
                     />
                   ) : isActive ? (
-                    <div className="mt-8 sm:mt-10 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-                      <p>Pre-sale now open!</p>
+                    <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
+                      <p>Soft launch now open!</p>
                       <button
                         className={
                           data.features.includes(

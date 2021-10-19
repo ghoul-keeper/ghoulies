@@ -60,13 +60,13 @@
 .very-large-logo-bg {
 	background: url(/Ghoulie-lg-01.png) no-repeat center center;
 	background-size: cover;
-	height: 113%;
-	width: 32rem;
+	height: 116%;
+	width: 35rem;
 	max-width: 100vw;
 	position: relative;
-	top: 24.5%;
+	top: 22.5%;
 	transform: translateY(-33%);
-	left: -44%;
+	left: -50%;
 }
 
 .discord-bubble {
