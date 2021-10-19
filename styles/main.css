@@ -61,12 +61,24 @@
 	background: url(/Ghoulie-lg-01.png) no-repeat center center;
 	background-size: cover;
 	height: 116%;
+	width: 34rem;
+	max-width: 100vw;
+	position: relative;
+	top: 22.3%;
+	transform: translateY(-33%);
+	left: -22%;
+}
+
+.very-large-logo-bg-adjusted {
+	background: url(/Ghoulie-lg-01.png) no-repeat center center;
+	background-size: cover;
+	height: 116%;
 	width: 31rem;
 	max-width: 100vw;
 	position: relative;
 	top: 22.5%;
 	transform: translateY(-33%);
-	left: -40%;
+	left: -15%;
 }
 
 .discord-bubble {

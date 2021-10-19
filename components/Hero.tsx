@@ -177,13 +177,10 @@ const Hero = (props: HomeProps) => {
     })();
   };
 
-  // let walletUsed = data.features.includes(wallet?.publicKey?.toBase58());
-
-  // temp
-  let walletUsed = true;
+  let walletUsed = data?.features.includes(wallet?.publicKey?.toBase58());
 
   const onMint = async () => {
-    if (walletUsed) {
+    if (!walletUsed) {
       try {
         setIsMinting(true);
         if (wallet && candyMachine?.program) {
@@ -292,9 +289,13 @@ const Hero = (props: HomeProps) => {
             src="/ghoulie-gang-logo.png"
           />
           <div className="welcome w-full flex flex-col md:flex-row text-white overflow-visible">
-            <div className="logo-bg-cont h-auto" style={{ width: "21rem" }}>
+            <div className="logo-bg-cont h-auto" style={{ width: "25rem" }}>
               {startDateInThePast ? (
-                <div className="very-large-logo-bg"></div>
+                wallet ? (
+                  <div className="very-large-logo-bg"></div>
+                ) : (
+                  <div className="very-large-logo-bg-adjusted"></div>
+                )
               ) : (
                 <div className="logo-bg"></div>
               )}
@@ -303,11 +304,11 @@ const Hero = (props: HomeProps) => {
               <h2 className="uppercase text-xl letter-spacing-2">Season 1:</h2>
               <h1 className="uppercase text-4xl letter-spacing-3">Halloween</h1>
               <p className="reg-font max-w-lg pt-3">
-                <b>Soft launch</b>: Oct 19th for the first 750 Ghoulies, 0.1 SOL
-                each (limit 1 per wallet)
+                <b>Soft launch</b>: Oct 19th for the first 750 Ghoulies, 0.25
+                SOL each (limit 1 per wallet)
               </p>
               <p className="reg-font max-w-lg mt-3">
-                <b>Full release</b>: Oct 25th for 7,500 total Ghoulies, .75 SOL
+                <b>Full release</b>: Oct 25th for 7,500 total Ghoulies, 0.75 SOL
                 each (no-limit)
               </p>
               <p className="reg-font max-w-lg pb-3 mt-3">
@@ -348,7 +349,7 @@ const Hero = (props: HomeProps) => {
                             : "mint-button my-6"
                         }
                         disabled={
-                          isSoldOut || isMinting || !isActive || !walletUsed
+                          isSoldOut || isMinting || !isActive || walletUsed
                         }
                         onClick={onMint}
                         // variant="contained"
