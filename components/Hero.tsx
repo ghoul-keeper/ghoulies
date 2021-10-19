@@ -177,8 +177,13 @@ const Hero = (props: HomeProps) => {
     })();
   };
 
+  // let walletUsed = data.features.includes(wallet?.publicKey?.toBase58());
+
+  // temp
+  let walletUsed = true;
+
   const onMint = async () => {
-    if (!data.features.includes(wallet?.publicKey?.toBase58())) {
+    if (walletUsed) {
       try {
         setIsMinting(true);
         if (wallet && candyMachine?.program) {
@@ -343,10 +348,7 @@ const Hero = (props: HomeProps) => {
                             : "mint-button my-6"
                         }
                         disabled={
-                          isSoldOut ||
-                          isMinting ||
-                          !isActive ||
-                          data.features.includes(wallet?.publicKey?.toBase58())
+                          isSoldOut || isMinting || !isActive || walletUsed
                         }
                         onClick={onMint}
                         // variant="contained"
