@@ -50,7 +50,7 @@ const Navigation = (props) => {
             </svg>
           </a>
           <a
-            href="https://discord.gg/UQQ2ySbt"
+            href="https://discord.gg/vhhs3t3xqK"
             target="_blank"
             className="pt-4 menu-item hover:opacity-60"
           >

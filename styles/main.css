@@ -57,6 +57,30 @@
 	left: -6%;
 }
 
+.very-large-logo-bg {
+	background: url(/Ghoulie-lg-01.png) no-repeat center center;
+	background-size: cover;
+	height: 116%;
+	width: 34rem;
+	max-width: 100vw;
+	position: relative;
+	top: 22.3%;
+	transform: translateY(-33%);
+	left: -22%;
+}
+
+.very-large-logo-bg-adjusted {
+	background: url(/Ghoulie-lg-01.png) no-repeat center center;
+	background-size: cover;
+	height: 116%;
+	width: 31rem;
+	max-width: 100vw;
+	position: relative;
+	top: 22.5%;
+	transform: translateY(-33%);
+	left: -15%;
+}
+
 .discord-bubble {
 	background-color: #5866f2;
 	border-radius: 38px;
@@ -186,6 +210,7 @@ body {
 
 .open-source {
 	background-color: #237879;
+	z-index: -222;
 }
 
 .special-bg-h {
@@ -210,6 +235,14 @@ body {
 	margin-right: auto;
 }
 
+.disable-but {
+	background-color: rgba(156, 163, 175) !important;
+}
+
+.disable-but:hover {
+	cursor: not-allowed;
+}
+
 .hero {
 	background: url("/ghoulies-mast-background-halloween.jpg");
 	background-size: cover;
@@ -226,6 +259,7 @@ body {
 }
 
 .ghoulies-section {
+	z-index: -222;
 	background-color: #194052;
 }
 

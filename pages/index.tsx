@@ -4,7 +4,6 @@ import { Disclosure } from "@headlessui/react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/outline";
 import dynamic from "next/dynamic";
 import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 import parse from "html-react-parser";
 
 // Work around to use the Solana Wallet Adapter with Next.js
@@ -30,12 +29,18 @@ const faqs = [
   {
     question: "WHAT'S THE ROADMAP?",
     answer:
-      "This is the inaugural season for Ghoulie Gang, and the best time to join!\n\nWe're planning to explore future drops and releases for other holiday events, and we're already creating partnerships with other projects. All future Ghoulie Gang projects will provide incentives to Ghoulie Gang members (holders of Season 1: Halloween).\n\nJoin the gang on [Discord](https://discord.gg/UQQ2ySbt) for more information.",
+      "This is the inaugural season for Ghoulie Gang, and the best time to join!\n\nWe're planning to explore future drops and releases for other holiday events, and we're already creating partnerships with other projects. All future Ghoulie Gang projects will provide incentives to Ghoulie Gang members (holders of Season 1: Halloween).\n\nJoin the gang on [Discord](https://discord.gg/vhhs3t3xqK) for more information.",
   },
 ];
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [hide, setHide] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setHide(true);
+    }, 500);
+  }, []);
 
   return (
     <div>
@@ -86,89 +91,83 @@ export default function Home() {
       </Head>
 
       <main className="relative overflow-hidden">
-        {/* <WalletProvider objectOfScrolls={objOfScrolls} /> */}
-        <a
-          href="https://solana.com/"
-          target="_blank"
-          className="hover:opacity-60"
-        >
-          <img src="/solana.png" className="sol-log" />
-        </a>
-        <Navigation setIsOpen={setIsOpen} isOpen={isOpen} />
-        <div className="hero">
-          <div className="inside px-8 md:px-0 pb-8">
-            <img
-              className="m-auto w-96 pt-24 pb-24 md:pb-20"
-              src="/ghoulie-gang-logo.png"
-            />
-            <div className="welcome w-full flex flex-col md:flex-row text-white overflow-visible">
-              <div className="logo-bg-cont h-auto" style={{ width: "21rem" }}>
-                <div className="logo-bg"></div>
-              </div>
-              <div className="py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-4 md:px-0">
-                <h2 className="uppercase text-xl letter-spacing-2">
-                  Season 1:
-                </h2>
-                <h1 className="uppercase text-4xl letter-spacing-3">
-                  Halloween
-                </h1>
-                <p className="reg-font max-w-lg pt-3">
-                  Catch a spooky Halloween Ghoulie in the first Ghoulie Gang
-                  drop!
-                </p>
-                <p className="reg-font max-w-lg">
-                  October 25th at 8PM UTC/4PM EST on Solana.
-                </p>
-                <br />
-                <p className="reg-font max-w-lg pb-3">
-                  Follow along on{" "}
-                  <a
-                    className="underline hover:opacity-60"
-                    target="_blank"
-                    href="https://twitter.com/GhouliesNFT"
-                  >
-                    Twitter
-                  </a>{" "}
-                  and{" "}
-                  <a
-                    className="underline hover:opacity-60"
-                    target="_blank"
-                    href="https://discord.gg/UQQ2ySbt"
-                  >
-                    Discord
-                  </a>
-                  .
-                </p>
-                <ul className="flex justify-center items-center space-x-1 md:space-x-3 px-2 md:px-0">
-                  <li className="pos-gho">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-01.png" />
-                  </li>
-                  <li className="pos-gho">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-02.png" />
-                  </li>
-                  <li className="pos-gho-tra">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-03.png" />
-                  </li>
-                  <li className="pos-gho">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-04.png" />
-                  </li>
-                  <li>
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-05.png" />
-                  </li>
-                  <li className="pos-gho">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-06.png" />
-                  </li>
-                  <li className="pos-gho-tra-s">
-                    <img src="/ghoulie-no-bg/Ghoulie-sm-07.png" />
-                  </li>
-                </ul>
+        <WalletProvider />
+        {hide ? null : (
+          <div className="hero">
+            <div className="inside px-8 md:px-0 pb-8">
+              <img
+                className="m-auto w-96 pt-24 pb-24 md:pb-20"
+                src="/ghoulie-gang-logo.png"
+              />
+              <div className="welcome w-full flex flex-col md:flex-row text-white overflow-visible">
+                <div className="logo-bg-cont h-auto" style={{ width: "21rem" }}>
+                  <div className="logo-bg"></div>
+                </div>
+                <div className="ml-0 md:ml-4 py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-8 md:px-0 pt-8">
+                  <h2 className="uppercase text-xl letter-spacing-2">
+                    Season 1:
+                  </h2>
+                  <h1 className="uppercase text-4xl letter-spacing-3">
+                    Halloween
+                  </h1>
+                  <p className="reg-font max-w-lg pt-3">
+                    Catch a spooky Halloween Ghoulie in the first Ghoulie Gang
+                    drop!
+                  </p>
+                  <p className="reg-font max-w-lg">
+                    October 25th at 8PM UTC/4PM EST on Solana.
+                  </p>
+                  <br />
+                  <p className="reg-font max-w-lg pb-3">
+                    Follow along on{" "}
+                    <a
+                      className="underline hover:opacity-60"
+                      target="_blank"
+                      href="https://twitter.com/GhouliesNFT"
+                    >
+                      Twitter
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      className="underline hover:opacity-60"
+                      target="_blank"
+                      href="https://discord.gg/vhhs3t3xqK"
+                    >
+                      Discord
+                    </a>
+                    .
+                  </p>
+                  <ul className="flex justify-center items-center space-x-1 md:space-x-3 px-2 md:px-0">
+                    <li className="pos-gho">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-01.png" />
+                    </li>
+                    <li className="pos-gho">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-02.png" />
+                    </li>
+                    <li className="pos-gho-tra">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-03.png" />
+                    </li>
+                    <li className="pos-gho">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-04.png" />
+                    </li>
+                    <li>
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-05.png" />
+                    </li>
+                    <li className="pos-gho">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-06.png" />
+                    </li>
+                    <li className="pos-gho-tra-s">
+                      <img src="/ghoulie-no-bg/Ghoulie-sm-07.png" />
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         <a
-          href="https://discord.gg/UQQ2ySbt"
+          href="https://discord.gg/vhhs3t3xqK"
           target="_blank"
           className="discord-bubble m-auto my-8 px-10"
         >
