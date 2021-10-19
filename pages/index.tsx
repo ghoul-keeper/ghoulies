@@ -103,7 +103,7 @@ export default function Home() {
                 <div className="logo-bg-cont h-auto" style={{ width: "21rem" }}>
                   <div className="logo-bg"></div>
                 </div>
-                <div className="ml-4 py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-4 md:px-0">
+                <div className="ml-0 md:ml-4 py-0 md:pt-8 -mt-14 md:mt-0 text-center md:text-left px-8 md:px-0 pt-8">
                   <h2 className="uppercase text-xl letter-spacing-2">
                     Season 1:
                   </h2>
