@@ -17,6 +17,23 @@
   justify-content: center !important;
 }
 
+.wal-banner {
+	border-radius: 25.5px !important;
+	background-color: #fff !important;
+  font-size: 15px !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+	letter-spacing: 1px !important;
+	color: #051a29 !important;
+
+	width: auto !important;
+  min-width: 198px !important;
+	height: 36px !important;
+	right: 100px !important;
+  line-height: 38px !important;
+  justify-content: center !important;
+}
+
 .mint-button {
 	border-radius: 25.5px !important;
 	background-color: #fff;

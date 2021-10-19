@@ -37,28 +37,49 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const GhoulieCountdown = (props) => {
   let startDate = props.startDate;
   let setIsActive = props.setIsActive;
+  let content = props.content;
 
   return (
     <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-      <p>Soft launch now open!</p>
+      <p style={{ color: "#FFD051" }}>Soft launch now open!</p>
       <Countdown
         date={startDate.getTime()}
         onMount={({ completed }) => completed && setIsActive(true)}
         onComplete={() => setIsActive(true)}
-        renderer={rendererForCountdown}
+        renderer={(props) =>
+          rendererForCountdown({
+            days: props.days,
+            hours: props.hours,
+            minutes: props.minutes,
+            seconds: props.seconds,
+            completed: props.completed,
+            content: content,
+          })
+        }
       />
     </div>
   );
 };
 
-const rendererForCountdown = ({ days, hours, minutes, seconds, completed }) => {
+const rendererForCountdown = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  completed,
+  content,
+}) => {
   if (completed) {
     return (
-      <span
-        className="flex my-2 text-center items-center w-full justify-center"
-        style={{ color: "#46ddeb" }}
-      >
-        Connect your wallet
+      <span className="flex my-2 text-center items-center w-full justify-center">
+        <WalletMultiButton
+          className="wal-banner"
+          style={{
+            textTransform: content == "Connect Wallet" ? "uppercase" : "none",
+          }}
+        >
+          {content}
+        </WalletMultiButton>
       </span>
     );
   } else {
@@ -336,10 +357,11 @@ const Hero = (props: HomeProps) => {
                     <GhoulieCountdown
                       startDate={startDate}
                       setIsActive={setIsActive}
+                      content={content}
                     />
                   ) : isActive ? (
                     <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-                      <p>Soft launch now open!</p>
+                      <p style={{ color: "#FFD051" }}>Soft launch now open!</p>
                       <button
                         className={
                           data.features.includes(
@@ -367,6 +389,7 @@ const Hero = (props: HomeProps) => {
                           <GhoulieCountdown
                             startDate={startDate}
                             setIsActive={setIsActive}
+                            content={content}
                           />
                         )}
                       </button>
@@ -375,6 +398,7 @@ const Hero = (props: HomeProps) => {
                     <GhoulieCountdown
                       startDate={startDate}
                       setIsActive={setIsActive}
+                      content={content}
                     />
                   )}
                 </div>
