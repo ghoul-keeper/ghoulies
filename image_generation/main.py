@@ -7,58 +7,62 @@ import copy
 skip_generating_individual_metadata = False
 
 background = [
-    {
-        "Name": "Best Grey",
-        "Weight": 10
-    },
-    {
-        "Name": "Pompus",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Matilda",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Bluwu",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Perry Winkle",
-        "Weight": 7.5
-    },
-    {
-        "Name": "That One Blue",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Bahamas",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Mint",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Alien Ant Farm",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Fav Green",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Rusted Root",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Blowfish",
-        "Weight": 7.5
-    },
-    {
-        "Name": "Candy Red",
-        "Weight": 7.5
-    }
+  {
+    "Name": "Best Grey",
+    "Weight": 10
+  },
+  {
+    "Name": "Bahamas",
+    "Weight": 8.5
+  },
+  {
+    "Name": "Fav Green",
+    "Weight": 8.5
+  },
+  {
+    "Name": "Pompus",
+    "Weight": 7
+  },
+  {
+    "Name": "Matilda",
+    "Weight": 7
+  },
+  {
+    "Name": "Bluwu",
+    "Weight": 7
+  },
+  {
+    "Name": "Perry Winkle",
+    "Weight": 7
+  },
+  {
+    "Name": "That One Blue",
+    "Weight": 7
+  },
+  {
+    "Name": "Mint",
+    "Weight": 7
+  },
+  {
+    "Name": "Alien Ant Farm",
+    "Weight": 7
+  },
+  {
+    "Name": "Rusted Root",
+    "Weight": 7
+  },
+  {
+    "Name": "Blowfish",
+    "Weight": 7
+  },
+  {
+    "Name": "Candy Red",
+    "Weight": 7
+  },
+  {
+    "Name": "Sol",
+    "Weight": 3
+  }
 ]
 background_names = [m["Name"] for m in background]
 background_weights = [w["Weight"] for w in background]
@@ -86,313 +90,321 @@ environment_weights = [w["Weight"] for w in environment]
 
 
 body = [
-    {
-        "Name": "Robot",
-        "Weight": 16
-    },
-    {
-        "Name": "Bear",
-        "Weight": 15
-    },
-    {
-        "Name": "Cat",
-        "Weight": 14
-    },
-    {
-        "Name": "Monke",
-        "Weight": 13
-    },
-    {
-        "Name": "Hoodlum",
-        "Weight": 12
-    },
-    {
-        "Name": "Banshee",
-        "Weight": 10
-    },
-    {
-        "Name": "Satyr",
-        "Weight": 9
-    },
-    {
-        "Name": "Punk",
-        "Weight": 5
-    },
-    {
-        "Name": "Zombie",
-        "Weight": 2.35
-    },
-    {
-        "Name": "Bear Ghost",
-        "Weight": 1.75
-    },
-    {
-        "Name": "Ghost",
-        "Weight": 1
-    },
-    {
-        "Name": "Robot Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Bear Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Cat Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Brass Monke",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Hoodlum Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Banshee Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Satyr Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Punk Gold",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Zombie Gold",
-        "Weight": 0.18
-    },
-    {
-        "Name": "Bear Rainbow",
-        "Weight": 0.07
-    }
+  {
+    "Name": "Robot",
+    "Weight": 16
+  },
+  {
+    "Name": "Bear",
+    "Weight": 15
+  },
+  {
+    "Name": "Cat",
+    "Weight": 14
+  },
+  {
+    "Name": "Monke",
+    "Weight": 13
+  },
+  {
+    "Name": "Hoodlum",
+    "Weight": 12
+  },
+  {
+    "Name": "Banshee",
+    "Weight": 8.7
+  },
+  {
+    "Name": "Satyr",
+    "Weight": 9
+  },
+  {
+    "Name": "Punk",
+    "Weight": 5
+  },
+  {
+    "Name": "Zombie",
+    "Weight": 2.35
+  },
+  {
+    "Name": "Bear Ghost",
+    "Weight": 1.75
+  },
+  {
+    "Name": "Ghost",
+    "Weight": 1
+  },
+  {
+    "Name": "Robot Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Bear Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Cat Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Brass Monke",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Hoodlum Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Banshee Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Satyr Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Punk Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Zombie Gold",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Bear Rainbow",
+    "Weight": 0.05
+  },
+  {
+    "Name": "White Ghost",
+    "Weight": 0.1
+  },
+  {
+    "Name": "Bear Sol",
+    "Weight": 0.25
+  }
 ]
 
 body_names = [m["Name"] for m in body]
 body_weights = [w["Weight"] for w in body]
 
 eyes = [
-    {
-        "Name": "Stare",
-        "Weight": 10
-    },
-    {
-        "Name": "Happi",
-        "Weight": 10
-    },
-    {
-        "Name": "Derp",
-        "Weight": 9
-    },
-    {
-        "Name": "Hero",
-        "Weight": 8
-    },
-    {
-        "Name": "Shades",
-        "Weight": 6
-    },
-    {
-        "Name": "Do Not Press",
-        "Weight": 5
-    },
-    {
-        "Name": "Bowie",
-        "Weight": 4
-    },
-    {
-        "Name": "Key Lime Pie",
-        "Weight": 3.5
-    },
-    {
-        "Name": "Spooky",
-        "Weight": 3
-    },
-    {
-        "Name": "Jaundice",
-        "Weight": 3
-    },
-    {
-        "Name": "X",
-        "Weight": 3
-    },
-    {
-        "Name": "Dialated",
-        "Weight": 7
-    },
-    {
-        "Name": "Burned Out",
-        "Weight": 3
-    },
-    {
-        "Name": "High",
-        "Weight": 3
-    },
-    {
-        "Name": "Hung",
-        "Weight": 3
-    },
-    {
-        "Name": "Laser Red",
-        "Weight": 0.03
-    },
-    {
-        "Name": "Laser Gold",
-        "Weight": 3
-    },
-    {
-        "Name": "CrushCrushCrush",
-        "Weight": 3
-    },
-    {
-        "Name": "Pain",
-        "Weight": 3
-    },
-    {
-        "Name": "Hard Forks",
-        "Weight": 1.9
-    },
-    {
-        "Name": "Tranquility",
-        "Weight": 3
-    },
-    {
-        "Name": "Piranhas",
-        "Weight": 1.4
-    },
-    {
-        "Name": "Vipers",
-        "Weight": 1.6
-    },
-    {
-        "Name": "Glasses",
-        "Weight": 1.24
-    },
-    {
-        "Name": "Snake",
-        "Weight": 1
-    },
-    {
-        "Name": "Squish",
-        "Weight": 0.17
-    },
-    {
-        "Name": "Three of Diamonds",
-        "Weight": 0.06
-    },
-    {
-        "Name": "Filthy Lucre",
-        "Weight": 0.1
-    }
+  {
+    "Name": "Stare",
+    "Weight": 10
+  },
+  {
+    "Name": "Happi",
+    "Weight": 10
+  },
+  {
+    "Name": "Derp",
+    "Weight": 8.5
+  },
+  {
+    "Name": "Hero",
+    "Weight": 7.5
+  },
+  {
+    "Name": "Shades",
+    "Weight": 4
+  },
+  {
+    "Name": "Do Not Press",
+    "Weight": 4.5
+  },
+  {
+    "Name": "Bowie",
+    "Weight": 4
+  },
+  {
+    "Name": "Key Lime Pie",
+    "Weight": 3.5
+  },
+  {
+    "Name": "Spooky",
+    "Weight": 3
+  },
+  {
+    "Name": "Jaundice",
+    "Weight": 4
+  },
+  {
+    "Name": "X",
+    "Weight": 3
+  },
+  {
+    "Name": "Dialated",
+    "Weight": 7
+  },
+  {
+    "Name": "Burned Out",
+    "Weight": 3
+  },
+  {
+    "Name": "High",
+    "Weight": 3
+  },
+  {
+    "Name": "Hung",
+    "Weight": 3
+  },
+  {
+    "Name": "Laser Red",
+    "Weight": 0.03
+  },
+  {
+    "Name": "Laser Gold",
+    "Weight": 3
+  },
+  {
+    "Name": "CrushCrushCrush",
+    "Weight": 3
+  },
+  {
+    "Name": "Pain",
+    "Weight": 2
+  },
+  {
+    "Name": "Hard Forks",
+    "Weight": 1.9
+  },
+  {
+    "Name": "Tranquility",
+    "Weight": 3
+  },
+  {
+    "Name": "Piranhas",
+    "Weight": 1.4
+  },
+  {
+    "Name": "Vipers",
+    "Weight": 1.6
+  },
+  {
+    "Name": "3D Glasses",
+    "Weight": 4.74
+  },
+  {
+    "Name": "Snake",
+    "Weight": 1
+  },
+  {
+    "Name": "Squish",
+    "Weight": 0.17
+  },
+  {
+    "Name": "Three of Diamonds",
+    "Weight": 0.06
+  },
+  {
+    "Name": "Filthy Lucre",
+    "Weight": 0.1
+  }
 ]
 eyes_names = [m["Name"] for m in eyes]
 eyes_weights = [w["Weight"] for w in eyes]
 
 headgear = [
-    {
-        "Name": "None",
-        "Weight": 50
-    },
-    {
-        "Name": "Candy Corn",
-        "Weight": 5
-    },
-    {
-        "Name": "Diablos",
-        "Weight": 5
-    },
-    {
-        "Name": "Einstein",
-        "Weight": 4.5
-    },
-    {
-        "Name": "Crown",
-        "Weight": 4.5
-    },
-    {
-        "Name": "Webbies",
-        "Weight": 3.4
-    },
-    {
-        "Name": "Antennae",
-        "Weight": 3
-    },
-    {
-        "Name": "Party Animal",
-        "Weight": 2
-    },
-    {
-        "Name": "Candle",
-        "Weight": 2
-    },
-    {
-        "Name": "Snaily",
-        "Weight": 2
-    },
-    {
-        "Name": "Hari-kiri",
-        "Weight": 2.75
-    },
-    {
-        "Name": "Audiophile",
-        "Weight": 2.25
-    },
-    {
-        "Name": "Gold Horns",
-        "Weight": 2
-    },
-    {
-        "Name": "Halo",
-        "Weight": 2
-    },
-    {
-        "Name": "Over Easy",
-        "Weight": 1.75
-    },
-    {
-        "Name": "Unicorn",
-        "Weight": 1.75
-    },
-    {
-        "Name": "Potted",
-        "Weight": 1.5
-    },
-    {
-        "Name": "Sailor",
-        "Weight": 1.25
-    },
-    {
-        "Name": "Bloody Scream",
-        "Weight": 1
-    },
-    {
-        "Name": "Huntress Mask",
-        "Weight": 1
-    },
-    {
-        "Name": "Beak Mask",
-        "Weight": 1
-    },
-    {
-        "Name": "Ganja",
-        "Weight": 0.14
-    },
-    {
-        "Name": "Kabuki",
-        "Weight": 0.1
-    },
-    {
-        "Name": "Rainbow Horns",
-        "Weight": 0.06
-    },
-    {
-        "Name": "Pumpkin",
-        "Weight": 0.05
-    }
+  {
+    "Name": "None",
+    "Weight": 50
+  },
+  {
+    "Name": "Candy Corn",
+    "Weight": 5
+  },
+  {
+    "Name": "Diablos",
+    "Weight": 5
+  },
+  {
+    "Name": "Einstein",
+    "Weight": 4.5
+  },
+  {
+    "Name": "Crown",
+    "Weight": 4.5
+  },
+  {
+    "Name": "Webbies",
+    "Weight": 3.4
+  },
+  {
+    "Name": "Antennae",
+    "Weight": 2.72
+  },
+  {
+    "Name": "Party Animal",
+    "Weight": 2
+  },
+  {
+    "Name": "Candle",
+    "Weight": 2
+  },
+  {
+    "Name": "Snaily",
+    "Weight": 2
+  },
+  {
+    "Name": "Hari-kiri",
+    "Weight": 2.75
+  },
+  {
+    "Name": "Audiophile",
+    "Weight": 1.75
+  },
+  {
+    "Name": "Gold Horns",
+    "Weight": 2
+  },
+  {
+    "Name": "Halo",
+    "Weight": 2
+  },
+  {
+    "Name": "Over Easy",
+    "Weight": 1.75
+  },
+  {
+    "Name": "Unicorn",
+    "Weight": 1.75
+  },
+  {
+    "Name": "Potted",
+    "Weight": 1.5
+  },
+  {
+    "Name": "Sailor",
+    "Weight": 1.25
+  },
+  {
+    "Name": "Bloody Scream",
+    "Weight": 1
+  },
+  {
+    "Name": "Huntress Mask",
+    "Weight": 1
+  },
+  {
+    "Name": "Beak Mask",
+    "Weight": 1
+  },
+  {
+    "Name": "Ganja",
+    "Weight": 0.5
+  },
+  {
+    "Name": "Kabuki",
+    "Weight": 0.4
+  },
+  {
+    "Name": "Rainbow Horns",
+    "Weight": 0.15
+  },
+  {
+    "Name": "Pumpkin",
+    "Weight": 0.08
+  }
 ]
 
 headgear_names = [m["Name"] for m in headgear]
@@ -492,138 +504,138 @@ accessories_names = [m["Name"] for m in accessories]
 accessories_weights = [w["Weight"] for w in accessories]
 
 mouths = [
-    {
-        "Name": "Snaggletooth",
-        "Weight": 14
-    },
-    {
-        "Name": "Good Grin",
-        "Weight": 13
-    },
-    {
-        "Name": "Cheshire",
-        "Weight": 12
-    },
-    {
-        "Name": "D Smile",
-        "Weight": 9
-    },
-    {
-        "Name": "King Vamp",
-        "Weight": 6
-    },
-    {
-        "Name": "Drippy Purple",
-        "Weight": 4
-    },
-    {
-        "Name": "Purple People Eater",
-        "Weight": 3.5
-    },
-    {
-        "Name": "Ogre",
-        "Weight": 3
-    },
-    {
-        "Name": "Gum",
-        "Weight": 2.85
-    },
-    {
-        "Name": "Zim",
-        "Weight": 2.5
-    },
-    {
-        "Name": "Stitch",
-        "Weight": 2
-    },
-    {
-        "Name": "Buck",
-        "Weight": 2
-    },
-    {
-        "Name": "Yellow Smile",
-        "Weight": 4.2
-    },
-    {
-        "Name": "Sweet Tooth",
-        "Weight": 4
-    },
-    {
-        "Name": "Purp",
-        "Weight": 4
-    },
-    {
-        "Name": "Toof",
-        "Weight": 3.75
-    },
-    {
-        "Name": "Whimsy",
-        "Weight": 3.4
-    },
-    {
-        "Name": 420,
-        "Weight": 3
-    },
-    {
-        "Name": "None",
-        "Weight": 2
-    },
-    {
-        "Name": "Smokie",
-        "Weight": 0.2
-    },
-    {
-        "Name": "Smile Slime",
-        "Weight": 0.18
-    },
-    {
-        "Name": "Fish",
-        "Weight": 0.17
-    },
-    {
-        "Name": "Drippy Gold",
-        "Weight": 0.16
-    },
-    {
-        "Name": "Cookie",
-        "Weight": 0.15
-    },
-    {
-        "Name": "One Fang Gold",
-        "Weight": 0.15
-    },
-    {
-        "Name": "Sharp Gold",
-        "Weight": 0.15
-    },
-    {
-        "Name": "Lick",
-        "Weight": 0.14
-    },
-    {
-        "Name": "Buck Gold",
-        "Weight": 0.12
-    },
-    {
-        "Name": "Slurp",
-        "Weight": 0.1
-    },
-    {
-        "Name": "Yellow Tongue",
-        "Weight": 0.1
-    },
-    {
-        "Name": "Pumpkin Bites",
-        "Weight": 0.08
-    },
-    {
-        "Name": "Toast",
-        "Weight": 0.06
-    },
-    {
-        "Name": "Diamond",
-        "Weight": 0.04
-    }
+  {
+    "Name": "Snaggletooth",
+    "Weight": 14
+  },
+  {
+    "Name": "Good Grin",
+    "Weight": 13
+  },
+  {
+    "Name": "Cheshire",
+    "Weight": 12
+  },
+  {
+    "Name": "D Smile",
+    "Weight": 9
+  },
+  {
+    "Name": "King Vamp",
+    "Weight": 6
+  },
+  {
+    "Name": "Drippy Purple",
+    "Weight": 4
+  },
+  {
+    "Name": "Purple People Eater",
+    "Weight": 3.5
+  },
+  {
+    "Name": "Ogre",
+    "Weight": 3
+  },
+  {
+    "Name": "Gum",
+    "Weight": 2.85
+  },
+  {
+    "Name": "Zim",
+    "Weight": 2.5
+  },
+  {
+    "Name": "Stitch",
+    "Weight": 2
+  },
+  {
+    "Name": "Buck",
+    "Weight": 2
+  },
+  {
+    "Name": "Yellow Smile",
+    "Weight": 4.2
+  },
+  {
+    "Name": "Sweet Tooth",
+    "Weight": 4
+  },
+  {
+    "Name": "Purp",
+    "Weight": 4
+  },
+  {
+    "Name": "Toof",
+    "Weight": 3.06
+  },
+  {
+    "Name": "Whimsy",
+    "Weight": 3.4
+  },
+  {
+    "Name": 420,
+    "Weight": 3
+  },
+  {
+    "Name": "None",
+    "Weight": 2
+  },
+  {
+    "Name": "Smokie",
+    "Weight": 0.2
+  },
+  {
+    "Name": "Smile Slime",
+    "Weight": 0.18
+  },
+  {
+    "Name": "Fish",
+    "Weight": 0.17
+  },
+  {
+    "Name": "Drippy Gold",
+    "Weight": 0.16
+  },
+  {
+    "Name": "Cookie",
+    "Weight": 0.15
+  },
+  {
+    "Name": "One Fang Gold",
+    "Weight": 0.15
+  },
+  {
+    "Name": "Sharp Gold",
+    "Weight": 0.15
+  },
+  {
+    "Name": "Lick",
+    "Weight": 0.14
+  },
+  {
+    "Name": "Buck Gold",
+    "Weight": 0.12
+  },
+  {
+    "Name": "Slurp",
+    "Weight": 0.1
+  },
+  {
+    "Name": "Yellow Tongue",
+    "Weight": 0.1
+  },
+  {
+    "Name": "Pumpkin Bites",
+    "Weight": 0.08
+  },
+  {
+    "Name": "Toast",
+    "Weight": 0.75
+  },
+  {
+    "Name": "Diamond",
+    "Weight": 0.04
+  }
 ]
 
 mouth_names = [m["Name"] for m in mouths]
@@ -656,7 +668,7 @@ print("Do all the weights add up correctly? " +
       str(not weights_dont_add_up))
 
 # Trait Generation
-total_ghoulies = 100
+total_ghoulies = 7500
 traits = []
 
 
@@ -785,9 +797,9 @@ def createGhoulieMetadata(ghoulie):
         ), "value": value, "trait_count": all_trait_counts[key][value] - 1})
 
     m = {}
-    m["name"] = 'Ghoulie #' + str(ghoulie_id).zfill(4)
+    m["name"] = 'Ghoulie #' + str((ghoulie_id + 1)).zfill(4)
     m["symbol"] = 'GHOULIE'
-    m["description"] = 'Ghoulies.Space is a collection of 7,500 algorithmically unique NFTs on the Solana blockchain.'
+    m["description"] = 'Ghoulie Gang Season 1: Halloween is a collection of 7,500 algorithmically unique NFTs on the Solana blockchain.'
     m["seller_fee_basis_points"] = 500
     m["image"] = str(ghoulie_id) + '.png'
     m["external_url"] = 'https://ghouliegang.io'
