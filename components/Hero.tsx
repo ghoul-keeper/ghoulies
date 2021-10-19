@@ -348,7 +348,7 @@ const Hero = (props: HomeProps) => {
                             : "mint-button my-6"
                         }
                         disabled={
-                          isSoldOut || isMinting || !isActive || walletUsed
+                          isSoldOut || isMinting || !isActive || !walletUsed
                         }
                         onClick={onMint}
                         // variant="contained"
