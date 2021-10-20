@@ -325,12 +325,12 @@ const Hero = (props: HomeProps) => {
                   <b>SOLD OUT </b>
                 </span>
                 <strike>
-                  Oct 19th for the first 750 Ghoulies, 0.25 SOL each (limit 1
+                  Oct. 19th for the first 750 Ghoulies, 0.25 SOL each (limit 1
                   per wallet)
                 </strike>
               </p>
               <p className="reg-font max-w-lg mt-3">
-                <b>Full release</b>: Monday, Oct 25th for 6,624 remaining
+                <b>Full release</b>: Monday, Oct. 25th for 6,624 remaining
                 Ghoulies, 0.75 SOL each (no-limit)
               </p>
               <p className="reg-font max-w-lg pb-3 mt-3">
