@@ -330,8 +330,12 @@ const Hero = (props: HomeProps) => {
                 </strike>
               </p>
               <p className="reg-font max-w-lg mt-3">
-                <b>Full release</b>: Monday, Oct. 25th for 6,624 remaining
-                Ghoulies, 0.75 SOL each (no-limit)
+                <b>Full release</b>: Monday{" "}
+                <span style={{ color: "rgb(255, 208, 81)" }}>
+                  <b>8PM UTC/4PM EST</b>
+                </span>
+                , Oct. 25th for 6,624 remaining Ghoulies, 0.75 SOL each
+                (no-limit)
               </p>
               <p className="reg-font max-w-lg pb-3 mt-3">
                 7,500 Total Mint. Follow along on{" "}
