@@ -41,7 +41,9 @@ const GhoulieCountdown = (props) => {
 
   return (
     <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-      <p style={{ color: "#FFD051" }}>Soft launch now open!</p>
+      <p style={{ color: "#FFD051" }}>
+        soft launch sold out - come back monday
+      </p>
       <Countdown
         date={startDate.getTime()}
         onMount={({ completed }) => completed && setIsActive(true)}
@@ -72,14 +74,7 @@ const rendererForCountdown = ({
   if (completed) {
     return (
       <span className="flex my-2 text-center items-center w-full justify-center">
-        <WalletMultiButton
-          className="wal-banner"
-          style={{
-            textTransform: content == "Connect Wallet" ? "uppercase" : "none",
-          }}
-        >
-          {content}
-        </WalletMultiButton>
+        <div className="wal-banner-later">MINT 0.75</div>
       </span>
     );
   } else {
@@ -325,15 +320,21 @@ const Hero = (props: HomeProps) => {
               <h2 className="uppercase text-xl letter-spacing-2">Season 1:</h2>
               <h1 className="uppercase text-4xl letter-spacing-3">Halloween</h1>
               <p className="reg-font max-w-lg pt-3">
-                <b>Soft launch</b>: Oct 19th for the first 750 Ghoulies, 0.25
-                SOL each (limit 1 per wallet)
+                <b>Soft launch</b>:{" "}
+                <span style={{ color: "rgb(255, 208, 81)" }}>
+                  <b>SOLD OUT </b>
+                </span>
+                <strike>
+                  Oct 19th for the first 750 Ghoulies, 0.25 SOL each (limit 1
+                  per wallet)
+                </strike>
               </p>
               <p className="reg-font max-w-lg mt-3">
-                <b>Full release</b>: Oct 25th for 7,500 total Ghoulies, 0.75 SOL
-                each (no-limit)
+                <b>Full release</b>: Monday, Oct 25th for 6,624 remaining
+                Ghoulies, 0.75 SOL each (no-limit)
               </p>
               <p className="reg-font max-w-lg pb-3 mt-3">
-                Follow along on{" "}
+                7,500 Total Mint. Follow along on{" "}
                 <a
                   className="underline hover:opacity-60"
                   target="_blank"
@@ -361,7 +362,9 @@ const Hero = (props: HomeProps) => {
                     />
                   ) : isActive ? (
                     <div className="mt-4 text-base sm:text-xl lg:text-lg xl:text-xl letter-spacing3 text-center">
-                      <p style={{ color: "#FFD051" }}>Soft launch now open!</p>
+                      <p style={{ color: "#FFD051" }}>
+                        soft launch sold out - come back monday
+                      </p>
                       <button
                         className={
                           data.features.includes(

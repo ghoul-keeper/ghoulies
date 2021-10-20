@@ -15,6 +15,23 @@
 	top: 32px !important;
   line-height: 38px !important;
   justify-content: center !important;
+  z-index: 10;
+}
+
+.wal-banner-later {
+  border-radius: 25.5px !important;
+  font-size: 15px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  color: #383a47 !important;
+  width: auto !important;
+  min-width: 250px !important;
+  height: 36px !important;
+  line-height: 38px !important;
+  justify-content: center !important;
+  border: 1px solid #383a47;
+  cursor: not-allowed;
 }
 
 .wal-banner {
@@ -77,6 +94,7 @@
   height: 9.4px;
   right: 160px;
   top: 83px;
+  z-index: 10;
 }
 
 /* Position and sizing of burger button */

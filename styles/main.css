@@ -210,7 +210,7 @@ body {
 
 .open-source {
 	background-color: #237879;
-	z-index: -222;
+	z-index: 5;
 }
 
 .special-bg-h {
@@ -259,7 +259,7 @@ body {
 }
 
 .ghoulies-section {
-	z-index: -222;
+	z-index: 5;
 	background-color: #194052;
 }
 
