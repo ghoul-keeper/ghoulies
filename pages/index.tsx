@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "WHEN IS THE LAUNCH AND HOW MUCH?",
     answer:
-      "There will be exactly 7,500 Ghoulies released on Oct. 25th. They will be 0.75 SOL each (make sure to have ~0.05 SOL for fees)",
+      "There will be exactly 7,500 Ghoulies released on Oct. 25th. They will be 0.4 SOL each (make sure to have ~0.05 SOL for fees)",
   },
   {
     question: "HOW DO I SPAWN A GHOULIE?",
