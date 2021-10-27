@@ -19,6 +19,9 @@ const Navigation = (props) => {
         isOpen={props.isOpen}
       >
         <main id="page-wrap">
+          <a href="/rarity" className="pt-4 menu-item hover:opacity-60">
+            Rarity
+          </a>
           <a
             href="https://medium.com/@Ghoulies"
             target="_blank"

@@ -130,7 +130,6 @@ const Hero = (props: HomeProps) => {
   let startDateInThePast = startDate <= new Date();
 
   const wallet = useAnchorWallet();
-  console.log(".");
 
   const base58 = useMemo(() => wallet?.publicKey?.toBase58(), [wallet]);
   const content = !base58
