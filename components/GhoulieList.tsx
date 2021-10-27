@@ -55,19 +55,19 @@ let getTraitScore = (trait, subTrait) => {
   let totalAmountOfGhoulies = 7500;
 
   // https://raritytools.medium.com/ranking-rarity-understanding-rarity-calculation-methods-86ceaeb9b98c
-  let traitScore = 1 / totalAmountOfSubTrait / totalAmountOfGhoulies;
+  let traitScore = 1 / (totalAmountOfSubTrait / totalAmountOfGhoulies);
 
-  let simplifiedScore = Math.round(traitScore * 100000000 * 100) / 100;
+  let simplifiedScore = Math.round(traitScore * 100) / 100;
 
   return simplifiedScore;
 };
 
 let getTraitProgressWidthAndColor = (score) => {
-  if (score < 25) {
+  if (score < 15) {
     return ["bg-gray-500", "bg-gray-300", "25%"];
-  } else if (score >= 25 && score < 76) {
+  } else if (score >= 15 && score < 40) {
     return ["bg-blue-500", "bg-blue-300", "50%"];
-  } else if (score >= 76 && score < 200) {
+  } else if (score >= 40 && score < 185) {
     return ["bg-red-500", "bg-red-300", "75%"];
   } else {
     return ["bg-yellow-500", "bg-yellow-300", "100%"];
@@ -84,6 +84,7 @@ const PaginatedGhoulies = ({
   const [pageCount, setPageCount] = useState(0);
   const [ghoulieOffset, setGhoulieOffset] = useState(0);
   const [remountComponent, setRemountComponent] = useState(0);
+  const [hover, setHover] = useState("");
 
   useEffect(() => {
     setRemountComponent(Math.random());
@@ -149,13 +150,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("background")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("background", viewGhoulie.background)
                       )[1]
                     }
                   >
+                    {hover == "background" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("background", viewGhoulie.background)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -181,13 +192,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("environment")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("environment", viewGhoulie.environment)
                       )[1]
                     }
                   >
+                    {hover == "environment" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("environment", viewGhoulie.environment)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -213,13 +234,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("body")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("body", viewGhoulie.body)
                       )[1]
                     }
                   >
+                    {hover == "body" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("body", viewGhoulie.body)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -245,13 +276,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("eyes")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("eyes", viewGhoulie.eyes)
                       )[1]
                     }
                   >
+                    {hover == "eyes" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("eyes", viewGhoulie.eyes)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -277,13 +318,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("mouth")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("mouth", viewGhoulie.mouth)
                       )[1]
                     }
                   >
+                    {hover == "mouth" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("mouth", viewGhoulie.mouth)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -309,13 +360,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("headgear")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("headgear", viewGhoulie.headgear)
                       )[1]
                     }
                   >
+                    {hover == "headgear" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("headgear", viewGhoulie.headgear)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
@@ -341,13 +402,23 @@ const PaginatedGhoulies = ({
                 </h2>
                 <div className="relative pt-1">
                   <div
+                    onMouseOver={() => setHover("accessories")}
+                    onMouseOut={() => setHover("")}
                     className={
-                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full " +
+                      "overflow-hidden h-4 mb-4 text-xs flex rounded-full cursor-pointer relative " +
                       getTraitProgressWidthAndColor(
                         getTraitScore("accessories", viewGhoulie.accessories)
                       )[1]
                     }
                   >
+                    {hover == "accessories" ? (
+                      <div
+                        style={{ left: "50%", marginLeft: "-189.5" }}
+                        className="absolute letter-spacing-1"
+                      >
+                        {getTraitScore("accessories", viewGhoulie.accessories)}
+                      </div>
+                    ) : null}
                     <div
                       style={{
                         width: getTraitProgressWidthAndColor(
