@@ -198,3 +198,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .custom-left {
 	left: 0px;
 }
+
+.r-nav {
+  background-color: #14548a;
+}
+
+.r-nav-n:hover {
+  background-color: #14548a;
+}

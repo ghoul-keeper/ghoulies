@@ -5,6 +5,15 @@
   font-weight: 400;
 }
 
+.gh {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  transition: .5s;
+}
+
+.gh:hover {
+	transform:scale(1.05);
+}
+
 .supa-rounded {
 	border-radius: 40px;
 }
@@ -128,6 +137,10 @@
 
 .letter-spacing-3 {
 	letter-spacing: 3.76px;
+}
+
+.center-pls {
+	margin: 0 auto;
 }
 
 body {
