@@ -417,7 +417,10 @@ export default function Rarity() {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
+              <div
+                className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4"
+                style={{ backgroundColor: "#031423" }}
+              >
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-300"
@@ -441,40 +444,168 @@ export default function Rarity() {
                     </button>
                   </div>
                 </Transition.Child>
-                <div className="flex-shrink-0 flex items-center px-4">
-                  {/* logo here */}
+                <div className="flex-shrink-0 flex items-center px-4 w-full justify-center">
+                  <a className="hover:opacity-60" href="/">
+                    <img
+                      className="h-20 w-auto hover:opacity-60"
+                      src="/ghoulie-gang-logo.png"
+                    />
+                  </a>
                 </div>
                 <div className="mt-5 flex-1 h-0 overflow-y-auto">
                   <nav className="px-2">
                     <div className="space-y-1"></div>
                     <div className="mt-8">
+                      {currentFilters.map((fl) => (
+                        <div
+                          key={"g_" + Object.keys(fl)[0]}
+                          className="flex flex-wrap"
+                        >
+                          {getValues(fl).map((v) => {
+                            return (
+                              <span key={"w_" + v}>
+                                <a
+                                  onClick={() =>
+                                    removeFromFilterList(
+                                      fl,
+                                      v,
+                                      currentFilters,
+                                      setCurrentFilters
+                                    )
+                                  }
+                                  key={v}
+                                  className={
+                                    "cursor-pointer letter-spacing-1 group flex items-center px-2 py-2 text-sm font-medium text-white rounded-md r-nav-n"
+                                  }
+                                >
+                                  <span
+                                    key={"p_" + v}
+                                    className={classNames(
+                                      "truncate rounded-full p-2 px-4",
+                                      getColor(fl)
+                                    )}
+                                  >
+                                    {v}
+                                  </span>
+                                </a>
+                              </span>
+                            );
+                          })}
+                        </div>
+                      ))}
                       <h3
-                        className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
-                        id="mobile-teams-headline"
+                        className="mt-4 px-3 text-xs font-semibold text-white uppercase tracking-wider letter-spacing-1a flex justify-between"
+                        id="mobile-headline"
                       >
-                        Traits
+                        Filter Traits{" "}
+                        <a
+                          className="text-gray-400 text-xs cursor-pointer hover:opacity-60"
+                          onClick={() => {
+                            setOpenSubTrait("");
+                            setCurrentFilters([]);
+                          }}
+                        >
+                          Reset
+                        </a>
                       </h3>
                       <div
                         className="mt-1 space-y-1"
                         role="group"
-                        aria-labelledby="mobile-teams-headline"
+                        aria-labelledby="desktop-teams-headline"
                       >
                         {traits.map((trait) => (
-                          <a
-                            key={trait.name}
-                            className="group flex items-center px-3 py-2 text-base leading-5 font-medium text-white rounded-md r-nav-n"
+                          <span
+                            key={"2_" + trait.name}
+                            className="flex flex-col cursor-pointer"
                           >
-                            <span
-                              className={classNames(
-                                trait.bgColorClass,
-                                "w-2.5 h-2.5 mr-3 rounded-full"
-                              )}
-                              aria-hidden="true"
-                            />
-                            <span className="pl-0.5 truncate">
-                              {trait.name}
-                            </span>
-                          </a>
+                            <a
+                              key={trait.name}
+                              onClick={() => {
+                                openSubTrait == trait.name
+                                  ? setOpenSubTrait("")
+                                  : setOpenSubTrait(trait.name);
+                              }}
+                              className={
+                                "letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n"
+                              }
+                            >
+                              <span
+                                key={"0_" + trait.name}
+                                className={classNames(
+                                  trait.bgColorClass,
+                                  "w-2.5 h-2.5 mr-3 rounded-full"
+                                )}
+                                aria-hidden="true"
+                              />
+                              <span
+                                key={"1_" + trait.name}
+                                className="pl-0.5 truncate"
+                              >
+                                {trait.name}
+                              </span>
+                            </a>
+                            {openSubTrait == trait.name ? (
+                              <ul className="w-2/3 self-center">
+                                {getSubTraits(trait).map((subTrait) => {
+                                  return (
+                                    <li
+                                      className="cursor-pointer"
+                                      key={subTrait.name}
+                                    >
+                                      <a
+                                        key={subTrait.name}
+                                        onClick={() => {
+                                          currentFilters.filter(
+                                            (e) => e[trait.name]
+                                          ).length > 0
+                                            ? filterAlreadyClickedTrait(
+                                                trait,
+                                                subTrait,
+                                                currentFilters,
+                                                setCurrentFilters
+                                              )
+                                            : setCurrentFilters(
+                                                currentFilters.concat([
+                                                  {
+                                                    [trait.name]: [
+                                                      subTrait.name,
+                                                    ],
+                                                  },
+                                                ])
+                                              );
+                                        }}
+                                        className={classNames(
+                                          "my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n",
+                                          subTraitIncluded(
+                                            currentFilters,
+                                            trait,
+                                            subTrait
+                                          )
+                                            ? "r-nav"
+                                            : ""
+                                        )}
+                                      >
+                                        <span
+                                          key={"0_" + subTrait.name}
+                                          className={classNames(
+                                            subTrait.bgColorClass,
+                                            "w-2.5 h-2.5 mr-3 rounded-full"
+                                          )}
+                                          aria-hidden="true"
+                                        />
+                                        <span
+                                          key={"1_" + subTrait.name}
+                                          className="pl-0.5 truncate"
+                                        >
+                                          {subTrait.name}
+                                        </span>
+                                      </a>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            ) : null}
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -482,13 +613,10 @@ export default function Rarity() {
                 </div>
               </div>
             </Transition.Child>
-            <div className="flex-shrink-0 w-14" aria-hidden="true">
-              {/* Dummy element to force sidebar to shrink to fit close icon */}
-            </div>
+            <div className="flex-shrink-0 w-14" aria-hidden="true"></div>
           </Dialog>
         </Transition.Root>
 
-        {/* Static sidebar for desktop */}
         <div className="hidden lg:flex lg:flex-shrink-0">
           <div
             className="flex flex-col w-64 pt-5 pb-4"
@@ -502,9 +630,7 @@ export default function Rarity() {
                 />
               </a>
             </div>
-            {/* Sidebar component, swap this element with another sidebar if you like */}
             <div className="mt-6 h-0 flex-1 flex flex-col overflow-y-auto">
-              {/* Sidebar Search */}
               <div className="px-3">
                 <label htmlFor="search" className="sr-only">
                   Search
@@ -541,7 +667,6 @@ export default function Rarity() {
                   ) : null}
                 </div>
               </div>
-              {/* Navigation */}
               <nav className="px-3 mt-6">
                 <div className="space-y-1">
                   <a
@@ -585,12 +710,14 @@ export default function Rarity() {
                   </a>
                 </div>
                 <div className="mt-8">
-                  {/* Secondary navigation */}
                   {currentFilters.map((fl) => (
-                    <div className="flex flex-wrap">
+                    <div
+                      key={"ll_" + Object.keys(fl)[0]}
+                      className="flex flex-wrap"
+                    >
                       {getValues(fl).map((v) => {
                         return (
-                          <span>
+                          <span key={"a_" + v}>
                             <a
                               onClick={() =>
                                 removeFromFilterList(
@@ -606,6 +733,7 @@ export default function Rarity() {
                               }
                             >
                               <span
+                                key={"b_" + v}
                                 className={classNames(
                                   "truncate rounded-full p-2 px-4",
                                   getColor(fl)
@@ -735,9 +863,7 @@ export default function Rarity() {
             </div>
           </div>
         </div>
-        {/* Main column */}
         <div className="flex flex-col w-0 flex-1 overflow-hidden">
-          {/* Search header */}
           <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:hidden">
             <button
               type="button"
@@ -758,22 +884,33 @@ export default function Rarity() {
                       <SearchIcon className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <input
-                      id="search-field"
-                      name="search-field"
+                      value={inputField}
+                      onChange={(e) => setInputField(e.target.value)}
+                      id="search"
+                      name="search"
                       className="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-0 focus:border-transparent focus:placeholder-gray-400 sm:text-sm"
-                      placeholder="Search"
-                      type="search"
+                      placeholder="Ghoulie #0333"
+                      type="text"
                     />
+                    {inputField !== "" ? (
+                      <div
+                        className="absolute inset-y-0 right-0 pl-3 flex items-center cursor-pointer z-30"
+                        aria-hidden="true"
+                      >
+                        <XIcon
+                          onClick={() => setInputField("")}
+                          className="w-8 h-8 text-gray-400 cursor-pointer hover:opacity-60"
+                        />
+                      </div>
+                    ) : null}
                   </div>
                 </form>
               </div>
               <div className="flex items-center">
-                {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
                     <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
                       <span className="sr-only">Open user menu</span>
-                      {/* img here */}
                     </Menu.Button>
                   </div>
                   <Transition
@@ -892,8 +1029,7 @@ export default function Rarity() {
             className="flex-1 relative z-0 overflow-y-auto focus:outline-none"
             style={{ backgroundColor: "#194051" }}
           >
-            {/* Page title & actions */}
-            <div className="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
+            <div className="border-b border-gray-200 px-6 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
               <div className="flex-1 min-w-0">
                 <h1 className="text-lg font-medium leading-6 text-white sm:truncate letter-spacing-1">
                   Rarity - How Rare Is My Ghoulie?
@@ -901,18 +1037,37 @@ export default function Rarity() {
               </div>
             </div>
 
-            {/* Projects list (only on smallest breakpoint) */}
-            <div className="mt-10 sm:hidden">
+            <div className="py-2 sm:hidden border-b border-gray-200">
               <div className="px-4 sm:px-6">
-                <h2 className="text-gray-500 text-xs font-medium uppercase tracking-wide">
-                  Projects
-                </h2>
+                <a
+                  onClick={() => setCurrentPage("top-100")}
+                  className={classNames(
+                    "letter-spacing-1 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md cursor-pointer r-nav-n",
+                    currentPage == "top-100" ? "r-nav" : "bg-transparent"
+                  )}
+                >
+                  <StarIcon
+                    className={classNames("mr-3 flex-shrink-0 h-6 w-6")}
+                    aria-hidden="true"
+                  />
+                  Top 100 Ghoulies
+                </a>
+                <a
+                  onClick={() => setCurrentPage("all-ghoulies")}
+                  className={classNames(
+                    "letter-spacing-1 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md cursor-pointer r-nav-n",
+                    currentPage == "all-ghoulies" ? "r-nav" : "bg-transparent"
+                  )}
+                >
+                  <CollectionIcon
+                    className={classNames("mr-3 flex-shrink-0 h-6 w-6")}
+                    aria-hidden="true"
+                  />
+                  All Ghoulies
+                </a>
               </div>
-              <ul
-                role="list"
-                className="mt-3 border-t border-gray-200 divide-y divide-gray-100"
-              ></ul>
             </div>
+
             <div className="p-6 pl-8">
               <GhoulieList
                 ghoulieField={ghoulieField}

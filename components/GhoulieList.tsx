@@ -18,13 +18,16 @@ function classNames(...classes) {
 function Ghoulies({ setViewGhoulie, currentGhoulies }) {
   return (
     <>
-      <ul role="list" className="inline-grid grid-cols-4 gap-y-6 gap-x-11">
+      <ul
+        role="list"
+        className="block md:inline-grid md:grid-cols-4 md:gap-y-6 md:gap-x-11"
+      >
         {currentGhoulies &&
           currentGhoulies.map((ghoulie) => (
             <li
               onClick={() => setViewGhoulie(ghoulie)}
               key={ghoulie.name}
-              className="col-span-1 flex flex-col text-center rounded-lg shadow divide-y divide-gray-200 cursor-pointer gh"
+              className="mb-4 md:mb-0 col-span-1 flex flex-col text-center rounded-lg shadow divide-y divide-gray-200 cursor-pointer gh"
               style={{ backgroundColor: "#031423" }}
             >
               <div className="flex-1 flex flex-col pt-8 px-8 pb-4 items-center">
@@ -449,7 +452,8 @@ const PaginatedGhoulies = ({
               breakLabel="..."
               nextLabel="next >"
               onPageChange={handlePageClick}
-              pageRangeDisplayed={5}
+              pageRangeDisplayed={3}
+              marginPagesDisplayed={1}
               pageCount={pageCount}
               previousLabel="< previous"
               renderOnZeroPageCount={null}
@@ -520,7 +524,7 @@ export default function GhoulieList({ ghoulieField, filters }) {
   return (
     <div>
       {ghoulies.length == 0 ? (
-        <div className="flex items-center flex-col mt-12">
+        <div className="flex items-center flex-col mt-2 md:mt-12">
           <img
             className="h-24 w-auto opacity-50"
             src="/ghoulie-gang-logo.png"
