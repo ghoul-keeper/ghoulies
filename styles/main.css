@@ -525,6 +525,10 @@ enable-background:new 0 0 248 204;
 }
 
 @media (max-width: 770px) {
+	.gh:hover {
+		transform: none;
+	}
+
 	.mobile-only {
 		display: block;
 	}
