@@ -111,7 +111,7 @@ const PaginatedGhoulies = ({
       {viewGhoulie ? (
         <div
           style={{ backgroundColor: "#031423" }}
-          className="rounded-md w-9/12 center-pls"
+          className="rounded-md w-11/12 md:w-9/12 center-pls"
         >
           <div className="flex items-center flex-col w-full pt-8 pb-4 relative">
             <XIcon
@@ -119,7 +119,7 @@ const PaginatedGhoulies = ({
               className="absolute top-4 left-4 w-8 h-8 text-red-600 cursor-pointer hover:opacity-60"
             />
 
-            <h3 className="text-5xl text-white letter-spacing-2 mb-4">
+            <h3 className="text-5xl text-white letter-spacing-2 mb-4 md:mt-0 mt-8">
               {viewGhoulie.name}
             </h3>
             <div
@@ -129,10 +129,10 @@ const PaginatedGhoulies = ({
               Rarity Score: {viewGhoulie.rarityScore}
             </div>
           </div>
-          <div className="flex-1 flex px-10 pt-4 pb-6 items-center justify-between">
+          <div className="flex-1 flex px-10 pt-4 pb-6 items-center justify-between flex-col md:flex-row">
             <div className="w-auto">
               <img
-                className="h-96 w-auto rounded-md"
+                className="h-60 md:h-96 w-auto rounded-md"
                 src={viewGhoulie.image}
                 alt=""
               />
@@ -143,7 +143,7 @@ const PaginatedGhoulies = ({
                 Ranked {viewGhoulie.ranking}
               </p>
             </div>
-            <div className="flex h-full items-center flex-col w-1/2 pl-10 -mt-18">
+            <div className="flex h-full items-center flex-col w-full md:w-1/2 pl-0 md:pl-10 mt-8 md:-mt-18">
               <span className="w-full my-1">
                 <h2 className="text-white text-xl pb-1 letter-spacing-1">
                   Background:{" "}

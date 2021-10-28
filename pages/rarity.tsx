@@ -1068,7 +1068,7 @@ export default function Rarity() {
               </div>
             </div>
 
-            <div className="p-6 pl-8">
+            <div className="py-6 px-0 md:p-6 md:pl-8">
               <GhoulieList
                 ghoulieField={ghoulieField}
                 filters={currentFilters}
