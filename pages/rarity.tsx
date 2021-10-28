@@ -313,7 +313,7 @@ export default function Rarity() {
   const [openSubTrait, setOpenSubTrait] = useState("");
   const [currentFilters, setCurrentFilters] = useState([]);
   const [inputField, setInputField] = useState("");
-  const [ghoulieField] = useDebounce(inputField, 1000);
+  const [ghoulieField] = useDebounce(inputField, 500);
 
   let setCurrentPage = (page) => {
     window.location.hash = page;
