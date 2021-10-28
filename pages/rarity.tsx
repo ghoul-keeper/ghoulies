@@ -526,7 +526,7 @@ export default function Rarity() {
                                   : setOpenSubTrait(trait.name);
                               }}
                               className={
-                                "letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n"
+                                "letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md"
                               }
                             >
                               <span
@@ -575,7 +575,7 @@ export default function Rarity() {
                                               );
                                         }}
                                         className={classNames(
-                                          "my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n",
+                                          "my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md",
                                           subTraitIncluded(
                                             currentFilters,
                                             trait,
