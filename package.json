@@ -21,7 +21,6 @@
     "@solana/wallet-adapter-wallets": "^0.10.1",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
-    "fuzzysort": "^1.1.4",
     "html-react-parser": "^1.4.0",
     "ioredis": "^4.28.0",
     "next": "^11.0.0",

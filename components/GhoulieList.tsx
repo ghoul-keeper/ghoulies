@@ -3,7 +3,6 @@ import rawGhoulies from "./../Final-Mint-Public/final-ghoulies.json";
 import traitCounts from "./../Final-Mint-Public/trait_counts.json";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-import fuzzysort from "fuzzysort";
 import { XIcon } from "@heroicons/react/outline";
 
 let sortedByRank = rawGhoulies.sort((a, b) =>
@@ -502,15 +501,8 @@ export default function GhoulieList({ ghoulieField, filters }) {
       return a.name;
     });
 
-    const gNames =
-      ghoulieField !== ""
-        ? fuzzysort.go(ghoulieField, uGhoulies).map((a) => {
-            return a.target;
-          })
-        : uGhoulies;
-
     let finalGhoulies = updatedGhoulies.filter((g) => {
-      return gNames.includes(g.name);
+      return g.name.toLowerCase().includes(ghoulieField);
     });
 
     setGhoulies(finalGhoulies);
