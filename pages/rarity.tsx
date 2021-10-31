@@ -412,8 +412,6 @@ export default function Rarity() {
     } else {
       if (hash == "top-100" || hash == "all-traits" || hash == "all-ghoulies") {
         setCurrentPage(hash);
-      } else {
-        setCurrentPage("top-100");
       }
     }
   });

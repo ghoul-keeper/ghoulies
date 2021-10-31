@@ -470,10 +470,28 @@ const PaginatedGhoulies = ({
 
 export default function GhoulieList({ ghoulieField, filters }) {
   const [ghoulies, setGhoulies] = useState(topGhoulies);
-  const [viewGhoulie, setViewGhoulie] = useState(null);
+  const [viewGhoulie, _setViewGhoulie] = useState(null);
+
+  let setViewGhoulie = (ghoulie) => {
+    if (ghoulie) {
+      window.location.hash =
+        window.location.hash + "_" + encodeURIComponent(ghoulie.name);
+    } else {
+      let hash = window.location.hash.split("#")[1].split("_")[0];
+      window.location.hash = hash;
+    }
+
+    _setViewGhoulie(ghoulie);
+  };
 
   useEffect(() => {
     let hash = window.location.hash.split("#")[1];
+    let possibleGhoulie = decodeURIComponent(
+      window.location.hash.split("_")[1]
+    );
+    let foundGhoulie = ghoulies.filter((g) => {
+      return g.name == possibleGhoulie;
+    })[0];
 
     let g = hash == "top-100" ? topGhoulies : rawGhoulies;
 
@@ -506,7 +524,7 @@ export default function GhoulieList({ ghoulieField, filters }) {
     });
 
     setGhoulies(finalGhoulies);
-    setViewGhoulie(null);
+    _setViewGhoulie(foundGhoulie == undefined ? null : foundGhoulie);
   }, [
     filters,
     typeof window !== "undefined" ? window.location.hash : "",
