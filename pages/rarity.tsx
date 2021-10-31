@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Head from "next/head";
 import React, { useCallback } from "react";
 import { Fragment, useState, useEffect } from "react";
