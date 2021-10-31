@@ -321,6 +321,89 @@ export default function Rarity() {
   };
 
   useEffect(() => {
+    var searchParams = new URLSearchParams(window.location.search);
+
+    let filtersWithoutEmptyArrays = currentFilters.filter((f) => {
+      let keys = Object.keys(f);
+
+      return !keys
+        .map((key) => {
+          return f[key].length > 0;
+        })
+        .includes(false);
+    });
+
+    let result = filtersWithoutEmptyArrays.map((cFilter) => {
+      let key = Object.keys(cFilter)[0];
+      let filterValues = cFilter[key];
+
+      return key + "=" + filterValues.join(",");
+    });
+
+    for (var key of searchParams.keys()) {
+      let k = key;
+
+      let included = result
+        .map((r) => {
+          return r.includes(k);
+        })
+        .includes(true);
+
+      if (!included) {
+        searchParams.delete(k);
+
+        var newRelativePathQuery =
+          window.location.pathname +
+          "?" +
+          searchParams.toString() +
+          window.location.hash;
+
+        history.pushState(null, "", newRelativePathQuery);
+      }
+    }
+
+    if (result.length == 0) {
+      var newRelativePathQuery =
+        window.location.pathname + window.location.hash;
+      history.pushState(null, "", newRelativePathQuery);
+    } else {
+      result.forEach((r) => {
+        let key = r.split("=")[0];
+        let value = r.split("=")[1];
+
+        searchParams.set(key, encodeURIComponent(value));
+
+        var newRelativePathQuery =
+          window.location.pathname +
+          "?" +
+          searchParams.toString() +
+          window.location.hash;
+        history.pushState(null, "", newRelativePathQuery);
+      });
+    }
+  }, [currentFilters]);
+
+  useEffect(() => {
+    // next tick
+    setTimeout(() => {
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const params = Object.fromEntries(urlSearchParams.entries());
+
+      let keys = Object.keys(params);
+
+      let filtersToSet = keys.map((key) => {
+        let valuesStr = decodeURIComponent(params[key]);
+
+        let values = valuesStr.split(",");
+
+        return { [key]: values };
+      });
+
+      setCurrentFilters(filtersToSet);
+    }, 500);
+  }, []);
+
+  useEffect(() => {
     let hash = window.location.hash.split("#")[1];
 
     if (window.location.hash == "") {
@@ -575,7 +658,7 @@ export default function Rarity() {
                                               );
                                         }}
                                         className={classNames(
-                                          "my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md",
+                                          "select-none my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md",
                                           subTraitIncluded(
                                             currentFilters,
                                             trait,
@@ -780,7 +863,7 @@ export default function Rarity() {
                               : setOpenSubTrait(trait.name);
                           }}
                           className={
-                            "letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n"
+                            "select-none letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n"
                           }
                         >
                           <span
@@ -825,7 +908,7 @@ export default function Rarity() {
                                           );
                                     }}
                                     className={classNames(
-                                      "my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n",
+                                      "select-none my-2 letter-spacing-1 group flex items-center px-3 py-2 text-sm font-medium text-white rounded-md r-nav-n",
                                       subTraitIncluded(
                                         currentFilters,
                                         trait,
