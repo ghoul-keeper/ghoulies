@@ -344,7 +344,7 @@ const Hero = (props: HomeProps) => {
                           isMinting ? (
                             <CircularProgress />
                           ) : (
-                            "MINT FOR 0.4"
+                            "MINT FOR 0.05"
                           )
                         ) : (
                           // Shouldn't get here.
