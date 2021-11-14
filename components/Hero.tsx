@@ -196,7 +196,6 @@ const Hero = (props: HomeProps) => {
         }
       }
     } catch (error: any) {
-      // TODO: blech:
       let message = error.msg || "Minting failed! Please try again!";
       if (!error.msg) {
         if (error.message.indexOf("0x138")) {
