@@ -4,24 +4,26 @@ import React, { useCallback } from "react";
 import { Fragment, useState, useEffect } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import { useDebounce } from "use-debounce";
+import dynamic from "next/dynamic";
 import {
   CollectionIcon,
-  ClockIcon,
-  HomeIcon,
-  SparklesIcon,
+  HeartIcon,
   StarIcon,
   MenuAlt1Icon,
-  ViewListIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import {
-  ChevronRightIcon,
-  DotsVerticalIcon,
-  SearchIcon,
-  SelectorIcon,
-} from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/solid";
+
+import { useWalletNfts } from "@nfteyez/sol-rayz-react";
 
 import GhoulieList from "./../components/GhoulieList";
+
+const WalletProvider = dynamic(
+  () => import("../components/ClientWalletProvider"),
+  {
+    ssr: false,
+  }
+);
 
 const traits = [
   { name: "Background", href: "#", bgColorClass: "bg-indigo-500" },
@@ -315,11 +317,27 @@ export default function Rarity() {
   const [currentFilters, setCurrentFilters] = useState([]);
   const [inputField, setInputField] = useState("");
   const [ghoulieField] = useDebounce(inputField, 500);
+  const [wallet, setWallet] = useState(null);
+  const [connection, setConnection] = useState(null);
 
   let setCurrentPage = (page) => {
     window.location.hash = page;
     setCurrentPage_0(page);
   };
+
+  let passPropsUp = (incWallet, incConnection) => {
+    setWallet(incWallet);
+    setConnection(incConnection);
+  };
+
+  const { nfts, isLoading, error } = useWalletNfts({
+    publicAddress: wallet?.publicKey?.toBase58(),
+    connection: connection,
+    sanitize: true,
+    strictNftStandard: false,
+    stringifyPubKeys: true,
+    sort: true,
+  });
 
   useEffect(() => {
     var searchParams = new URLSearchParams(window.location.search);
@@ -410,8 +428,17 @@ export default function Rarity() {
     if (window.location.hash == "") {
       setCurrentPage("top-100");
     } else {
-      if (hash == "top-100" || hash == "all-traits" || hash == "all-ghoulies") {
-        setCurrentPage(hash);
+      if (hash == "my-ghoulies" && !wallet) {
+        setCurrentPage("top-100");
+      } else {
+        if (
+          hash == "top-100" ||
+          hash == "all-traits" ||
+          hash == "all-ghoulies" ||
+          hash == "my-ghoulies"
+        ) {
+          setCurrentPage(hash);
+        }
       }
     }
   });
@@ -442,6 +469,7 @@ export default function Rarity() {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <script type="text/javascript" src="/static/check_class.js"></script>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
@@ -789,6 +817,27 @@ export default function Rarity() {
                       aria-hidden="true"
                     />
                     All Ghoulies
+                  </a>
+                  <a
+                    onClick={() => {
+                      if (wallet) {
+                        setCurrentPage("my-ghoulies");
+                      }
+                    }}
+                    className={classNames(
+                      "letter-spacing-1 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md r-nav-n",
+                      currentPage == "my-ghoulies" ? "r-nav" : "bg-transparent",
+                      !wallet ? "cursor-not-allowed" : "cursor-pointer"
+                    )}
+                  >
+                    <HeartIcon
+                      className={classNames("mr-3 flex-shrink-0 h-6 w-6")}
+                      aria-hidden="true"
+                    />
+                    My Ghoulies
+                  </a>
+                  <a id="r-wp">
+                    <WalletProvider passPropsUp={passPropsUp} rarity={true} />
                   </a>
                 </div>
                 <div className="mt-8">
@@ -1145,6 +1194,27 @@ export default function Rarity() {
                   />
                   All Ghoulies
                 </a>
+                <a
+                  onClick={() => {
+                    if (wallet) {
+                      setCurrentPage("my-ghoulies");
+                    }
+                  }}
+                  className={classNames(
+                    "letter-spacing-1 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md r-nav-n",
+                    currentPage == "my-ghoulies" ? "r-nav" : "bg-transparent",
+                    !wallet ? "cursor-not-allowed" : "cursor-pointer"
+                  )}
+                >
+                  <HeartIcon
+                    className={classNames("mr-3 flex-shrink-0 h-6 w-6")}
+                    aria-hidden="true"
+                  />
+                  My Ghoulies
+                </a>
+                <a id="r-wp-mob">
+                  <WalletProvider passPropsUp={passPropsUp} rarity={true} />
+                </a>
               </div>
             </div>
 
@@ -1152,6 +1222,7 @@ export default function Rarity() {
               <GhoulieList
                 ghoulieField={ghoulieField}
                 filters={currentFilters}
+                myGhoulies={nfts}
               />
             </div>
           </main>

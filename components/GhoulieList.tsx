@@ -468,7 +468,7 @@ const PaginatedGhoulies = ({
   );
 };
 
-export default function GhoulieList({ ghoulieField, filters }) {
+export default function GhoulieList({ ghoulieField, filters, myGhoulies }) {
   const [ghoulies, setGhoulies] = useState(topGhoulies);
   const [viewGhoulie, _setViewGhoulie] = useState(null);
 
@@ -519,7 +519,18 @@ export default function GhoulieList({ ghoulieField, filters }) {
       return a.name;
     });
 
-    let finalGhoulies = updatedGhoulies.filter((g) => {
+    let myGhouliesByName = myGhoulies.map((a) => {
+      return a.data.name.toLowerCase();
+    });
+
+    let preFinalGhoulies =
+      hash == "my-ghoulies"
+        ? updatedGhoulies.filter((g) => {
+            return myGhouliesByName.includes(g.name.toLowerCase());
+          })
+        : updatedGhoulies;
+
+    let finalGhoulies = preFinalGhoulies.filter((g) => {
       return g.name.toLowerCase().includes(ghoulieField);
     });
 

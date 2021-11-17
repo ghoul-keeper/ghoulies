@@ -2,6 +2,7 @@ import { useMemo, useCallback } from "react";
 import Notification from "./Notification";
 import { WalletError } from "@solana/wallet-adapter-base";
 import Hero from "./Hero";
+import SimpleWallet from "./SimpleWallet";
 import toast, { Toaster } from "react-hot-toast";
 
 import * as anchor from "@project-serum/anchor";
@@ -67,14 +68,21 @@ export default function ClientWalletProvider(props): JSX.Element {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} onError={onError} {...props}>
         <WalletModalProvider logo="/ghoulie-gang-logo.png">
-          <Hero
-            candyMachineId={candyMachineId}
-            config={config}
-            connection={connection}
-            startDate={startDateSeed}
-            treasury={treasury}
-            txTimeout={txTimeout}
-          />
+          {props.rarity ? (
+            <SimpleWallet
+              connection={connection}
+              passPropsUp={props.passPropsUp}
+            />
+          ) : (
+            <Hero
+              candyMachineId={candyMachineId}
+              config={config}
+              connection={connection}
+              startDate={startDateSeed}
+              treasury={treasury}
+              txTimeout={txTimeout}
+            />
+          )}
         </WalletModalProvider>
         <Toaster position="bottom-left" reverseOrder={false} />
       </WalletProvider>

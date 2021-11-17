@@ -66,6 +66,27 @@
   "resolved" "https://registry.npmjs.org/@emotion/hash/-/hash-0.8.0.tgz"
   "version" "0.8.0"
 
+"@ethersproject/bytes@^5.5.0":
+  "integrity" "sha512-ABvc7BHWhZU9PNM/tANm/Qx4ostPGadAuQzWTr3doklZOhDlmcBqclrQe/ZXUIj3K8wC28oYeuRa+A37tX9kog=="
+  "resolved" "https://registry.npmjs.org/@ethersproject/bytes/-/bytes-5.5.0.tgz"
+  "version" "5.5.0"
+  dependencies:
+    "@ethersproject/logger" "^5.5.0"
+
+"@ethersproject/logger@^5.5.0":
+  "integrity" "sha512-rIY/6WPm7T8n3qS2vuHTUBPdXHl+rGxWxW5okDfo9J4Z0+gRRZT0msvUdIJkE4/HS29GUMziwGaaKO2bWONBrg=="
+  "resolved" "https://registry.npmjs.org/@ethersproject/logger/-/logger-5.5.0.tgz"
+  "version" "5.5.0"
+
+"@ethersproject/sha2@^5.5.0":
+  "integrity" "sha512-B5UBoglbCiHamRVPLA110J+2uqsifpZaTmid2/7W5rbtYVz6gus6/hSDieIU/6gaKIDcOj12WnOdiymEUHIAOA=="
+  "resolved" "https://registry.npmjs.org/@ethersproject/sha2/-/sha2-5.5.0.tgz"
+  "version" "5.5.0"
+  dependencies:
+    "@ethersproject/bytes" "^5.5.0"
+    "@ethersproject/logger" "^5.5.0"
+    "hash.js" "1.1.7"
+
 "@hapi/accept@5.0.2":
   "integrity" "sha512-CmzBx/bXUR8451fnZRuZAJRlzgm0Jgu5dltTX/bszmR2lheb9BpyN47Q1RbaGTsvFzn0PXAEs+lXDKfshccYZw=="
   "resolved" "https://registry.npmjs.org/@hapi/accept/-/accept-5.0.2.tgz"
@@ -277,6 +298,25 @@
   "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-11.1.2.tgz"
   "version" "11.1.2"
 
+"@nfteyez/sol-rayz-react@^0.7.0":
+  "integrity" "sha512-yWF3HMiCMwJS8IEP3FXedEPLCRcnWVtJoHnblbaR3heDykYzR6qaYb5DuNaO//AZPg3eOoTpEtNNQj/+v7ch9Q=="
+  "resolved" "https://registry.npmjs.org/@nfteyez/sol-rayz-react/-/sol-rayz-react-0.7.0.tgz"
+  "version" "0.7.0"
+  dependencies:
+    "@nfteyez/sol-rayz" "^0.7.0"
+    "@solana/web3.js" "^1.30.2"
+    "swr" "^1.0.1"
+
+"@nfteyez/sol-rayz@^0.7.0":
+  "integrity" "sha512-N/KKuIwPEoLCyOd6Tf3QLMNQl0IlU3EBGVWFfMyFqvdMYOhLahK5O1uVG1jje0ynm9vpXtbD7TNF7UzhCaM5LA=="
+  "resolved" "https://registry.npmjs.org/@nfteyez/sol-rayz/-/sol-rayz-0.7.0.tgz"
+  "version" "0.7.0"
+  dependencies:
+    "@types/lodash.chunk" "^4.2.6"
+    "borsh" "^0.6.0"
+    "lodash.chunk" "^4.2.0"
+    "lodash.orderby" "^4.6.0"
+
 "@node-rs/helper@1.2.1":
   "integrity" "sha512-R5wEmm8nbuQU0YGGmYVjEc0OHtYsuXdpRG+Ut/3wZ9XAvQWyThN08bTh2cBJgoZxHQUPtvRfeQuxcAgLuiBISg=="
   "resolved" "https://registry.npmjs.org/@node-rs/helper/-/helper-1.2.1.tgz"
@@ -484,19 +524,19 @@
     "@solana/wallet-adapter-solong" "^0.6.1"
     "@solana/wallet-adapter-torus" "^0.7.1"
 
-"@solana/web3.js@^1.17.0", "@solana/web3.js@^1.2.0", "@solana/web3.js@^1.20.0", "@solana/web3.js@^1.21.0", "@solana/web3.js@^1.22.0", "@solana/web3.js@^1.5.0":
-  "integrity" "sha512-XXrE8srfA3ilMvpOs6WdGOIuY8epc0sF9Tl4M6BHNnfS5pbSQ+jJJdEhwi6AzURgXWWu//242Tq347iLSQhRqQ=="
-  "resolved" "https://registry.npmjs.org/@solana/web3.js/-/web3.js-1.26.0.tgz"
-  "version" "1.26.0"
+"@solana/web3.js@^1.17.0", "@solana/web3.js@^1.2.0", "@solana/web3.js@^1.20.0", "@solana/web3.js@^1.21.0", "@solana/web3.js@^1.22.0", "@solana/web3.js@^1.30.2", "@solana/web3.js@^1.5.0":
+  "integrity" "sha512-hznCj+rkfvM5taRP3Z+l5lumB7IQnDrB4l55Wpsg4kDU9Zds8pE5YOH5Z9bbF/pUzZJKQjyBjnY/6kScBm3Ugg=="
+  "resolved" "https://registry.npmjs.org/@solana/web3.js/-/web3.js-1.30.2.tgz"
+  "version" "1.30.2"
   dependencies:
     "@babel/runtime" "^7.12.5"
+    "@ethersproject/sha2" "^5.5.0"
     "@solana/buffer-layout" "^3.0.0"
     "bn.js" "^5.0.0"
     "borsh" "^0.4.0"
     "bs58" "^4.0.1"
     "buffer" "6.0.1"
     "cross-fetch" "^3.1.4"
-    "crypto-hash" "^1.2.2"
     "jayson" "^3.4.4"
     "js-sha3" "^0.8.0"
     "rpc-websockets" "^7.4.2"
@@ -616,7 +656,14 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash@^4.14.159":
+"@types/lodash.chunk@^4.2.6":
+  "integrity" "sha512-SPlusB7jxXyGcTXYcUdWr7WmhArO/rmTq54VN88iKMxGUhyg79I4Q8n4riGn3kjaTjOJrVlHhxgX/d7woak5BQ=="
+  "resolved" "https://registry.npmjs.org/@types/lodash.chunk/-/lodash.chunk-4.2.6.tgz"
+  "version" "4.2.6"
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*", "@types/lodash@^4.14.159":
   "integrity" "sha512-/BHF5HAx3em7/KkzVKm3LrsD6HZAXuXO1AJZQ3cRRBZj4oHZDviWPYu0aEplAqDFNHZPW6d3G7KN+ONcCCC7pw=="
   "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.172.tgz"
   "version" "4.14.172"
@@ -892,7 +939,7 @@
   "resolved" "https://registry.npmjs.org/bn.js/-/bn.js-4.12.0.tgz"
   "version" "4.12.0"
 
-"bn.js@^5.0.0", "bn.js@^5.1.0", "bn.js@^5.1.1", "bn.js@^5.1.2":
+"bn.js@^5.0.0", "bn.js@^5.1.0", "bn.js@^5.1.1", "bn.js@^5.1.2", "bn.js@^5.2.0":
   "integrity" "sha512-D7iWRBvnZE8ecXiLj/9wbxH7Tk79fAh8IHaTNq1RWRixsS02W+5qS+iE9yq6RYl0asXx5tw0bLhmT5pIfbSquw=="
   "resolved" "https://registry.npmjs.org/bn.js/-/bn.js-5.2.0.tgz"
   "version" "5.2.0"
@@ -904,6 +951,15 @@
   dependencies:
     "@types/bn.js" "^4.11.5"
     "bn.js" "^5.0.0"
+    "bs58" "^4.0.0"
+    "text-encoding-utf-8" "^1.0.2"
+
+"borsh@^0.6.0":
+  "integrity" "sha512-sl5k89ViqsThXQpYa9XDtz1sBl3l1lI313cFUY1HKr+wvMILnb+58xpkqTNrYbelh99dY7K8usxoCusQmqix9Q=="
+  "resolved" "https://registry.npmjs.org/borsh/-/borsh-0.6.0.tgz"
+  "version" "0.6.0"
+  dependencies:
+    "bn.js" "^5.2.0"
     "bs58" "^4.0.0"
     "text-encoding-utf-8" "^1.0.2"
 
@@ -1390,7 +1446,7 @@
     "randombytes" "^2.0.0"
     "randomfill" "^1.0.3"
 
-"crypto-hash@^1.2.2", "crypto-hash@^1.3.0":
+"crypto-hash@^1.3.0":
   "integrity" "sha512-lyAZ0EMyjDkVvz8WOeVnuCPvKVBXcMv1l5SVqO1yC7PzTwrD/pPje/BIRbWhMoPe436U+Y2nD7f5bFx0kt+Sbg=="
   "resolved" "https://registry.npmjs.org/crypto-hash/-/crypto-hash-1.3.0.tgz"
   "version" "1.3.0"
@@ -2022,7 +2078,7 @@
     "readable-stream" "^3.6.0"
     "safe-buffer" "^5.2.0"
 
-"hash.js@^1.0.0", "hash.js@^1.0.3":
+"hash.js@^1.0.0", "hash.js@^1.0.3", "hash.js@1.1.7":
   "integrity" "sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA=="
   "resolved" "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz"
   "version" "1.1.7"
@@ -2557,6 +2613,11 @@
   dependencies:
     "p-locate" "^4.1.0"
 
+"lodash.chunk@^4.2.0":
+  "integrity" "sha1-ZuXOH3btJ7QwPYxlEujRIW6BBrw="
+  "resolved" "https://registry.npmjs.org/lodash.chunk/-/lodash.chunk-4.2.0.tgz"
+  "version" "4.2.0"
+
 "lodash.defaults@^4.2.0":
   "integrity" "sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw="
   "resolved" "https://registry.npmjs.org/lodash.defaults/-/lodash.defaults-4.2.0.tgz"
@@ -2576,6 +2637,11 @@
   "integrity" "sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ=="
   "resolved" "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   "version" "4.6.2"
+
+"lodash.orderby@^4.6.0":
+  "integrity" "sha1-5pfwTOXXhSL1TZM4syuBozk+TrM="
+  "resolved" "https://registry.npmjs.org/lodash.orderby/-/lodash.orderby-4.6.0.tgz"
+  "version" "4.6.0"
 
 "lodash.sortby@^4.7.0":
   "integrity" "sha1-7dFMgk4sycHgsKG0K7UhBRakJDg="
@@ -3344,7 +3410,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16 || ^17 || ^18", "react@^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>= 15", "react@>= 16", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=0.14.0 <18.0.0", "react@>=16", "react@>=16.6.0", "react@>=16.8.0", "react@0.14 || 15 || 16 || 17", "react@17.0.2":
+"react@^16 || ^17 || ^18", "react@^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>= 15", "react@>= 16", "react@>= 16.8.0 || 17.x.x || 18.x.x", "react@>=0.14.0 <18.0.0", "react@>=16", "react@>=16.6.0", "react@>=16.8.0", "react@~17.0.0", "react@0.14 || 15 || 16 || 17", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
