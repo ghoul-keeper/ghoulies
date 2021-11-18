@@ -501,7 +501,7 @@ export default function GhoulieList({ ghoulieField, filters, myGhoulies }) {
           .map((filter) => {
             let key = Object.keys(filter)[0].toLowerCase();
             let values = Object.values(filter);
-            let a = values[0];
+            let a = values[0] == 420 ? "420" : values[0];
 
             if (a.length > 0) {
               return a.includes(gh[key]);
