@@ -17,10 +17,7 @@ function classNames(...classes) {
 function Ghoulies({ setViewGhoulie, currentGhoulies }) {
   return (
     <>
-      <ul
-        role="list"
-        className="block md:inline-grid md:grid-cols-4 md:gap-y-6 md:gap-x-11"
-      >
+      <ul role="list" className="custom-grid-break-points test">
         {currentGhoulies &&
           currentGhoulies.map((ghoulie) => (
             <li
@@ -31,11 +28,11 @@ function Ghoulies({ setViewGhoulie, currentGhoulies }) {
             >
               <div className="flex-1 flex flex-col pt-8 px-8 pb-4 items-center">
                 <img
-                  className="h-52 w-auto rounded-md"
+                  className="w-auto rounded-md ghoulie-img-height"
                   src={ghoulie.image}
                   alt=""
                 />
-                <h3 className="text-3xl mt-6 text-white letter-spacing-2">
+                <h3 className="md:text-xl lg:text-3xl mt-6 text-white letter-spacing-2">
                   {ghoulie.name}
                 </h3>
                 <p

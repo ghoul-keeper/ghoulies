@@ -620,3 +620,75 @@ enable-background:new 0 0 248 204;
 		height: auto;
 	}
 }
+
+.ghoulie-img-height {
+	max-height: 13rem;
+}
+
+.custom-grid-break-points {
+	display: inline-grid;
+	column-gap: 2.75rem;
+	row-gap: 1.5rem;
+}
+
+@media (min-width: 3001px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(10, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 2801px) and (max-width: 3000px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(9, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 2601px) and (max-width: 2800px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(8, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 2322px) and (max-width: 2600px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(7, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2320px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(6, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 1651px) and (max-width: 1920px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(5, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 1351px) and (max-width: 1650px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1350px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 750px) {
+	.custom-grid-break-points {
+		grid-template-columns: repeat(2, minmax(0,1fr));
+	}
+}
+
+
+@media (max-width: 500px) {
+	.custom-grid-break-points {
+		display: block;
+		margin: 0 16px;
+	}
+}
